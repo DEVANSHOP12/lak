@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTEMP</title>
+  
+</head>
+<body>
+    <header>
+        <h1>LAKSHYA WALLAH</h1>
+    </header>
+    
+   
+    <div class="content">
+        <section id="topic1">
+            <h2>• PHYSICS</h2>
+            <!-- Dropdown content for Topic 1 goes here -->
+            <div class="dropdown">
+                <ul>
+                    <li><a href="#">Ray Optics and Optical Instruments</a></li>
+                    <li><a href="#">Electromagnetic Waves</a></li>
+                    <li><a href="#">Electromagnetic Induction</a></li>
+                    <li><a href="#">Moving Charges And Magnetism</a></li>
+                    <li><a href="#">Electric Charges And Field</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="topic2">
+            <h2>• CHEMISTRY</h2>
+            <!-- Dropdown content for Topic 2 goes here -->
+            <div class="dropdown">
+                <ul>
+                    <li>
+                        <h3>↪ ORGANIC CHEMISTRY</h3>
+                        <!-- Nested list for ORGANIC CHEMISTRY -->
+                        <ul class="nested-list">
+                            <li><a href="#">Haloalkanes & Haloarenes</a></li>
+                            <li><a href="#">REVISION BY AMIT SIR</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>↪ INORGANIC CHEMISTRY</h3>
+                        <!-- Nested list for INORGANIC CHEMISTRY -->
+                        <ul class="nested-list">
+                            <li><a href="#">D & F BLOCK</a></li>
+                            <li><a href="#">P Block</a></li>
+                            <li><a href="#">Salt Analysis</a></li>
+                            <li><a href="#">Coordination Chemistry</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>↪ PHYSICAL CHEMISTRY</h3>
+                        <!-- Nested list for PHYSICAL CHEMISTRY -->
+                        <ul class="nested-list">
+                            <li><a href="#">Surface Chemistry</a></li>
+                            <li><a href="#">Chemical Kinetics</a></li>
+                            <li><a href="#">Solutions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="topic3">
+            <h2>• MATH</h2>
+            <!-- Dropdown content for Topic 3 goes here -->
+            <div class="dropdown">
+                <ul>
+                    <li><a href="#">Definite Integration</a></li>
+                    <li><a href="#">Indefinite Integration</a></li>
+                    <li><a href="#">Methods of Differentiation</a></li>
+                    <li><a href="#">Relations & Functions</a></li>
+                    <li><a href="#">Revising Basics</a></li>
+                </ul>
+            </div>
+        </section>
+         <section id="topic4">
+             <H2>SUPPORT TOOLS </H2>
+             <ul>
+            <li><a href="https://t.me/+-731_iRKYvRmZmY1">TELEGRAM</a></li>
+ 
+            <li><a href="#contact">Contact</a></li>
+          
+        </ul>
+         </section>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+<style>
+   /* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for header */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Styles for content */
+.content {
+  
+    padding: 20px;
+}
+
+/* Styles for sections */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Styles for dropdowns */
+.dropdown {
+    display: none;
+    margin-top: 10px;
+}
+
+.dropdown.active {
+    display: block;
+}
+
+.dropdown ul {
+    list-style: none;
+}
+
+.dropdown ul li {
+    margin: 5px 0;
+}
+
+/* Style for dropdown links */
+.dropdown ul li a {
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dropdown links */
+.dropdown ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Styles for nested dropdowns */
+.nested-dropdown {
+    display: none;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.nested-dropdown.active {
+    display: block;
+}
+
+.nested-dropdown li {
+    margin: 5px 0;
+}
+
+/* Style for nested dropdown links */
+.nested-dropdown li a {
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for nested dropdown links */
+.nested-dropdown li a:hover {
+    background-color: #ddd;
+}
+
+</style>
+
+<script>
+document.querySelectorAll(".content section").forEach((section) => {
+    const dropdown = section.querySelector(".dropdown");
+    const header = section.querySelector("h2");
+
+    if (dropdown) {
+        header.addEventListener("click", () => {
+            dropdown.classList.toggle("active");
+        });
+    }
+
+    const nestedDropdown = section.querySelector(".nested-dropdown");
+    if (nestedDropdown) {
+        header.addEventListener("click", () => {
+            nestedDropdown.classList.toggle("active");
+        });
+    }
+});
+
+
+
+
+</script>
