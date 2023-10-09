@@ -1,0 +1,634 @@
+
+<html>
+    <head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+        <meta content="text/html; charset=UTF-8" http-equiv="CONTENT-TYPE"></meta>
+
+  </head>
+        <style>
+            body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+          }
+   
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+    /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+  clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%
+  }
+
+  50% {
+    background-position: 70% 100%
+  }
+
+  100% {
+    background-position: 31% 0%
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+            /* Top-left */
+            var(--border-width) 
+            calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) 
+            var(--border-width),
+
+            calc(100% - var(--border-width)) 
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+                /* Top-left */
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+    
+                /* top-right */
+                calc(100% - var(--border-width))
+
+                 var(--border-width),
+    
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+    
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                calc(100% - var(--border-width)),
+
+                /* bottom-right 2 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+          
+          
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  top : 10% ;
+  right : 10%;
+  position: relative;
+  transition: all 5s ease-in-out;
+ background-color:#808080;
+}
+
+.popup h2 {
+  margin-top: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  color :#90EE90;
+ 
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 40%;
+  overflow: auto;
+  color :#90EE90;
+  font-weight: 600;
+ 
+}
+       
+          
+@media screen and (max-width: 600px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 60%;
+  }
+}
+
+  
+        </style>
+    
+  
+ 
+    <center>  <a href="#">
+          <img border="0" data-original-height="1482" data-original-width="1000" height="320" src="https://graph.org/file/ccb58d8579719b5841e38.jpg" width="500" /></a></center><br><br>
+    <table>
+      
+    
+    
+  
+      <tr><th>LEC<br /> NO.</th><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+        <th style="color: rgb(10, 168, 91); font-size: 20PX;">  Link </th>
+        <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">NOTES & DPP</th></tr>
+          
+      
+     <tr><td> 1. </td>  <td>Practice Problems || Basics About Set Theory || Cartesian Product Of Two Sets</td>   <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=8c9cdb91-fe1c-41b8-a60b-5308a7cd8c11 ';" type="button"> WATCH</button></td> <td style="padding: 10px;">  <button class="btn" onclick="window.location.href ='#popup1';">VIEW</button> </td>  </tr> 
+   
+      
+       <tr><td> 2 </td>  <td>Cartesian Product Of Sets || Relation || Inverse Of A Relation</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=0110120a-6b53-4513-a162-0c973bd286c5 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup2';">VIEW</button></td>  </tr> 
+      
+      
+      
+       <tr><td> 3 </td>  <td>Inverse Of Relation || Types Of</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=4e019dc2-76d2-47a9-ac8b-b703e295da35 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup3';">VIEW</button></td>  </tr> 
+    
+      
+       <tr><td> 4 </td>  <td>Practice Problems || Number Of Different Relations || Composition Of Relations</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=db2ad46b-3587-4d76-bcc7-ef85aa183ce7 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup4';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 5 </td>  <td>Practice Problems || Composition Of Relations</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=746e5e26-820c-4124-ade8-0d8e32a43a4c ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup5';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 6 </td>  <td>Composition Of Relations || Number Of Relations || Introduction To Functions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=f1653524-9e6f-414a-9054-d9902ec4b8eb ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup6';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 7 </td>  <td>Introduction To Functions || Domain  Range Of Functions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=8d92f1b4-91c9-449d-b37e-e98dc833fff7 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup7';">VIEW</button></td>  </tr> 
+
+       <tr><td> 7.1 </td>  <td>KTK SOLUTIONS 01 || NO DPP</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=44b088bb-0921-43f8-be2f-7042a7f0c2c3 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup81';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 8 </td>  <td>Algebra Of Function || Polynomial Function</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=0f52c740-9e7d-4d0b-988b-386fd53fbb7f ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup8';">VIEW</button></td>  </tr> 
+      
+      <tr><td> 8.1 </td>  <td>KTK SOLN OF LEC 08</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=61c04427-19f1-46b2-ae20-7557ce1b228b ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup81';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 9 </td>  <td>Polynomial Function || Algebraic Aid Rational Functions || Range Of Rational Functions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=a8a7d380-4974-406f-8d93-3e107c651980 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup9';">VIEW</button></td>  </tr> 
+
+      <tr><td> 10 </td>  <td>Practice Problems || Range Of Relation Functions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=7c1ffbb6-46c0-45cd-8453-f7d3796a77c7 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup10';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 11 </td>  <td>Range Of Rational Functions || Exponential || Signum || Logarithmic || Greatest Integer Function</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=e73f513f-c1d6-40c3-832e-3cc57e696c11 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup11';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 12 </td>  <td>Greatest Integer Function || Fractional Part Function || Identical & Non-Identical Functions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=3b7fcf90-f65d-416a-84ef-6b1711bfeb51 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup12';">VIEW</button></td>  </tr> 
+      
+       <tr><td> -- </td>  <td>ADVANCE PRACTICE SESSION</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=c2f4bd15-de67-4207-897b-a88dd045931c ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popupEX';">VIEW</button></td>  </tr> 
+
+       <tr><td> 13 </td>  <td>Identical And Non Identical Functions II Even And Odd Function</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=e3a53b8d-d8d9-4887-99a8-13b3dc8818a4 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup13';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 14 </td>  <td>Practice Problems</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=b9e6eaf8-f06d-45f1-9d88-7844665199d2 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup14';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 15 </td>  <td>Classification of Functions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=0ec80c2c-985f-4185-9a56-ca72c9a50e96 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup15';">VIEW</button></td>  </tr> 
+
+      
+      
+       <tr><td> 16 </td>  <td>Practice Problems</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=17f4c8f9-ff3d-47c8-9ef4-a0565f1118ab ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup16';">VIEW</button></td>  </tr> 
+      
+      <tr><td> 17 </td>  <td>Composition Of Functions || Practice Problems</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=b0dff4b9-1419-4846-b1cf-1f51fdbac4ac ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup17';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 18 </td>  <td>Practice Problems on Composite Functions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=7ddebe30-40c5-48e6-bef4-80b152e15963 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup18';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 18.1 </td>  <td>Practice Problems || NO DPP</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=4235bfc8-f7e1-4d9b-a7b5-0ad90bf6813c ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup188';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 19 </td>  <td>Periodic Functions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=fa41bb10-dc18-42d8-94c5-a962b46a16cb ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup19';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 20 </td>  <td>Practice Problems on Periodic Functions || Inverse of a Function</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=dc1c9459-1df8-4094-83cc-2e50b092bb1a ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup20';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 21 </td>  <td>Some Important Definitions || Practice Problems On Inverse Function</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=c318ae82-1e4f-4d9b-b4ce-3d55c28812b5 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup21';">VIEW</button></td>  </tr>
+      
+      
+      <tr><td> 22 </td>  <td> Functional Equations </td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=1595481e-e464-43c3-aae1-5cfdc96c4b81 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup22';">VIEW</button></td>  </tr> 
+
+      
+      </table>
+
+ <div id="popup22" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5cd12752-bca8-4e9b-8eca-d6c90a526d9d.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f2e60494-5282-44dd-83bd-0999276c99c8.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6466dc367a0ec291ed03c0f7?batchId=63fc49ff5376bb01699a69d5&title=Relations%20%26%20Functions%20:%20DPP%2020%20MCQ%20QUIZ&subjectName=Maths&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+
+
+<div id="popup21" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f285639a-56fb-47b5-9eee-809b144c1275.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/594a84db-3c7b-4dec-88a0-1f1b0360eb27.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/64660166696e345fcbced47e?contentSlug=relations-and-functions---dpp-19-mcq-quiz-097728&title=Relations%20%26%20Functions%20:%20DPP%2019%20MCQ%20QUIZ&cameFrom=dpp&subjectName=Maths&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=64660205db71bc00180d3957&batchName=Lakshya%20JEE%202024?batchld=undefined';"  >ATTEND  </button></div></div></div>
+
+<div id="popup20" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f6524169-744e-41b8-86d1-152c7d2fff78.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8d1cde7f-a037-4be9-ad56-da307a652423.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/64640e75bac774b5fd71184f?contentSlug=relations-and-functions---dpp-18-mcq-quiz-450644&title=Relations%20%26%20Functions%20:%20DPP%2018%20MCQ%20QUIZ&cameFrom=dpp&subjectName=Maths&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=64640f08ef503e0018e0cdef&batchName=Lakshya%20JEE%202024';"  >ATTEND  </button></div></div></div>
+
+
+ <div id="popup19" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a52763cc-5822-49da-8f8e-7d0e41b99746.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/93d05664-3f07-4662-8dab-0dd0cfa52de6.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/646344ec202f10de2711d0cc?contentSlug=relations-and-functions---dpp-17-mcq-quiz-701723&title=Relations%20%26%20Functions%20:%20DPP%2017%20MCQ%20QUIZ&cameFrom=dpp&subjectName=Maths&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=646345812c1a310018b80598&batchName=Lakshya%20JEE%202024?batchld=undefined';"  >ATTEND  </button></div></div></div>
+
+
+ <div id="popup18" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1a122a49-7cc9-4e8c-9ac5-8b1596cd9577.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/283712b8-9772-4341-a214-142ae0e0802d.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6461e4cdd2062fabc43fed32?title=Relations%20%26%20Functions%20:%20DPP%2016%20MCQ%20QUIZ&cameFrom=dpp';"  >ATTEND  </button></div></div></div>
+
+
+
+ <div id="popup188" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e0aa9705-8429-428f-91f2-c1768fcfc76c.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='#';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='#';"  >ATTEND  </button></div></div></div>
+      
+
+
+ <div id="popup17" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4a6d84d6-4995-4f68-9839-b14808d88e58.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/41490a86-ab93-4f3f-b238-0d6db1cb24bd.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/645e0a8bce65c02318fd180b?batchId=63fc49ff5376bb01699a69d5&title=Relations%20%26%20Functions%20:%20DPP%2015%20MCQ%20QUIZ&subjectName=Maths&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup16" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6433a03e-1a12-4686-9fe2-9ea805a83f29.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8849d5c1-96ad-470f-af7a-b80cb0ca5ff9.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/645c169fd73adf7bf5dc0c6a?title=Relations%20%26%20Functions%20:%20DPP%2014%20MCQ%20QUIZ&cameFrom=dpp';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup15" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d8c75afd-bac3-4e33-b2cc-cb0f5334ecd9.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/08b1eeaf-7811-4659-8982-628301764961.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/645afc061e23299421b1d663?title=Relations%20%26%20Functions%20:%20DPP%2013%20MCQ%20QUIZ&cameFrom=dpp';"  >ATTEND  </button></div></div></div>
+
+
+
+ <div id="popup14" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/97c9e86b-c481-4dcd-919e-7da06275d629.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d124efb4-e1b0-40f1-a64a-d3648515a740.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6459b030c512e2dcc8a74b93?title=Relations%20%26%20Functions%20:%20DPP%2012%20MCQ%20QUIZ&cameFrom=dpp?batchld=undefined';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup13" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a66ba91a-a958-4eb8-9e31-ecdc43b28d5f.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8c9e6d53-f158-491d-939f-c2c71ecfbe78.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6458cd4ae41ec57309546adb?title=Relations%20%26%20Functions%20:%20DPP%2011%20MCQ%20QUIZ&cameFrom=dpp?batchld=undefined';"  >ATTEND  </button></div></div></div>
+
+ <div id="popupEX" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3a50afa3-90a2-436d-a226-ea861bc36810.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='#';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='#';"  >ATTEND  </button></div></div></div>
+
+
+
+ <div id="popup12" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/13766cca-e9a9-439f-a38f-bab26f254036.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9b5724ea-3142-4e01-95d5-582efba3e908.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6454e3145104613b645e160d?batchId=63fc49ff5376bb01699a69d5&title=Relations%20%26%20Functions%20:%20DPP%2010%20MCQ%20QUIZ&subjectName=Maths&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup11" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2edf2c8e-016d-40c3-9492-61f3b69fc3da.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/89c40e04-4a2d-48c9-af21-a4dc8d486c47.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/64539ef307432122cbde16db?batchId=63fc49ff5376bb01699a69d5&title=Relations%20%26%20Functions%20:%20DPP%2009%20MCQ%20QUIZ&subjectName=Maths&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+
+
+ <div id="popup10" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ca16700b-fa33-4c5b-b7ee-27990bcfcf9a.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='#';" >NO DPP </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='#';"  >NO DPP  </button></div></div></div>
+
+ <div id="popup81" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0fc3fe12-2866-4055-b152-b4a85c0fb2f1.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='#';" >NO DPP </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='#';"  >NO DPP  </button></div></div></div>
+
+
+ <div id="popup9" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4ee49009-063c-4d64-bdca-43f54e9ac968.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a8a84e76-fc32-498e-a698-d7301e47b605.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6450ba64a39dc30018d1f1f7?title=Relations%20%26%20Functions%20:%20DPP%2008%20MCQ%20QUIZ&cameFrom=dpp';"  >ATTEND </button></div></div></div>
+
+ <div id="popup8" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/027a1dac-c65a-4b0c-91c9-a3d82cb6c480.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/145f51c4-e48e-4537-8d70-e252fe413e2b.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/644f40c956df550018152321?batchId=63fc49ff5376bb01699a69d5&title=Relations%20%26%20Functions%20:%20DPP%2007%20MCQ%20QUIZ&subjectName=Maths&fromWeekly=true';"  >ATTEND</button></div></div></div>
+
+ <div id="popup81" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0e89558d-1b9e-4a1a-a770-a08b76acc64c.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='#';" >NO DPP</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='#';"  >NO DPP </button></div></div></div>
+
+
+ <div id="popup7" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1c460ec3-e283-4f3d-b0d1-21cdf5f8fe2f.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/62773472-f8b1-4652-87b8-1690a3cfd7b9.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6448e0a6ad00e700185eda6f?batchId=63fc49ff5376bb01699a69d5&title=Relations%20%26%20Functions%20:%20DPP%2006%20MCQ%20QUIZ&subjectName=Maths&fromWeekly=true';"  >ATTEND </button></div></div></div>
+
+
+ <div id="popup5" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b117d38e-6f87-466f-92ad-c82bbbf9b63d.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ead4309e-510f-464a-a3ac-2720d920a98d.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/64466afdc7eb23001897a264?batchId=63fc49ff5376bb01699a69d5&title=Relations%20%26%20Functions%20:%20DPP%2005%20MCQ%20QUIZ&subjectName=Maths&fromWeekly=true';"  >VIEW </button></div></div></div>
+
+
+ <div id="popup3" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8239c80e-0a88-4302-8be5-dbadd1215fba.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4398e93e-5578-4297-b194-ee0780cb4188.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/643e2488432ce80018ad0921?title=Relations%20%26%20Functions%20:%20DPP%2003%20MCQ%20QUIZ';"  >ATTEND </button></div></div></div>
+
+ <div id="popup2" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/61d9e7c4-6ec9-424a-bb32-786afc336fe3.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4a3c774f-f13d-4e3a-8938-f60e791e8fd6.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/643ca3220bf3d5001843094e?title=Relations%20%26%20Functions%20:%20DPP%2002%20MCQ%20QUIZ';"  >ATTEND </button></div></div></div>
+
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>HERE ARE YOUR</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content" style="font-size:larger;">
+      NOTES :-   <button class="btn">  CLICK ME </button> <BR><BR>
+			DPP IN PDF :- <button class="btn">CLICK ME </button>   <BR><BR>
+        DPP IN QUIZ :-  <button class="btn">CLICK ME </button>
+		</div>
+	</div>
+</div>
+
+ <div id="popup4" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fb2327a5-a3b1-4ae4-814d-e52d7017dca9.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2b68a132-47c4-4859-9c73-ba08d9769009.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/643f394b675f0e00185246d1?title=Relations%20%26%20Functions%20:%20DPP%2004%20MCQ%20QUIZ&cameFrom=dpp';"  >ATTEND </button></div></div></div>
+
+
+ <div id="popup6" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7fc4dc78-be5d-4024-8606-3fa81dd6b057.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ff5ea603-0d27-4abe-9cd7-408b4e6fa5e4.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/64479eb977123a0018fcba6a?batchId=63fc49ff5376bb01699a69d5&title=Relations%20%26%20Functions%20:%20DPP%2005%20MCQ%20QUIZ&subjectName=Maths&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+  </html>
+
+  <style> 
+    /* Desktop styles */
+    table {
+     border-collapse: collapse;
+     width: 100%;
+    }
+    th, td {
+     text-align: left;
+     padding: 8px;
+     border: 1px solid black;
+    }
+    th {
+     background-color: #f2f2f2;
+    }
+    img {
+     max-width: 100%;
+     height: auto;
+    }
+    
+    /* Mobile styles */
+    @media only screen and (max-width: 600px) {
+      table {
+        font-size: 12px;
+      }
+      th, td {
+        padding: 4px;
+      }
+      img {
+        height: 200px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    </style>
+
+
+
+      <script>
+   // Function to shorten a URL using the https://tnshort.net API
+async function shortenURL(url) {
+  const apiEndpoint = "https://tnshort.net/api?api=9125d560a0a9cf40622a805f6d0282a605da2e4d&url="; // Replace YOUR_API_KEY with your actual API key
+
+  try {
+    const response = await fetch(apiEndpoint + encodeURIComponent(url));
+    const data = await response.json();
+
+    if (data.shortenedUrl) {
+      return data.shortenedUrl;
+    }
+  } catch (error) {
+    console.error("Error fetching short link:", error);
+  }
+
+  return url; // Return the original URL if shortening fails
+}
+
+
+// Function to replace old links with new links, preserve query parameters, and then shorten the resulting link
+async function replaceAndShortenLinks() {
+  const oldLink = "https://lakpaid.blogspot.com/p/player-page.html";
+  const newLink = "https://devanshop12.github.io/lak/player.html";
+
+  // Select all elements with an onclick attribute
+  const elements = document.querySelectorAll('[onclick]');
+
+  // Loop through the selected elements
+  for (const element of elements) {
+    const onclickAttribute = element.getAttribute('onclick');
+
+    // Check if the onclick attribute contains the oldLink
+    if (onclickAttribute.includes(oldLink)) {
+      // Extract the query parameters from the old link
+      const queryParameters = onclickAttribute.split(oldLink)[1];
+
+      // Build the new URL with the query parameters
+      const newURL = newLink + queryParameters;
+
+      // Shorten the new URL
+      const shortNewLink = await shortenURL(newURL);
+
+      // Replace the entire onclick attribute value with the shortened URL
+      element.setAttribute('onclick', `window.location.href='${shortNewLink}'`);
+    }
+  }
+}
+
+// Call the replaceAndShortenLinks function to replace and shorten the links in the onclick attributes
+replaceAndShortenLinks();
+      </script>
+    

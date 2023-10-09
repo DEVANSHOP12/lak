@@ -1,0 +1,631 @@
+
+<html>
+    <head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+        <meta content="text/html; charset=UTF-8" http-equiv="CONTENT-TYPE"></meta>
+        <style> 
+          /* Desktop styles */
+          table {
+           border-collapse: collapse;
+           width: 100%;
+          }
+          th, td {
+           text-align: left;
+           padding: 8px;
+           border: 1px solid black;
+          }
+          th {
+           background-color: #f2f2f2;
+          }
+          img {
+           max-width: 100%;
+           height: auto;
+          }
+          
+          /* Mobile styles */
+          @media only screen and (max-width: 600px) {
+            table {
+              font-size: 12px;
+            }
+            th, td {
+              padding: 4px;
+            }
+            img {
+              height: 200px;
+            }
+            body {
+              margin: 0;
+              padding: 0;
+            }
+          }
+          </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4912705680109107"
+     crossorigin="anonymous"></script>
+
+  </head>
+        <style>
+            body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+          }
+   
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+    /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+  clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%
+  }
+
+  50% {
+    background-position: 70% 100%
+  }
+
+  100% {
+    background-position: 31% 0%
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+            /* Top-left */
+            var(--border-width) 
+            calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) 
+            var(--border-width),
+
+            calc(100% - var(--border-width)) 
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+                /* Top-left */
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+    
+                /* top-right */
+                calc(100% - var(--border-width))
+
+                 var(--border-width),
+    
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+    
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                calc(100% - var(--border-width)),
+
+                /* bottom-right 2 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+   backdrop-filter: blur(2px);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  
+}
+          
+          
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  top : 5% ;
+  right : 10%;
+  position: relative;
+  transition: all 5s ease-in-out;
+ background-color:#808080;
+   
+}
+
+.popup h2 {
+  margin-top: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  color :#90EE90;
+ 
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 40%;
+  overflow: auto;
+  color :#90EE90;
+  font-weight: 600;
+ 
+}
+       
+          
+@media screen and (max-width: 600px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 60%;
+  }
+}
+
+  
+        </style>
+  
+ 
+    <center>  <a href="#">
+          <img border="0" data-original-height="1482" data-original-width="1000" height="320" src="https://graph.org/file/e672d51cacd616c5a7334.jpg" width="500" /></a></center>
+          <br><br>
+    <table>
+      <tr><th>LEC<br /> NO.</th><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+        <th style="color: rgb(10, 168, 91); font-size: 20PX;">  Link </th>
+        <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">NOTES & DPP</th></tr>
+          
+      
+    
+<tr><td> 1. </td>  <td>Carges and its Properties </td>   <td style="padding: 10px;"> 
+<button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=bce6196c-7b93-463b-9318-3f983fe2228f';" type="button"> WATCH</button></td>  
+ <td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup1';">VIEW</button></td>  </tr> 
+    
+     
+<tr><td> 2. </td>  <td>Method Of Charging&nbsp;A&nbsp;Body</td> 
+ <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=5f582dc3-7089-4b5b-b698-8169196fedb9  ';" type="button"> WATCH</button></td> 
+  <td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup2';">VIEW</button></td>  </tr> 
+     
+     
+     
+     <tr><td> 3. </td>  <td>Charging By Conduction || Coloumb's Law</td> 
+        <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=a3420114-8f8f-4eeb-8f76-9a61e7b529b3 ';" type="button"> WATCH</button></td> 
+        <td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup3';">VIEW</button></td>  </tr> 
+
+     
+      <tr><td> 4. </td>  <td>Coulomb's Law || It's Vector Form <br></td>  
+         <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=04b455b9-2fc1-4de9-b77c-1b1d54349d34 ';" type="button"> WATCH</button></td>  
+         <td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup4';">VIEW</button></td>  </tr>  
+     
+     
+     
+      <tr><td> 5. </td>  <td>Questions On Coulomb's Law</td>  
+         <td style="padding: 10px;">
+           <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=a9256859-6ba5-4db7-839c-f9040c44cea9 ';" type="button"> WATCH</button></td>  
+           <td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup5';">VIEW</button></td>  </tr> 
+     
+     
+      <tr><td> 6. </td>  <td>Questions On Coulomb's Law (Part - 02)</td>  
+         <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=04f7ef5c-4312-45ed-9840-640fd862d0a0 ';" type="button"> WATCH</button></td> 
+          <td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup6';">VIEW</button></td>  </tr> 
+    
+      <tr><td> 7 </td>  <td>Electric Field || Force On Charge Particle In Electric Field</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=a682ac69-ad9c-4f9d-a5b7-84bac9706e6e ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup7';">VIEW</button></td>  </tr> 
+      
+      <tr><td> 8 </td>  <td>Charge Particle In Electric Field || NO DPP</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=7b9e040b-a86d-487e-8094-eae5089338a5 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup8';">VIEW</button></td>  </tr> 
+
+      
+      
+       <tr><td> 9 </td>  <td>Electric Field Lines & It's Properties</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=02833026-e4a9-4d4c-9cff-8b1872f2243d ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup9';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 10 </td>  <td>Electric Field Lines</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=4eec2554-8fdd-460d-80e5-9f8ffb4d0e84 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup10';">VIEW</button></td>  </tr> 
+      
+      
+      
+      <tr><td> 11 </td>  <td>Electric Field Due To Ring Il Electric Dipole</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=821e335d-fd5e-41a7-b702-18717e8a6c11 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup11';">VIEW</button></td>  </tr> 
+
+      
+      
+      
+       <tr><td> 12 </td>  <td>Electric Field Due To Charged Thread Il Electric Dipole</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=106607d3-7f30-4e53-ac01-e9c4b6dfbcc3 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup12';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 13 </td>  <td>Electric Dipole || Electric Field Due To Dipole Moment</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=0e377742-a6ca-4484-99b0-4f8d95b80130 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup13';">VIEW</button></td>  </tr> 
+      
+      <tr><td> 14 </td>  <td>Electric dipole in External Field</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=068c2fe0-896a-4594-9459-b1675334e1af ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup14';">VIEW</button></td>  </tr> 
+      
+      <tr><td> 15 </td>  <td>Oscillation Of Dipole In Field || Force Interaction Between Dipoles || NO DPP</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=1bb52c47-9a00-482f-ae3b-7985541f82b7 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup15';">VIEW </button></td>  </tr> 
+      
+      
+      <tr><td> 16 </td>  <td>Electric dipole in External Field</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=8ebd09ec-e878-45e8-b89b-c6ca999470b3 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup16';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 17 </td>  <td>Electric Flux Projection Rule || Gauss Law</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=479a55f0-5f63-46be-8cbe-879d906fcc25 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup17';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 18 </td>  <td>Questions On Gauss Law</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=9f88dd78-7ea9-4d98-af8a-50e9cc06983c ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup18';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 19 </td>  <td>Application of Gauss Law</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=c6cbe2b2-415e-467c-9af6-9dc47a2b9f08 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup19';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 20 </td>  <td>Question on Application of Gauss Law || NO DPP</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=93e40292-9a3b-4cba-8beb-084cfdd3a3a3 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup20';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 21 </td>  <td>Quick Revision || NO DPP</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=bba45af5-ccf7-493a-bd5f-9b6dc525b316 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup21';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> -- </td>  <td>Advance Concepts and Questions || NO DPP</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-lec.html?vid=b998ec4c-8587-413c-a95a-a0d23ce13ef4 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popupnewEX';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> -- </td>  <td>MINDMAP</td> 
+  <td style="padding: 10px;"><button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/00746449-31ed-425e-8c18-af635985ffd4.pdf';" >VIEW </button>  </td></tr> 
+
+
+
+</table>
+
+ <div id="popupnewEX" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8a6e8c10-1f7f-434c-a664-b30acb4f630a.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='#';" >NO DPP </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='#';"  >NO DPP  </button></div></div></div>
+      
+
+ <div id="popup21" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/16eabc36-b5f9-4902-8e5d-2482942ebd6a.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='#';" >NO DPP </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='#';"  >NO DPP  </button></div></div></div>
+
+ <div id="popup20" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/90852928-146d-4628-88d7-29d760eaec6c.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='#';" >NO DPP </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='#';"  >NO DPP  </button></div></div></div>
+
+<div id="popup19" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ca3162e2-3e30-4cb8-a2c6-3ceaabdc02e9.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d3b71469-de96-4d26-b5b5-6792dd019d1d.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6459afe55a6aac28f85f6b07?title=Electric%20Charges%20And%20Field%20:%20DPP%2016%20MCQ%20Quiz&cameFrom=dpp';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup18" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9064dea2-b77d-4e6a-828e-7f8161e00576.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d0041591-c394-4eb2-bbd7-fb55872f7962.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6458c856079bc40d3094b7b1?title=Electric%20Charges%20And%20Field%20:%20DPP%2015%20MCQ%20Quiz&cameFrom=dpp?batchld=undefined';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup17" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c62d69bf-5b4d-4a63-adf4-fb599a9f372d.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d5695b56-b3d3-4daf-9dee-532329dfab7c.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6454b83ba59dd4b857b20d0c?batchId=63fc49ff5376bb01699a69d5&title=Electric%20Charges%20And%20Field%20:%20DPP%2014%20MCQ%20Quiz&subjectName=Physics&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup16" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7a17679b-42fa-434e-b997-fcfd376d38f1.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/badbe7ec-0fbc-4639-bea1-335ece43cacf.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/645388c207432122cbd34515?title=Electric%20Charges%20And%20Field%20:%20DPP%2013%20MCQ%20Quiz&cameFrom=dpp';"  >ATTEND  </button></div></div></div>
+
+
+ <div id="popup15" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6d4376bf-2440-4523-9e69-3523a53d9be7.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='#';" >NO DPP </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='#';"  >NO DPP  </button></div></div></div>
+
+<div id="popup14" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2639d4cb-5b9b-40e7-ad47-513572b42533.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/70420ba5-077d-4c76-a4c3-aa92d7b0b1c5.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/645098e74deefa0018499622?title=Electric%20Charges%20And%20Field%20:%20DPP%2012%20MCQ%20Quiz&cameFrom=dpp';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup13" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d256ce86-6c2c-4ca2-8105-14e155788ed0.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5fa5b9d6-3ece-41a7-942e-216839322f40.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/644f44823d0ffd00188b0ff1?batchId=63fc49ff5376bb01699a69d5&title=Electric%20Charges%20And%20Field%20:%20DPP%2011%20MCQ%20Quiz&subjectName=Physics&fromWeekly=true';"  >ATTEND</button></div></div></div>
+
+
+ <div id="popup12" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e54427d0-02a2-47f6-af53-57e79c85435c.pdf   ';" >  VIEW</button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c3a5a156-0317-44f0-96d4-2b18e470ce21.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/644b930d5fedea0018f501b9?batchId=63fc49ff5376bb01699a69d5&title=Electric%20Charges%20And%20Field%20:%20DPP%2010%20MCQ%20Quiz&subjectName=Physics&fromWeekly=true';"  >ATTEND </button></div></div></div>
+
+
+ <div id="popup11" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ddde506d-edd9-4a93-a536-c8276b3f7c63.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d04dc539-76b5-4e89-b238-988f9a9fd101.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/644a458b79447300186696b2?batchId=63fc49ff5376bb01699a69d5&title=Electric%20Charges%20And%20Field%20:%20DPP%2009%20MCQ%20Quiz&subjectName=Physics&fromWeekly=true';"  >ATTEND</button></div></div></div>
+
+
+<div id="popup10" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/16ebd6c4-9852-4f24-b34e-7acaae605ef6.pdf  ';" >  VIEW</button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9d344dd9-a712-477f-a80a-66d93a233cd5.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6448e7f3fb4acc00189cd648?batchId=63fc49ff5376bb01699a69d5&title=Electric%20Charges%20And%20Field%20:%20DPP%2008%20MCQ%20Quiz&subjectName=Physics&fromWeekly=true';"  >ATTEND</button></div></div></div>
+
+
+
+<div id="popup9" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9ac08fd2-9456-49cb-8855-dceb54b2c721.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d74ce3ae-f943-476a-b64c-049d390cff03.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6440827cadd1d80018458dd0?title=Electric%20Charges%20And%20Field%20:%20DPP%2007%20MCQ%20Quiz&cameFrom=dpp?batchld=undefined';"  >ATTEND </button></div></div></div>
+
+<div id="popup8" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a983a1a2-20c9-488f-991b-0af6d2da4394.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='#';" >NO DPP</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='#';"  >NO DPP </button></div></div></div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>HERE ARE YOUR</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content" style="font-size:larger;">
+      NOTES :-   <button class="btn"  onclick="window.location.href ='  https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/94ef82c1-0a00-4a1f-99cb-a0e2b6755c33.pdf  ';" >  DOWNLOAD </button> <BR><BR>
+			DPP IN PDF :- <button class="btn"   onclick="window.location.href ='# ';" >NO DPP</button>   <BR><BR>
+        DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href =' #';"  >NO DPP </button>
+		</div>
+	</div>
+</div>
+
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<h2>HERE ARE YOUR</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content" style="font-size:larger;">
+      NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/99121a06-bddc-46e5-8d00-dc5f234b8164.pdf ';" >  VIEW </button> <BR><BR>
+			DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fe1b7f0d-fc86-47c1-8ab9-7a161ffb5611.pdf ';" >VIEW</button>   <BR><BR>
+        DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href =' https://www.pw.live/study/q-bank-exercise/642e566d51efb70018dfa119?title=Electric%20Charges%20And%20Field%20:%20DPP%2001%20MCQ%20Quiz&cameFrom=dpp';"  >ATTEND </button>
+		</div>
+	</div>
+</div>
+
+<div id="popup3" class="overlay">
+	<div class="popup">
+		<h2>HERE ARE YOUR</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content" style="font-size:larger;">
+      NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a7bc83e6-e107-4c00-bdc6-575aa681ce9f.pdf ';" >  VIEW </button> <BR><BR>
+			DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3c25f147-2adb-48c2-a9d9-22e656e5eaf4.pdf ';" >VIEW</button>   <BR><BR>
+        DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/642fdaf0c9662c00189f0b90?title=Electric%20Charges%20And%20Field%20:%20DPP%2002%20MCQ%20Quiz&cameFrom=dpp';"  >ATTEND </button>
+		</div>
+	</div>
+</div>
+
+
+<div id="popup4" class="overlay">
+	<div class="popup">
+		<h2>HERE ARE YOUR</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content" style="font-size:larger;">
+      NOTES :-   <button class="btn"  onclick="window.location.href ='  https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/efe669d3-f8c2-485f-8998-df98f21c9c75.pdf  ';" >  VIEW </button> <BR><BR>
+			DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/13341287-48f6-48ee-ab9a-19da42f76772.pdf';" >VIEW</button>   <BR><BR>
+        DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href =' https://www.pw.live/study/q-bank-exercise/64367d7c1ac10900189263c7?title=Electric%20Charges%20And%20Field%20:%20DPP%2003%20MCQ%20Quiz';"  >ATTEND </button>
+		</div>
+	</div>
+</div>
+
+<div id="popup5" class="overlay">
+	<div class="popup">
+		<h2>HERE ARE YOUR</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content" style="font-size:larger;">
+      NOTES :-   <button class="btn"  onclick="window.location.href =' https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e8befa06-192b-4737-b741-eff93df8f241.pdf   ';" > VIEW </button> <BR><BR>
+			DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/500f6b65-ea19-424e-be89-7d04efc17695.pdf ';" >VIEW</button>   <BR><BR>
+        DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href =' https://www.pw.live/study/q-bank-exercise/64376f71f59b860018d1703b?title=Electric%20Charges%20And%20Field%20:%20DPP%2004%20MCQ%20Quiz';"  >ATTEND </button>
+		</div>
+	</div>
+</div>
+
+<div id="popup6" class="overlay">
+	<div class="popup">
+		<h2>HERE ARE YOUR</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content" style="font-size:larger;">
+      NOTES :-   <button class="btn"  onclick="window.location.href ='  https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4429dab0-4486-4bea-8239-d1c69143c152.pdf  ';" > VIEW </button> <BR><BR>
+			DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/daeae099-9ace-40b6-ba78-521ecdc117c7.pdf';" >VIEW</button>   <BR><BR>
+        DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href =' https://www.pw.live/study/q-bank-exercise/6438c7e03f30f100188faa51?title=Electric%20Charges%20And%20Field%20:%20DPP%2005%20MCQ%20Quiz';"  >ATTEND </button>
+          
+          <BR><BR>
+        HC V VOL2  :-  <button class="btn"  onclick="window.location.href =' https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/56ff54b5-1759-44fe-b01d-087e058030bb.pdf';"  >ATTEND </button>
+		</div>
+	</div>
+</div>
+
+
+ <div id="popup7" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/14dc681c-b464-44c3-b2a0-ee2708278906.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4698d25c-cfa3-47ba-b1cc-242ccd00c981.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/643f4b33181572001847f3ab?batchId=63fc49ff5376bb01699a69d5&title=Electric%20Charges%20And%20Field%20:%20DPP%2006%20MCQ%20Quiz&subjectName=Physics&fromWeekly=true';"  >ATTEND </button></div></div></div>
+
+  </html>
+
+  
+  <script>
+    // Function to shorten a URL using the https://tnshort.net API
+ async function shortenURL(url) {
+   const apiEndpoint = "https://tnshort.net/api?api=9125d560a0a9cf40622a805f6d0282a605da2e4d&url="; // Replace YOUR_API_KEY with your actual API key
+ 
+   try {
+     const response = await fetch(apiEndpoint + encodeURIComponent(url));
+     const data = await response.json();
+ 
+     if (data.shortenedUrl) {
+       return data.shortenedUrl;
+     }
+   } catch (error) {
+     console.error("Error fetching short link:", error);
+   }
+ 
+   return url; // Return the original URL if shortening fails
+ }
+ 
+ 
+ // Function to replace old links with new links, preserve query parameters, and then shorten the resulting link
+ async function replaceAndShortenLinks() {
+   const oldLink = "https://lakshyawallah.blogspot.com/p/your-lec.html";
+   const newLink = "https://devanshop12.github.io/lak/player.html";
+ 
+   // Select all elements with an onclick attribute
+   const elements = document.querySelectorAll('[onclick]');
+ 
+   // Loop through the selected elements
+   for (const element of elements) {
+     const onclickAttribute = element.getAttribute('onclick');
+ 
+     // Check if the onclick attribute contains the oldLink
+     if (onclickAttribute.includes(oldLink)) {
+       // Extract the query parameters from the old link
+       const queryParameters = onclickAttribute.split(oldLink)[1];
+ 
+       // Build the new URL with the query parameters
+       const newURL = newLink + queryParameters;
+ 
+       // Shorten the new URL
+       const shortNewLink = await shortenURL(newURL);
+ 
+       // Replace the entire onclick attribute value with the shortened URL
+       element.setAttribute('onclick', `window.location.href='${shortNewLink}'`);
+     }
+   }
+ }
+ 
+ // Call the replaceAndShortenLinks function to replace and shorten the links in the onclick attributes
+ replaceAndShortenLinks();
+       </script>
+     
+ 

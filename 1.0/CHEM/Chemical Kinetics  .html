@@ -1,0 +1,437 @@
+
+<html>
+    <head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+        <meta content="text/html; charset=UTF-8" http-equiv="CONTENT-TYPE"></meta>
+
+
+  </head>
+  <style> 
+    /* Desktop styles */
+    table {
+     border-collapse: collapse;
+     width: 100%;
+    }
+    th, td {
+     text-align: left;
+     padding: 8px;
+     border: 1px solid black;
+    }
+    th {
+     background-color: #f2f2f2;
+    }
+    img {
+     max-width: 100%;
+     height: auto;
+    }
+    
+    /* Mobile styles */
+    @media only screen and (max-width: 600px) {
+      table {
+        font-size: 12px;
+      }
+      th, td {
+        padding: 4px;
+      }
+      img {
+        height: 200px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    </style>
+   
+  
+        <style>
+            body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+          }
+   
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+    /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+  clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%
+  }
+
+  50% {
+    background-position: 70% 100%
+  }
+
+  100% {
+    background-position: 31% 0%
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+            /* Top-left */
+            var(--border-width) 
+            calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) 
+            var(--border-width),
+
+            calc(100% - var(--border-width)) 
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+                /* Top-left */
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+    
+                /* top-right */
+                calc(100% - var(--border-width))
+
+                 var(--border-width),
+    
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+    
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                calc(100% - var(--border-width)),
+
+                /* bottom-right 2 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+   backdrop-filter: blur(2px);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  
+}
+          
+          
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  top : 5% ;
+  right : 10%;
+  position: relative;
+  transition: all 5s ease-in-out;
+ background-color:#808080;
+   
+}
+
+.popup h2 {
+  margin-top: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  color :#90EE90;
+ 
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 40%;
+  overflow: auto;
+  color :#90EE90;
+  font-weight: 600;
+ 
+}
+       
+          
+@media screen and (max-width: 600px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 60%;
+  }
+}
+
+  
+        </style>
+    
+  
+ 
+    <center>  <a href="#">
+          <img border="0" data-original-height="1482" data-original-width="1000" height="320" src="https://graph.org/file/452c8174e101118e3cbba.jpg" width="500" /></a></center>
+          <br><br>
+    <table>
+      <tr><th>LEC<br /> NO.</th><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+        <th style="color: rgb(10, 168, 91); font-size: 20PX;">  Link </th>
+        <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">NOTES & DPP</th></tr>
+      
+      
+       <tr><td> 1 </td>  <td> Rate of Reaction || Type of Rate</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-class.html?vid=cdd7dc36-7139-4115-b63b-63da835b2926 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup1';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 2 </td>  <td>Order Of Reaction || Molecularity Of Reaction</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-class.html?vid=5e84d92c-0b03-4097-a11a-c1e77e0f5010 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup2';">VIEW</button></td>  </tr> 
+      
+      <tr><td> 3 </td>  <td>Molecularity || Integrated Rate Equations</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-class.html?vid=bec7dc77-a1d6-47f3-8862-23d94912b9c2 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup3';">VIEW</button></td>  </tr> 
+      
+      
+       <tr><td> 4 </td>  <td>Zero And First Order Reactions </td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-class.html?vid=955e5eb6-c49c-47de-9a78-d969caf9375e ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup4';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 5 </td>  <td>First Order And nth Order Reactions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-class.html?vid=a748b5a2-5b72-42fb-a738-32d74b5575ae ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup5';">VIEW</button></td>  </tr> 
+      
+      
+      <tr><td> 6 </td>  <td>Numericals Based On Pressure || Factors Affecting Rate Of Reaction</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-class.html?vid=e5f7692b-9523-4396-b6ad-d570d24132db ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup6';">VIEW</button></td>  </tr> 
+
+      <tr><td> 7 </td>  <td>Arrhenius Equation || Collision theory </td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-class.html?vid=51d6ee1e-4e10-45cd-8c21-5ebcaf5a92a7 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup7';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 8 </td>  <td>Collision theory II First Order Parallel Reactions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-class.html?vid=ad93fb4f-40b0-4d35-8f29-21ae82a84c47 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup8';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 9 </td>  <td>First Order Parallel || Sequential || Reversible Reactions</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-class.html?vid=eb48229d-bfaa-4ea2-a92d-9b97b32f68c6 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup9';">VIEW</button></td>  </tr> 
+      
+       <tr><td> 10 </td>  <td>Advanced Session (One Shot) || No DPP</td> 
+  <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='https://lakshyawallah.blogspot.com/p/your-class.html?vid=fc0cdb08-f3c8-49ee-81e0-9af7bd118ef0 ';" type="button"> WATCH</button></td> 
+<td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#popup10';">VIEW</button></td>  </tr> 
+      
+      
+          </table>
+
+ <div id="popup10" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/88f6d17c-9013-4250-afbf-d302bc40e754.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup9" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4c858fcc-2fc5-4c57-9af6-60c5c6d51968.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c02b8813-8ec0-4296-9671-78e8592e40d4.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6459d18fc512e2dcc8ab6549?batchId=63fc49ff5376bb01699a69d5&title=Chemical%20Kinetics%20:%20DPP%2009%20MCQ%20Quiz&subjectName=Physical%20Chemistry&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup8" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c9f75412-67f2-4096-b487-be21bca5315d.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ca8bbe96-a29a-448b-96f2-2031d0995027.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6458e6fbc512e2dcc896cc65?title=Chemical%20Kinetics%20:%20DPP%2008%20MCQ%20Quiz&cameFrom=dpp';"  >ATTEND  </button></div></div></div>
+
+
+ <div id="popup7" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5be6a2b9-9187-4fb6-ac95-6099c2df0851.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/21cc57e2-9532-4855-a361-a4f263783931.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6454d03507432122cb120e7a?batchId=63fc49ff5376bb01699a69d5&title=Chemical%20Kinetics%20:%20DPP%2007%20MCQ%20Quiz&subjectName=Physical%20Chemistry&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+
+
+ <div id="popup6" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/67cb147b-113c-40f7-828a-b3e3248e8d26.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5a6a4643-8572-4b8b-8467-037c919fdac2.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://pw.live/study/q-bank-exercise/645393abdd829c4e1013a291?batchId=63fc49ff5376bb01699a69d5&title=Chemical%20Kinetics%20:%20DPP%2006%20MCQ%20Quiz&subjectName=Physical%20Chemistry&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup5" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/30a6cf25-ece0-4f2d-9d9f-b84abc27e0e9.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/10948caa-84b2-4032-a4c3-3ff6a0dae1c5.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/645214d69429950018f97800?batchId=63fc49ff5376bb01699a69d5&title=Chemical%20Kinetics%20:%20DPP%2005%20MCQ%20Quiz&subjectName=Physical%20Chemistry&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+
+ <div id="popup4" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8c513140-9825-47f8-9b7f-fa1b2ce38fc7.pdf   ';" > VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/748725f1-2ad1-4465-823f-ce7ba39a15bf.pdf';" >VIEW </button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/6450a13a876398001879f2e5?batchId=63fc49ff5376bb01699a69d5&title=Chemical%20Kinetics%20:%20DPP%2004%20MCQ%20Quiz&subjectName=Physical%20Chemistry&fromWeekly=true';"  >ATTEND  </button></div></div></div>
+
+
+ <div id="popup3" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/22ad7065-7cec-4234-97c2-11cc06bc8caf.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/51a7411a-b98a-44be-8dee-eff28daedbd9.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/644f87815031bc00186efdf7?batchId=63fc49ff5376bb01699a69d5&title=Chemical%20Kinetics%20:%20DPP%2003%20MCQ%20Quiz&subjectName=Physical%20Chemistry&fromWeekly=true';"  >ATTEND</button></div></div></div>
+
+ <div id="popup2" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/dfb61a57-b4de-45bb-a996-d9597e0be4cb.pdf   ';" >  VIEW</button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8a806062-db7d-4178-a419-e57a3f55998c.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/644b88aab1bb0a0018497904?batchId=63fc49ff5376bb01699a69d5&title=Chemical%20Kinetics%20:%20DPP%2002%20MCQ%20Quiz&subjectName=Physical%20Chemistry&fromWeekly=true';"  >ATTEND</button></div></div></div>
+
+ <div id="popup1" class="overlay"><div class="popup"><h2>HERE ARE YOUR</h2>
+<a class="close" href="#">&times;</a>	
+	<div class="content" style="font-size:larger;">   
+  NOTES :-   <button class="btn"  onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e1248719-1c5e-4359-8d44-ad3efeeaa213.pdf   ';" >  VIEW </button> <BR><BR>
+DPP IN PDF :- <button class="btn"   onclick="window.location.href ='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d0ad31c9-f6c7-47b4-b15d-a8fb2dfca4f7.pdf';" >VIEW</button>   <BR><BR>
+ DPP IN QUIZ :-  <button class="btn"  onclick="window.location.href ='https://www.pw.live/study/q-bank-exercise/644a3d0d55aeae0018215562?batchId=63fc49ff5376bb01699a69d5&title=Chemical%20Kinetics%20:%20DPP%2001%20MCQ%20Quiz&subjectName=Physical%20Chemistry&fromWeekly=true';"  >ATTEND</button></div></div></div>
+
+
+
+
+  </html>
+
+  
+  <script>
+    // Function to shorten a URL using the https://tnshort.net API
+ async function shortenURL(url) {
+   const apiEndpoint = "https://tnshort.net/api?api=9125d560a0a9cf40622a805f6d0282a605da2e4d&url="; // Replace YOUR_API_KEY with your actual API key
+ 
+   try {
+     const response = await fetch(apiEndpoint + encodeURIComponent(url));
+     const data = await response.json();
+ 
+     if (data.shortenedUrl) {
+       return data.shortenedUrl;
+     }
+   } catch (error) {
+     console.error("Error fetching short link:", error);
+   }
+ 
+   return url; // Return the original URL if shortening fails
+ }
+ 
+ 
+ // Function to replace old links with new links, preserve query parameters, and then shorten the resulting link
+ async function replaceAndShortenLinks() {
+   const oldLink = "https://lakshyawallah.blogspot.com/p/your-class.html";
+   const newLink = "https://devanshop12.github.io/lak/player.html";
+ 
+   // Select all elements with an onclick attribute
+   const elements = document.querySelectorAll('[onclick]');
+ 
+   // Loop through the selected elements
+   for (const element of elements) {
+     const onclickAttribute = element.getAttribute('onclick');
+ 
+     // Check if the onclick attribute contains the oldLink
+     if (onclickAttribute.includes(oldLink)) {
+       // Extract the query parameters from the old link
+       const queryParameters = onclickAttribute.split(oldLink)[1];
+ 
+       // Build the new URL with the query parameters
+       const newURL = newLink + queryParameters;
+ 
+       // Shorten the new URL
+       const shortNewLink = await shortenURL(newURL);
+ 
+       // Replace the entire onclick attribute value with the shortened URL
+       element.setAttribute('onclick', `window.location.href='${shortNewLink}'`);
+     }
+   }
+ }
+ 
+ // Call the replaceAndShortenLinks function to replace and shorten the links in the onclick attributes
+ replaceAndShortenLinks();
+       </script>
+     
+ 
