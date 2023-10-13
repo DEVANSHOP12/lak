@@ -4,14 +4,47 @@
   <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
         <meta content="text/html; charset=UTF-8" http-equiv="CONTENT-TYPE"></meta>
 
-
+ <style> 
+    /* Desktop styles */
+    table {
+     border-collapse: collapse;
+     width: 100%;
+    }
+    th, td {
+     text-align: left;
+     padding: 8px;
+     border: 1px solid black;
+    }
+    th {
+     background-color: #f2f2f2;
+    }
+    img {
+     max-width: 100%;
+     height: auto;
+    }
+    
+    /* Mobile styles */
+    @media only screen and (max-width: 600px) {
+      table {
+        font-size: 12px;
+      }
+      th, td {
+        padding: 4px;
+      }
+      img {
+        height: 200px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    </style>
 
   </head>
   
  
-    <center>  <a href="#">
-          <img border="0" data-original-height="1482" data-original-width="1000" height="320" src="https://graph.org/file/452c8174e101118e3cbba.jpg" width="500" /></a></center>
-          <br><br>
+  
     <table>
       <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
         <th style="color: rgb(10, 168, 91); font-size: 20PX;">  LEC / NOTES / DPP  </th>
@@ -283,7 +316,7 @@
      
      // Function to replace old links with new links, preserve query parameters, and then shorten the resulting link
      async function replaceAndShortenLinks() {
-       const oldLink = "https://lakpaid.blogspot.com/p/player-page.html";
+       const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
        const newLink = "https://devanshop12.github.io/lak/player.html";
      
        // Select all elements with an onclick attribute
