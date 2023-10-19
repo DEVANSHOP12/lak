@@ -1,0 +1,309 @@
+
+<html>
+    <head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+        <meta content="text/html; charset=UTF-8" http-equiv="CONTENT-TYPE"></meta>
+
+
+  </head>
+  <style> 
+    /* Desktop styles */
+    table {
+     border-collapse: collapse;
+     width: 100%;
+    }
+    th, td {
+     text-align: left;
+     padding: 8px;
+     border: 1px solid black;
+    }
+    th {
+     background-color: #f2f2f2;
+    }
+    img {
+     max-width: 100%;
+     height: auto;
+    }
+    
+    /* Mobile styles */
+    @media only screen and (max-width: 600px) {
+      table {
+        font-size: 12px;
+      }
+      th, td {
+        padding: 4px;
+      }
+      img {
+        height: 200px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    </style>
+   
+  
+        <style>
+            body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+          }
+   
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+    /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+  clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%
+  }
+
+  50% {
+    background-position: 70% 100%
+  }
+
+  100% {
+    background-position: 31% 0%
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+            /* Top-left */
+            var(--border-width) 
+            calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) 
+            var(--border-width),
+
+            calc(100% - var(--border-width)) 
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+                /* Top-left */
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+    
+                /* top-right */
+                calc(100% - var(--border-width))
+
+                 var(--border-width),
+    
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+    
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                calc(100% - var(--border-width)),
+
+                /* bottom-right 2 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+   backdrop-filter: blur(2px);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  
+}
+          
+          
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  top : 5% ;
+  right : 10%;
+  position: relative;
+  transition: all 5s ease-in-out;
+ background-color:#808080;
+   
+}
+
+.popup h2 {
+  margin-top: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  color :#90EE90;
+ 
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 40%;
+  overflow: auto;
+  color :#90EE90;
+  font-weight: 600;
+ 
+}
+       
+          
+@media screen and (max-width: 600px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 60%;
+  }
+}
+
+  
+        </style>
+    <table>
+   
+      
+      
+          </table>
+  </html>
+
+  
+  <script>
+    // Function to shorten a URL using the https://tnshort.net API
+ async function shortenURL(url) {
+   const apiEndpoint = "https://tnshort.net/api?api=9125d560a0a9cf40622a805f6d0282a605da2e4d&url="; // Replace YOUR_API_KEY with your actual API key
+ 
+   try {
+     const response = await fetch(apiEndpoint + encodeURIComponent(url));
+     const data = await response.json();
+ 
+     if (data.shortenedUrl) {
+       return data.shortenedUrl;
+     }
+   } catch (error) {
+     console.error("Error fetching short link:", error);
+   }
+ 
+   return url; // Return the original URL if shortening fails
+ }
+ 
+ 
+ // Function to replace old links with new links, preserve query parameters, and then shorten the resulting link
+ async function replaceAndShortenLinks() {
+   const oldLink = "https://lakshyawallah.blogspot.com/p/your-class.html";
+   const newLink = "https://devanshop12.github.io/lak/player.html";
+ 
+   // Select all elements with an onclick attribute
+   const elements = document.querySelectorAll('[onclick]');
+ 
+   // Loop through the selected elements
+   for (const element of elements) {
+     const onclickAttribute = element.getAttribute('onclick');
+ 
+     // Check if the onclick attribute contains the oldLink
+     if (onclickAttribute.includes(oldLink)) {
+       // Extract the query parameters from the old link
+       const queryParameters = onclickAttribute.split(oldLink)[1];
+ 
+       // Build the new URL with the query parameters
+       const newURL = newLink + queryParameters;
+ 
+       // Shorten the new URL
+       const shortNewLink = await shortenURL(newURL);
+ 
+       // Replace the entire onclick attribute value with the shortened URL
+       element.setAttribute('onclick', `window.location.href='${shortNewLink}'`);
+     }
+   }
+ }
+ 
+ // Call the replaceAndShortenLinks function to replace and shorten the links in the onclick attributes
+ replaceAndShortenLinks();
+       </script>
+     
+ 
