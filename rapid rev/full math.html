@@ -1,0 +1,385 @@
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+          <meta content="text/html; charset=UTF-8" http-equiv="CONTENT-TYPE"></meta>
+  
+  
+  
+    </head>
+    <!-- <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+    -->
+
+    <div id="content" style="text-align: center; margin: 20px;">
+        <p style="font-size: 20px; color: #333;">Select an option:</p>
+        <button onclick="LEC()" style="background-color: #3498db; color: #fff; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; margin: 10px;">
+            Lectures Only
+        </button><br>
+        <button onclick="NOTEDPP()" style="background-color: #e74c3c; color: #fff; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; margin: 10px;">
+            Notes/DPP Only
+        </button><br>
+        <button onclick="SOLN()" style="background-color: #27ae60; color: #fff; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; margin: 10px;">
+            DPP Solution Only
+        </button>
+    </div>
+    <!-- table 1  start -->
+      
+    <div id="table1" style="display: none;">
+      <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC/ NOTES</th></tr>
+        
+
+        
+  </table>
+      
+  <BR><BR><BR>
+    <CENTER>
+      
+    
+      <button onclick="location.reload()" style="background-color: #1a60a7; color: #fff; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">
+        GO BACK TO OPTIONS
+    </button>
+    
+  <BR><BR><BR>
+</CENTER>
+
+      <!-- table 1  end -->
+    </div>
+
+
+<!-- table 2  start -->
+ <div id="table2" style="display: none;">
+    <h2>FOR DPP SOLN VIDEOS </h2>
+ <table>
+    <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+        <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">SOL<SUP>N</SUP> LEC </th></tr>
+      
+</table>
+
+<BR><BR><BR>
+  <CENTER>
+    
+  
+    <button onclick="location.reload()" style="background-color: #1a60a7; color: #fff; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">
+      GO BACK TO OPTIONS
+  </button>
+  
+<BR><BR><BR>
+
+    <!-- table 2 end -->
+    
+</div>
+
+<!-- table 3 start -->
+
+  
+    <div id="table3" style="display: none;">
+    <h2>  DPP AND DPP SOLN PDF ARE BELOW [ONLY PDF] </h2>
+<table>
+    <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+        <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;"> SOLN NOTES / DPP</th></tr>
+    
+  
+  </table>
+
+  
+  <BR><BR><BR>
+    <CENTER>
+      
+    
+      <button onclick="location.reload()" style="background-color: #1a60a7; color: #fff; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">
+        GO BACK TO OPTIONS
+    </button>
+    
+  <BR><BR><BR>
+
+
+      <!-- table 3 end -->
+  </div>
+  
+        
+        
+  
+        <style>
+              body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+            }
+     
+  .btn {
+    --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+    --border-width: .125em;
+    --curve-size: .5em;
+    --blur: 30px;
+    --bg: #080312;
+    --color: #afffff;
+    color: var(--color);
+      /* use position: relative; so that BG is only for .btn */
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: .5em 1.5em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+    clip-path: polygon(
+              /* Top-left */
+              0% var(--curve-size),
+  
+              var(--curve-size) 0,
+              /* top-right */
+              100% 0,
+              100% calc(100% - var(--curve-size)),
+  
+              /* bottom-right 1 */
+              calc(100% - var(--curve-size)) 100%,
+              /* bottom-right 2 */
+              0 100%);
+    transition: color 250ms;
+  }
+  
+  .btn::after,
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  
+  .btn::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+  }
+  
+  @keyframes move-bg7234 {
+    0% {
+      background-position: 31% 0%
+    }
+  
+    50% {
+      background-position: 70% 100%
+    }
+  
+    100% {
+      background-position: 31% 0%
+    }
+  }
+  
+  .btn::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+              /* Top-left */
+              var(--border-width) 
+              calc(var(--curve-size) + var(--border-width) * .5),
+  
+              calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+  
+              /* top-right */
+              calc(100% - var(--border-width)) 
+              var(--border-width),
+  
+              calc(100% - var(--border-width)) 
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+  
+              /* bottom-right 1 */
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+              /* bottom-right 2 */
+              var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+  }
+  
+  .btn:where(:hover, :focus)::after {
+    clip-path: polygon(
+                  /* Top-left */
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      
+                  calc(100% - var(--border-width))
+  
+                  var(--border-width),
+      
+                  /* top-right */
+                  calc(100% - var(--border-width))
+  
+                   var(--border-width),
+      
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+      
+                  /* bottom-right 1 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                  calc(100% - var(--border-width)),
+  
+                  /* bottom-right 2 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                  calc(100% - var(--border-width)));
+    transition: 200ms;
+  }
+  
+  .btn:where(:hover, :focus) {
+    color: #fff;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+     backdrop-filter: blur(2px);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+    
+  }
+            
+            
+  
+    
+          </style>
+      
+    <style> 
+      /* Desktop styles */
+      table {
+       border-collapse: collapse;
+       width: 100%;
+      }
+      th, td {
+       text-align: left;
+       padding: 8px;
+       border: 1px solid black;
+      }
+      th {
+       background-color: #f2f2f2;
+      }
+      img {
+       max-width: 100%;
+       height: auto;
+      }
+      
+      /* Mobile styles */
+      @media only screen and (max-width: 600px) {
+        table {
+          font-size: 12px;
+        }
+        th, td {
+          padding: 4px;
+        }
+        img {
+          height: 200px;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      </style>
+  
+  
+  
+        <script>
+     // Function to shorten a URL using the https://tnshort.net API
+  async function shortenURL(url) {
+    const apiEndpoint = "https://urlshortx.com/api?api=4b17f6a264b2bbe471bf6b71ae3cd28dfc36ae90&url="; // Replace YOUR_API_KEY with your actual API key
+  
+    try {
+      const response = await fetch(apiEndpoint + encodeURIComponent(url));
+      const data = await response.json();
+  
+      if (data.shortenedUrl) {
+        return data.shortenedUrl;
+      }
+    } catch (error) {
+      console.error("Error fetching short link:", error);
+    }
+  
+    return url; // Return the original URL if shortening fails
+  }
+  
+  
+  // Function to replace old links with new links, preserve query parameters, and then shorten the resulting link
+  async function replaceAndShortenLinks() {
+    const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+    const newLink = "https://devanshop12.github.io/lak/player.html";
+  
+    // Select all elements with an onclick attribute
+    const elements = document.querySelectorAll('[onclick]');
+  
+    // Loop through the selected elements
+    for (const element of elements) {
+      const onclickAttribute = element.getAttribute('onclick');
+  
+      // Check if the onclick attribute contains the oldLink
+      if (onclickAttribute.includes(oldLink)) {
+        // Extract the query parameters from the old link
+        const queryParameters = onclickAttribute.split(oldLink)[1];
+  
+        // Build the new URL with the query parameters
+        const newURL = newLink + queryParameters;
+  
+        // Shorten the new URL
+        const shortNewLink = await shortenURL(newURL);
+  
+        // Replace the entire onclick attribute value with the shortened URL
+        element.setAttribute('onclick', `window.location.href='${shortNewLink}'`);
+      }
+    }
+  }
+  
+  // Call the replaceAndShortenLinks function to replace and shorten the links in the onclick attributes
+  replaceAndShortenLinks();
+        </script>
+
+
+<script>
+
+function LEC()
+{const a = document.getElementById('content')
+     a.style.display = "none"
+     
+     const b = document.getElementById('table1')
+     b.style.display="block";
+
+
+}
+
+
+
+    function SOLN()
+    { alert('ADDING SOON ')
+    // {const a = document.getElementById('content')
+    //  a.style.display = "none"
+     
+    //  const b = document.getElementById('table2')
+    //  b.style.display="block";
+
+
+}
+
+   
+    function NOTEDPP()
+    {const a = document.getElementById('content')
+     a.style.display = "none"
+     
+     const b = document.getElementById('table3')
+     b.style.display="block";
+
+
+}
+
+</script>
+        
