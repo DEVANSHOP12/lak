@@ -118,7 +118,9 @@
              <H2>SUPPORT TOOLS </H2>
              <ul>
             <li><a href="https://t.me/+-731_iRKYvRmZmY1">TELEGRAM</a></li>
-            <li><a href="https://youtu.be/l2m7xv0XPlw">HOW TO OPEN SHORT LINK </a></li>
+            <li><button id="open-button" onclick="openPopup()" >HOW TO OPEN LECTURES LINK </button></li>
+            <li><button onclick="alert('soon >>>>')" >HOW TO OPEN DPP SOLN/NCERT DISS LINK </button></li>
+          
             <li><a href="#contact">Contact</a></li>
           
         </ul>
@@ -128,6 +130,17 @@
 
 </body>
 </html>
+
+    <div id="video-popup">
+        <div id="video-container">
+            <button id="close-button" onclick="closePopup()">Close</button>
+            <video id="popup-video" controls>
+                <source src="https://raw.githubusercontent.com/DEVANSHOP12/lak/main/1.0/tn%20updated%20vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
 
 
 
@@ -229,6 +242,36 @@ h2 {
     background-color: #ddd;
 }
 
+
+      /* Style for the popup container */
+        #video-popup {
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px #888;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            display: none;
+        }
+
+        /* Style for the video */
+        #video-container {
+            text-align: center;
+        }
+
+        #video-container video {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Style for the close button */
+        #close-button {
+            
+            cursor: pointer;
+        }
+
 </style>
 
 <script>
@@ -254,3 +297,31 @@ document.querySelectorAll(".content section").forEach((section) => {
 
 
 </script>
+
+
+
+<script>
+        function openPopup() {
+            // Get a reference to the video popup container and video element
+            var popup = document.getElementById('video-popup');
+            var video = document.getElementById('popup-video');
+
+            // Display the popup
+            popup.style.display = 'block';
+
+            // Play the video (optional, you can remove this line if you don't want auto-play)
+            video.play();
+        }
+
+        function closePopup() {
+            // Get a reference to the video popup container and video element
+            var popup = document.getElementById('video-popup');
+            var video = document.getElementById('popup-video');
+
+            // Pause the video
+            video.pause();
+
+            // Hide the popup
+            popup.style.display = 'none';
+        }
+    </script>
