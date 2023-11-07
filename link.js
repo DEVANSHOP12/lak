@@ -71,7 +71,7 @@
   }
 
   // Determine the value of condi and execute the corresponding logic
-  var condi = "free"; // Change this to "ads" if needed
+  var condi = "ads"; // Change this to "ads" if needed
   if (condi === "free") {
     // Run the code to replace links in the table
     window.onload = replaceLinks;
