@@ -1,4 +1,4 @@
-
+window.onload = funcion linkchanger {
 
     // Function to replace the links in the table
     function replaceLinks() {
@@ -23,5 +23,8 @@
   
     // Call the function to replace links when the page loads
     window.onload = replaceLinks;
+
+console.log("bhai mai jinda hu ")
+}
   
   
