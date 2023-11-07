@@ -1,4 +1,7 @@
- 
+  document.addEventListener("DOMContentLoaded", function () {
+  // Your JavaScript code here
+
+
   // Function to replace the links in the table
   function replaceLinks() {
     const table = document.getElementById('myTable');
@@ -67,11 +70,8 @@
     }
   }
 
-
-
   // Determine the value of condi and execute the corresponding logic
-  var condi = "ads"; // Change this to "ads" if needed
-
+  var condi = "free"; // Change this to "ads" if needed
   if (condi === "free") {
     // Run the code to replace links in the table
     window.onload = replaceLinks;
@@ -79,3 +79,8 @@
     // Run the code to replace and shorten links in the onclick attributes
     replaceAndShortenLinks();
   }
+
+
+
+
+});
