@@ -1,4 +1,5 @@
- // Function to shorten a URL using the https://tnshort.net API
+ document.addEventListener("DOMContentLoaded", function () {
+  // Function to shorten a URL using the https://tnshort.net API
 async function shortenURL(url) {
   const apiEndpoint = "https://tnshort.net/api?api=9125d560a0a9cf40622a805f6d0282a605da2e4d&url="; // Replace YOUR_API_KEY with your actual API key
 
@@ -48,3 +49,6 @@ async function replaceAndShortenLinks() {
 
 // Call the replaceAndShortenLinks function to replace and shorten the links in the onclick attributes
 replaceAndShortenLinks();
+
+
+                           });
