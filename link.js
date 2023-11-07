@@ -1,4 +1,4 @@
-
+ 
   // Function to replace the links in the table
   function replaceLinks() {
     const table = document.getElementById('myTable');
