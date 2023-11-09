@@ -1,4 +1,4 @@
-<script>
+   document.addEventListener("DOMContentLoaded", function () {
   // Function to replace the links in the table
   function replaceLinks() {
     const table = document.getElementById('myTable');
@@ -76,4 +76,4 @@
     // Run the code to replace and shorten links in the onclick attributes
     replaceAndShortenLinks();
   }
-</script>
+   });
