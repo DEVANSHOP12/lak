@@ -1,0 +1,648 @@
+<html>
+    <head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+        <meta content="text/html; charset=UTF-8" http-equiv="CONTENT-TYPE"></meta>
+       
+        <style> 
+          /* Desktop styles */
+          table {
+           border-collapse: collapse;
+           width: 100%;
+          }
+          th, td {
+           text-align: left;
+           padding: 8px;
+           border: 1px solid black;
+          }
+          th {
+           background-color: #f2f2f2;
+          }
+          img {
+           max-width: 100%;
+           height: auto;
+          }
+          
+          /* Mobile styles */
+          @media only screen and (max-width: 600px) {
+            table {
+              font-size: 12px;
+            }
+            th, td {
+              padding: 4px;
+            }
+            img {
+              height: 200px;
+            }
+            body {
+              margin: 0;
+              padding: 0;
+            }
+          }
+          </style>
+  </head>
+    
+  <div id="cont">
+    <div id="wifi-loader">
+     <svg class="circle-outer" viewBox="0 0 86 86">
+         <circle class="back" cx="43" cy="43" r="40"></circle>
+         <circle class="front" cx="43" cy="43" r="40"></circle>
+         <circle class="new" cx="43" cy="43" r="40"></circle>
+     </svg>
+     <svg class="circle-middle" viewBox="0 0 60 60">
+         <circle class="back" cx="30" cy="30" r="27"></circle>
+         <circle class="front" cx="30" cy="30" r="27"></circle>
+     </svg>
+     <svg class="circle-inner" viewBox="0 0 34 34">
+         <circle class="back" cx="17" cy="17" r="14"></circle>
+         <circle class="front" cx="17" cy="17" r="14"></circle>
+     </svg><br><br>
+      <br><br><br>
+     <div class="text" data-text="RECEVING DATA"></div>
+      <br><br><br>
+ </div>
+ 
+ </div>
+ 
+ <br><br>
+ <div id="contoload" style="display: none;">
+   
+  <h2>  ↓↓  STARTS BELOW ↓↓ </h2>
+
+    <table id="myTable">
+
+          <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+       
+        <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+
+        
+ 
+</table>
+
+
+<h2>  ↓↓  STARTS BELOW ↓↓ </h2>
+
+<table id="myTable">
+
+  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+
+<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+
+
+
+
+  
+
+</table>
+
+<h2>  ↓↓   STARTS BELOW ↓↓ </h2>
+
+
+<table id="myTable">
+
+  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+
+<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+
+
+</table>
+
+
+<h2>  ↓↓  STARTS BELOW ↓↓ </h2>
+
+<table id="myTable">
+
+  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+
+<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+
+
+</table>
+
+
+
+<h2>  ↓↓   STARTS BELOW ↓↓ </h2>
+
+
+<table id="myTable">
+
+  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+
+<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+
+
+      
+      </table>
+
+
+
+      <h2>↓↓ DPP ARE BELOW ↓↓</h2>
+
+      <table >
+
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+     
+      <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+
+
+
+
+
+    
+    </table>
+  </div>
+  <br><br> <br><br>
+
+  </html>
+
+        <style>
+            body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+          }
+
+          h2{
+            JUSTIFY-CONTENT: CENTER;
+    TEXT-ALIGN: CENTER;
+    BORDER-TOP: DASHED DARKBLUE;
+    PADDING-TOP: 20PX;
+
+          }
+   
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+    /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+  clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%
+  }
+
+  50% {
+    background-position: 70% 100%
+  }
+
+  100% {
+    background-position: 31% 0%
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+            /* Top-left */
+            var(--border-width) 
+            calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) 
+            var(--border-width),
+
+            calc(100% - var(--border-width)) 
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+                /* Top-left */
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+    
+                /* top-right */
+                calc(100% - var(--border-width))
+
+                 var(--border-width),
+    
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+    
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                calc(100% - var(--border-width)),
+
+                /* bottom-right 2 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+          
+          
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  top : 10% ;
+  right : 10%;
+  position: relative;
+  transition: all 5s ease-in-out;
+ background-color:#808080;
+}
+
+.popup h2 {
+  margin-top: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  color :#90EE90;
+ 
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 40%;
+  overflow: auto;
+  color :#90EE90;
+  font-weight: 600;
+ 
+}
+       
+          
+@media screen and (max-width: 600px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 60%;
+  }
+}
+
+  
+        </style> 
+
+<style>
+      
+  #wifi-loader {
+--background: #62abff;
+--front-color: #4f29f0;
+--back-color: #c3c8de;
+--text-color: #414856;
+width: 150px;
+height: 64px;
+border-radius: 50px;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+ padding-bottom: 90px;
+padding-top: 90px;
+padding-left: 150px;
+padding-right: 150px;
+}
+
+#wifi-loader svg {
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#wifi-loader svg circle {
+position: absolute;
+fill: none;
+stroke-width: 6px;
+stroke-linecap: round;
+stroke-linejoin: round;
+transform: rotate(-100deg);
+transform-origin: center;
+}
+
+#wifi-loader svg circle.back {
+stroke: var(--back-color);
+}
+
+#wifi-loader svg circle.front {
+stroke: var(--front-color);
+}
+
+#wifi-loader svg.circle-outer {
+height: 86px;
+width: 86px;
+}
+
+#wifi-loader svg.circle-outer circle {
+stroke-dasharray: 62.75 188.25;
+}
+
+#wifi-loader svg.circle-outer circle.back {
+animation: circle-outer135 1.8s ease infinite 0.3s;
+}
+
+#wifi-loader svg.circle-outer circle.front {
+animation: circle-outer135 1.8s ease infinite 0.15s;
+}
+
+#wifi-loader svg.circle-middle {
+height: 60px;
+width: 60px;
+}
+
+#wifi-loader svg.circle-middle circle {
+stroke-dasharray: 42.5 127.5;
+}
+
+#wifi-loader svg.circle-middle circle.back {
+animation: circle-middle6123 1.8s ease infinite 0.25s;
+}
+
+#wifi-loader svg.circle-middle circle.front {
+animation: circle-middle6123 1.8s ease infinite 0.1s;
+}
+
+#wifi-loader svg.circle-inner {
+height: 34px;
+width: 34px;
+}
+
+#wifi-loader svg.circle-inner circle {
+stroke-dasharray: 22 66;
+}
+
+#wifi-loader svg.circle-inner circle.back {
+animation: circle-inner162 1.8s ease infinite 0.2s;
+}
+
+#wifi-loader svg.circle-inner circle.front {
+animation: circle-inner162 1.8s ease infinite 0.05s;
+}
+
+#wifi-loader .text {
+width:auto;
+position: absolute;
+bottom: -40px;
+display: flex;
+justify-content: center;
+align-items: center;
+/*text-transform: lowercase;*/
+font-weight: 500;
+font-size: 16px;
+letter-spacing: 0.2px;
+}
+
+#wifi-loader .text::before, #wifi-loader .text::after {
+content: attr(data-text);
+width:auto;
+}
+
+#wifi-loader .text::before {
+color: var(--text-color);
+width:auto;
+}
+
+#wifi-loader .text::after {
+color: var(--front-color);
+animation: text-animation76 3.6s ease infinite;
+position: absolute;
+left: 0;
+width:auto;
+}
+
+@keyframes circle-outer135 {
+0% {
+stroke-dashoffset: 25;
+}
+
+25% {
+stroke-dashoffset: 0;
+}
+
+65% {
+stroke-dashoffset: 301;
+}
+
+80% {
+stroke-dashoffset: 276;
+}
+
+100% {
+stroke-dashoffset: 276;
+}
+}
+
+@keyframes circle-middle6123 {
+0% {
+stroke-dashoffset: 17;
+}
+
+25% {
+stroke-dashoffset: 0;
+}
+
+65% {
+stroke-dashoffset: 204;
+}
+
+80% {
+stroke-dashoffset: 187;
+}
+
+100% {
+stroke-dashoffset: 187;
+}
+}
+
+@keyframes circle-inner162 {
+0% {
+stroke-dashoffset: 9;
+}
+
+25% {
+stroke-dashoffset: 0;
+}
+
+65% {
+stroke-dashoffset: 106;
+}
+
+80% {
+stroke-dashoffset: 97;
+}
+
+100% {
+stroke-dashoffset: 97;
+}
+}
+
+@keyframes text-animation76 {
+0% {
+clip-path: inset(0 100% 0 0);
+}
+
+50% {
+clip-path: inset(0);
+}
+
+100% {
+clip-path: inset(0 0 0 100%);
+}
+}
+
+  
+  
+  
+  
+
+</style>
+
+
+<script>
+
+window.onload = setTimeout(tablehide, 4500);
+
+function tablehide()
+{
+var ab = document.getElementById('contoload');
+ab.style.display="block";
+
+var cd = document.getElementById('cont');
+cd.style.display="none";
+
+}
+
+
+
+</script>
+
+
+
+<script>
+  // Function to shorten a URL using the https://tnshort.net API
+async function shortenURL(url) {
+ const apiEndpoint = "https://tnshort.net/api?api=9125d560a0a9cf40622a805f6d0282a605da2e4d&url="; 
+ try {
+   const response = await fetch(apiEndpoint + encodeURIComponent(url));
+   const data = await response.json();
+
+   if (data.shortenedUrl) {
+     return data.shortenedUrl;
+   }
+ } catch (error) {
+   console.error("Error fetching short link:", error);
+ }
+
+ return url; // Return the original URL if shortening fails
+}
+
+
+// Function to replace old links with new links, preserve query parameters, and then shorten the resulting link
+async function replaceAndShortenLinks() {
+ const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+ const newLink = "https://devanshop12.github.io/lak/player.html";
+
+ // Select all elements with an onclick attribute
+ const elements = document.querySelectorAll('[onclick]');
+
+ // Loop through the selected elements
+ for (const element of elements) {
+   const onclickAttribute = element.getAttribute('onclick');
+
+   // Check if the onclick attribute contains the oldLink
+   if (onclickAttribute.includes(oldLink)) {
+     // Extract the query parameters from the old link
+     const queryParameters = onclickAttribute.split(oldLink)[1];
+
+     // Build the new URL with the query parameters
+     const newURL = newLink + queryParameters;
+
+     // Shorten the new URL
+     const shortNewLink = await shortenURL(newURL);
+
+     // Replace the entire onclick attribute value with the shortened URL
+     element.setAttribute('onclick', `window.location.href='${shortNewLink}'`);
+   }
+ }
+}
+
+// Call the replaceAndShortenLinks function to replace and shorten the links in the onclick attributes
+replaceAndShortenLinks();
+     </script>
