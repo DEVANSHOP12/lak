@@ -6,10 +6,30 @@
     <title>TTEMP</title>
   
 </head>
+
+     <!-- The dialog box -->
+    <div id="myDialog">
+      <span class="close" onclick="closeDialog()">&times;</span>
+      <center><h4 style="text-decoration:underline wavy;">WEBSITE UPDATES</h4></center>
+      <hr style="border: solid black 1px;">
+      <ul>
+        <li>RAPID REV FULL BATCH ADDED</li>
+        <li>LAK 2.0 UPDATED [5-12-23]</li>
+        <li>LAK 1.0 UPDATE SOON</li>
+          <li>STAY CONNECTED....</li>
+      </ul>
+      <h4><hr style="border: solid black 1px;"></h4>
+    </div>
+
 <body>
+
+  
     <header>
         <h1>LAKSHYA WALLAH</h1>
+      
     </header>
+       <!-- Button to open the dialog box -->
+   <center> <button id="myButton" onclick="openDialog()">CLICK FOR WEBSITE UPDATES </button></center>
     
    
     <div class="content">
@@ -193,7 +213,7 @@
          </section>
     </div>
 
-
+   
 </body>
 </html>
 
@@ -206,13 +226,8 @@
 
   Your browser does not support the video tag.
 </video>
-
-           
         </div>
     </div>
-
-
-
 
 
 <style>
@@ -343,6 +358,51 @@ h2 {
             cursor: pointer;
         }
 
+
+
+
+
+
+ /* Style for the button */
+ #myButton {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    margin-top: 10px;
+    }
+
+    /* Style for the dialog box */
+    #myDialog {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      z-index: 1;
+      
+    }
+   
+    /* Style for the close button in the dialog box */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Style for the bullet points */
+    ul {
+      list-style-type: square;
+    }
+    li{ padding: 2px; font-weight: 600;}
 </style>
 
 <script>
@@ -396,3 +456,17 @@ document.querySelectorAll(".content section").forEach((section) => {
             popup.style.display = 'none';
         }
     </script>
+    <!-- JavaScript to handle the dialog box -->
+<script>
+  // Function to open the dialog box
+  function openDialog() {
+    document.getElementById("myDialog").style.display = "block";
+   
+  }
+
+  // Function to close the dialog box
+  function closeDialog() {
+    document.getElementById("myDialog").style.display = "none";
+   
+  }
+</script>
