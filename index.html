@@ -30,6 +30,13 @@
         <h1>LAKSHYA WALLAH</h1>
       
     </header>
+
+<div class="scroll-left">
+<p>  IF ANYONE HAVE BOARD BOSTER BATCH  </p>
+<br>
+<p>     CONTACT US :) <a href="https://t.me/@ITS_NOT_ROMEO">CLICK ME</a> </p>
+</div>
+
        <!-- Button to open the dialog box -->
    <center> <button id="myButton" onclick="openDialog()">CLICK FOR WEBSITE UPDATES </button></center>
     
@@ -472,3 +479,38 @@ document.querySelectorAll(".content section").forEach((section) => {
    
   }
 </script>
+
+
+<style>
+.scroll-left {
+ height: 70px;	
+ overflow: hidden;
+ position: relative;
+ color: RED;
+ padding-bottom : solid black ;
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 55px;
+ font-size :20px ;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 13s linear infinite;
+ 
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(-60%); 		
+ }
+ 100% {
+ transform: translateX(100%); 
+ }
+}
+</style>
+
