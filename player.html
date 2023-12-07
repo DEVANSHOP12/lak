@@ -1,9 +1,45 @@
+
 <!-- codes copy krne wala mc , bc -->
- <script disable-devtool-auto="true" src="https://cdn.jsdelivr.net/npm/disable-devtool" clear-log="true" disable-select="false" disable-copy="false" disable-cut="true" disable-paste="false"></script> 
+<script disable-devtool-auto="true" src="https://cdn.jsdelivr.net/npm/disable-devtool" clear-log="true" disable-select="false" disable-copy="false" disable-cut="true" disable-paste="true"></script> 
 
 <!DOCTYPE html>
 <html>
-
+<style> 
+    /* Desktop styles */
+    table {
+     border-collapse: collapse;
+     width: auto;
+    }
+    th, td {
+     text-align: left;
+     padding: 8px;
+     border: 1px solid black;
+    }
+    th {
+     background-color: #f2f2f2;
+    }
+    img {
+     max-width: 100%;
+     height: auto;
+    }
+    
+    /* Mobile styles */
+    @media only screen and (max-width: 600px) {
+      table {
+        font-size: 12px;
+      }
+      th, td {
+        padding: 4px;
+      }
+      img {
+        height: 200px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    </style>
 
 <!-- ALL HTML -->
 
@@ -16,14 +52,52 @@
       <button class="glow-on-hover" onclick=" displybtn()" type="button">CLICK DOWNLOADING LEC</button>
       </div>
     <div id="downlod-buttons-opt" style="display: none;">
-  <button class="glow-on-hover" onclick="link()" type="button">CLICK for PC/LAPTOP DL</button>
+  <button class="glow-on-hover" onclick="link()" type="button">FOR PC/LAPTOP DL</button>
 </i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 <i>
-  <a id="idmd" href=""><button class="glow-on-hover" type="button" onclick="dmm()">CLICK FOR MOBILE DL</button></a>
+ 
+ <div class="dropdown"> 
+  <button class="dropdown-btn">CLICK FOR MOBILE </button>
+  <div class="dropdown-content">
+    <div class="sub-dropdown">
+     
+    <div class="dropdown-item"> <a id="idmd" href=""><button class="glow-on-hover" type="button" onclick="dmm()">1dm</button></a></div>
+      
+<hr style="border: solid black 1px; padding: 0px;">
+      <hr style="border: solid black 1px; padding: 0px;">
+    <div class="dropdown-item"><b>↓↓  DOWLOAD OR PLAY ONLINE ↓↓</b> </div>
+   
+<hr style="border: solid black 1px; padding: 0px;">
+    <div class="dropdown-item"> <button class="glow-on-hover" type="button" onclick="vlc_player()">VLC Player</button> </div>
+   
+      <hr style="border: solid black 1px; padding: 0px;">
+      <div class="dropdown-item"><button class="glow-on-hover" type="button" onclick="mx_player()"> Mx Player</button></div>
+      
+      <hr style="border: solid black 1px; padding: 0px;">
+    <div class="dropdown-item"> <button class="glow-on-hover" type="button" onclick="playit_player()"> Play-it</button> </div>
+   
+    <hr style="border: solid black 1px; padding: 0px;">
+    <div class="dropdown-item"> <button class="glow-on-hover" type="button" onclick="km_player()">km Player</button> </div>
+   
+    <hr style="border: solid black 1px; padding: 0px;">
+    <div class="dropdown-item"> <button class="glow-on-hover" type="button" onclick="s_player()"> S Player</button> </div>
+   
+    </div>
+  </div>
+</div>
 </i>
+
+
+
+
+
+
 </div><BR><BR>
 
-     <button class="glow-on-hover" type="button" onclick="OLDPLR()">WATCH ON OLD PLR </button>
+     <!-- External video player section -->
+     <div class="justify-content-center align-items-center w-100 d-flex">
+      <div class="row d-flex w-100 justify-content-center align-items-center">
    </center> 
 </DIV>
   
@@ -76,7 +150,7 @@ vidplr();
      var video_id = window.location.search.split('=');
       var videourl = video_id[1].split('&');
       
-   alert("USE 1 DM APP ONLY || JOIN TELEGRAM : @LAKSHYA_JEE_24");
+   alert(" || JOIN TELEGRAM : @LAKSHYA_JEE_24 || ");     
     
 var fvideo = "intent:https://d26g5bnklkwsh4.cloudfront.net/"+videourl[0]+"/master.m3u8"+"#Intent;package=idm.internet.download.manager;end";
   document.getElementById("idmd").href= fvideo;
@@ -190,8 +264,11 @@ var tcod =` <br> <H4> NOTES & DPP ARE HERE </H4><br>
         <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPP QUIZ</th></tr>
         
       <tr><td><button class="btn" onclick="window.location.href ='`+nt+`';" type="button">GET </button></td> 
+         
   <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='#';" type="button"> NO DPP </button></td> 
+   
 <td style="padding: 10px;"><button class="btn" onclick="window.location.href ='#';">NO DPP</button></td>  </tr> 
+ 
 </table> <br>
    </center> `
     document.getElementById("tabl").innerHTML = tcod ;
@@ -209,8 +286,11 @@ var tcod =` <br> <H4> NOTES & DPP ARE HERE </H4><br>
         <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPP QUIZ</th></tr>
         
       <tr><td><button class="btn" onclick="window.location.href ='`+nt+`';" type="button">GET </button></td> 
+         
   <td style="padding: 10px;"> <button class="btn" onclick="window.location.href ='`+df+`';" type="button"> GET </button></td> 
+   
 <td style="padding: 10px;"><button class="btn" onclick="window.location.href ='`+qf+`';">UNAVAILABLE</button></td>  </tr> 
+ 
 </table> <br>
    </center>
   
@@ -220,6 +300,52 @@ var tcod =` <br> <H4> NOTES & DPP ARE HERE </H4><br>
     
 }
   }
+</script>
+
+<script>
+    var video_id = window.location.search.split('=');
+      var videourl = video_id[1].split('&');
+      
+
+function vlc_player() {
+  // const openLazyLink = lazyLink;
+  const openVlc = `vlc://https://d26g5bnklkwsh4.cloudfront.net/`+videourl[0]+`/master.m3u8`;
+  window.location.href = openVlc;
+  alert(" || JOIN TELEGRAM : @LAKSHYA_JEE_24 || ");     
+   
+}
+
+function mx_player() {
+  // const openLazyLink = lazyLink;
+  const openMx = `intent:https://d26g5bnklkwsh4.cloudfront.net/`+videourl[0]+`/master.m3u8#Intent;package=com.mxtech.videoplayer.ad;end`;
+  window.location.href = openMx;
+  alert(" || JOIN TELEGRAM : @LAKSHYA_JEE_24 || ");     
+      
+}
+
+function playit_player() {
+// const openLazyLink = lazyLink;
+const openPlayit = `playit://playerv2/video?url=https://d26g5bnklkwsh4.cloudfront.net/`+videourl[0]+`/master.m3u8`;
+window.location.href = openPlayit;
+ alert(" || JOIN TELEGRAM : @LAKSHYA_JEE_24 || ");     
+    }
+
+function s_player() {
+  // const openLazyLink = lazyLink;
+  const openSplayer = `intent:https://d26g5bnklkwsh4.cloudfront.net/`+videourl[0]+`/master.m3u8#Intent;action=com.young.simple.player.playback_online;package=com.young.simple.player;end`;
+  window.location.href = openSplayer;
+   alert(" || JOIN TELEGRAM : @LAKSHYA_JEE_24 || ");     
+    }
+
+function km_player() {
+//  const openLazyLink = lazyLink;
+ const openKmplayer = `intent:https://d26g5bnklkwsh4.cloudfront.net/`+videourl[0]+`/master.m3u8#Intent;package=com.kmplayer;end`;
+ window.location.href = openKmplayer;
+  alert(" || JOIN TELEGRAM : @LAKSHYA_JEE_24 || ");     
+    }
+
+
+
 </script>
 
 
@@ -289,13 +415,94 @@ body {
     
     alert("ONLY FOR PC/ LAPTOP  USERS ");
 
-var a =  `<center><H3 style ="color : blue;"><i><b><u> SELECT QUALITY OF LECTURE BELOW </u> </i></H3><br> <form name="demoForm">  <select name="demoSelect" onChange ="showData()"  >   <option value="null">&nbsp;   &nbsp;  SELECT &nbsp; &nbsp;  </option><option value="720">&nbsp;&nbsp; 720P &nbsp;&nbsp;</option><option value="480">&nbsp;&nbsp; 480P &nbsp;&nbsp;</option> <option value="360">&nbsp;&nbsp; 360P &nbsp;&nbsp;</option> <option value="240">&nbsp;&nbsp; 240P &nbsp;&nbsp;</option>     </select>  </form>  <textarea readonly name="result" cols="30" rows="5" id="result" placeholder="link will appear here"></textarea> <p id="thirdP"></p>  <h4 style="color : red ;">COPY THE LINK AND PASTE IN  CHROME EXTENSION PROVIDED !<BR> ... NEED EXTENSION LINK ??<br> <a href = "https://t.me/ARJUNA_JEE_WALLAH">CLICK HERE </a><br><br><button onclick ="location.reload()"> CLICK ME TO PLAY LEC ONLINE </button></h4> </center> <style> *{background-color :#C0C0C0} </style> `
+var a =  `<center><H3 style ="color : blue;"><i><b><u> SELECT QUALITY OF LECTURE BELOW </u> </i></H3><br> <form name="demoForm">  <select name="demoSelect" onChange ="showData()"  >   <option value="null">&nbsp;   &nbsp;  SELECT &nbsp; &nbsp;  </option><option value="720">&nbsp;&nbsp; 720P &nbsp;&nbsp;</option><option value="480">&nbsp;&nbsp; 480P &nbsp;&nbsp;</option> <option value="360">&nbsp;&nbsp; 360P &nbsp;&nbsp;</option> <option value="240">&nbsp;&nbsp; 240P &nbsp;&nbsp;</option>     </select>  </form>  <textarea readonly name="result" cols="30" rows="5" id="result" placeholder="link will appear here"></textarea> <p id="thirdP"></p>  <h4 style="color : red ;">COPY THE LINK AND PASTE IN  CHROME EXTENSION PROVIDED !<BR> ... NEED EXTENSION LINK ??<br> <a href = "https://chromewebstore.google.com/detail/m3u8-downloader/pibnhedpldjakfpnfkabbnifhmokakfb">CLICK HERE </a><br><br><button onclick ="location.reload()"> CLICK ME TO PLAY LEC ONLINE </button></h4> </center> <style> *{background-color :#C0C0C0} </style> `
 
 
 document.write(a) ;
   }
 </script>
 <style>
+
+
+
+
+
+.dropdown {
+      position: relative;
+      display: inline-block;
+    z-index: 100;
+      
+    }
+
+    .dropdown-btn {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+        
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      border-radius: 10px;
+    }
+
+    .dropdown-item {
+      
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .dropdown-item:hover {
+      background-color: #ddd;
+    }
+
+    .sub-dropdown {
+        
+      position: relative;
+      display: inline-block;
+      
+    }
+
+    .sub-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 0;
+      left: 100%;
+      
+    }
+
+    .sub-dropdown:hover .sub-dropdown-content {
+      display: block;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .glow-on-hover {
   width: auto;
   height: 35px;
@@ -533,3 +740,29 @@ table {
       }
         </style>
     
+
+    
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var mainDropdown = document.querySelector('.dropdown');
+    var subDropdown = document.querySelector('.sub-dropdown');
+
+    // Toggle dropdown on click
+    mainDropdown.addEventListener('click', function (event) {
+      event.stopPropagation(); // Prevent the click event from reaching the document
+      mainDropdown.querySelector('.dropdown-content').style.display = 'block';
+    });
+
+    // Toggle sub-dropdown on click
+    subDropdown.addEventListener('click', function (event) {
+      event.stopPropagation(); // Prevent the click event from reaching the document
+     
+    });
+
+    // Close dropdowns when clicking anywhere else on the page
+    document.addEventListener('click', function () {
+      mainDropdown.querySelector('.dropdown-content').style.display = 'none';
+    
+    });
+  });
+</script>
