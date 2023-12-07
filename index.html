@@ -166,20 +166,43 @@
         </section>
 
          <section id="topic8">
-            <h2>• BOARD BOOSTER</h2>
+            <h2>• BOARD BOOSTER [soon ;d] </h2>
             <!-- Dropdown content for Topic 1 goes here -->
             <div class="dropdown">
                 <ul>
-                      <li><a href="/lak/"> ↪ PHYSICS </a></li>
-                     <li><a href="/lak/">↪ CHEMISTRY</a></li>
-                    <li><a href="/lak/">↪  MATH</a></li>
-                    <li><a href="/lak/">↪  BIOLOGY</a></li>
-                    <li><a href="/lak/">↪  ENGLISH</a></li>
+                      <li><a href="/lak/BOARD%20BOOSTER/PHY/LEC.html"> ↪ PHYSICS </a></li>
+                     <li onclick="oopenDialog()">↪ CHEMISTRY</li>
+                    <li><a href="/lak/BOARD%20BOOSTER/MATH/LEC.html">↪  MATH</a></li>
+                    <li onclick="BopenDialog()">↪  BIOLOGY</li>
+                    <li><a href="/lak/BOARD%20BOOSTER/ENG/LEC.html">↪  ENGLISH</a></li>
                   
                 </ul>
             </div>
         </section>
 
+         <div id="BmyDialog">
+      <span class="close" onclick="ccloseDialog()">&times;</span>
+      <center><h4 style="text-decoration:underline wavy;">SELECT SUBJECT</h4></center>
+      <hr style="border: solid black 1px;">
+      <ul>
+          <li>PHYSICAL : <a href="">CLICK ME</a></li>
+        <li>ORGANIC : <a href="">NOT STARTED</a></li>
+        <li>INORGANIC : <a href="">NOT STARTED</a></li>
+      </ul>
+      <h4><hr style="border: solid black 1px;"></h4>
+    </div>
+
+<div id="BmyDialog">
+      <span class="close" onclick="BcloseDialog()">&times;</span>
+      <center><h4 style="text-decoration:underline wavy;">SELECT SUBJECT</h4></center>
+      <hr style="border: solid black 1px;">
+      <ul>
+          <li>BOTANY : <a href=" ">CLICK ME</a></li>
+        <li>ZOOLOGY : <a href="">NOT STARTED </a></li>
+<!--         <li> : <a href="">CLICK ME</a></li> -->
+      </ul>
+      <h4><hr style="border: solid black 1px;"></h4>
+    </div>
 
 
           <section id="topic7">
@@ -491,6 +514,31 @@ document.querySelectorAll(".content section").forEach((section) => {
   // Function to close the dialog box
   function closeDialog() {
     document.getElementById("myDialog").style.display = "none";
+   
+  }
+
+
+    // chem ka popup
+    function oopenDialog() {
+    document.getElementById("mmyDialog").style.display = "block";
+   
+  }
+
+  // Function to close the dialog box
+  function ccloseDialog() {
+    document.getElementById("mmyDialog").style.display = "none";
+   
+  }
+
+     // BIO ka popup
+    function BopenDialog() {
+    document.getElementById("BmyDialog").style.display = "block";
+   
+  }
+
+  // Function to close the dialog box
+  function BcloseDialog() {
+    document.getElementById("BmyDialog").style.display = "none";
    
   }
 </script>
