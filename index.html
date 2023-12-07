@@ -171,9 +171,9 @@ m<!DOCTYPE html>
             <div class="dropdown">
                 <ul>
                       <li><a href="/lak/BOARD%20BOOSTER/PHY/LEC.html"> ↪ PHYSICS </a></li>
-                   <a href="#">  <li onclick="oopenDialog()">↪ CHEMISTRY</li></a>
+                  <div id="alter">  <li onclick="oopenDialog()">↪ CHEMISTRY</li></div>
                     <li><a href="/lak/BOARD%20BOOSTER/MATH/LEC.html">↪  MATH</a></li>
-                  <a href="#">    <li onclick="BopenDialog()">↪  BIOLOGY</li></a>
+                  <div id="alter">    <li onclick="BopenDialog()">↪  BIOLOGY</li></div>
                     <li><a href="/lak/BOARD%20BOOSTER/ENG/LEC.html">↪  ENGLISH</a></li>
                   
                 </ul>
@@ -359,7 +359,7 @@ h2 {
 }
 
 /* Style for nested dropdown links */
-.nested-dropdown li a {
+.nested-dropdown li a , #alter{
     text-decoration: none;
     color: #333;
     background-color: #f0f0f0;
