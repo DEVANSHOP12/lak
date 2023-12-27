@@ -269,7 +269,44 @@
     }
   }
   </style>
-    
+
+
+<script>
+  // Function to replace old links with new links and preserve query parameters
+  function replaceLinks() {
+    const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+    const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+
+    // Select all elements with a class of 'btn'
+    const buttons = document.querySelectorAll('.btn');
+
+    // Loop through the selected elements
+    buttons.forEach(button => {
+      // Get the current onclick attribute
+      const currentOnClick = button.getAttribute('onclick');
+
+      // Check if the onclick attribute contains the oldLink
+      if (currentOnClick.includes(oldLink)) {
+        // Extract the query parameters from the old link
+        const queryParameters = currentOnClick.split(oldLink)[1];
+
+        // Build the new URL with the query parameters
+        const newURL = newLink + queryParameters;
+
+        // Remove the existing onclick attribute
+        button.removeAttribute('onclick');
+
+        // Add a click event listener to handle the navigation
+        button.addEventListener('click', () => {
+          window.location.href = newURL;
+        });
+      }
+    });
+  }
+
+  // Call the replaceLinks function to replace the links in the onclick attributes
+  replaceLinks();
+</script>
 
 
 
