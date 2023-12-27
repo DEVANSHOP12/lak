@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+
+    <style> 
+        /* Desktop styles */
+        table {
+         border-collapse: collapse;
+         width: auto;
+        }
+        th, td {
+         text-align: left;
+         padding: 8px;
+         border: 1px solid black;
+        }
+        th {
+         background-color: #f2f2f2;
+        }
+        img {
+         max-width: 100%;
+         height: auto;
+        }
+        
+        /* Mobile styles */
+        @media only screen and (max-width: 600px) {
+          table {
+            font-size: 12px;
+          }
+          th, td {
+            padding: 4px;
+          }
+          img {
+            height: 200px;
+          }
+          body {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        </style>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Chapter List Click On Name </h2>
+
+    <!-- Chapter buttons -->
+ 
+  <button onclick="showChapterContent(1)"> Logarithm & Inequalities</button>
+  <button onclick="showChapterContent(2)">  Sequence & Series </button>
+  <button onclick="showChapterContent(3)"> Quadratic Equations  </button>
+  <button onclick="showChapterContent(4)"> Binomial Theorem  </button>
+  <button onclick="showChapterContent(5)">  </button>
+  <button onclick="showChapterContent(6)">   </button>
+  <button onclick="showChapterContent(7)">   </button>
+    <!-- Add buttons for other chapters as needed -->
+
+    <!-- Chapter content -->
+    <div id="chapterContent">
+        <h3 id="chapterTitle"></h3>
+        <p id="chapterText"></p>
+    </div>
+
+    <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'Logarithm & Inequalities';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+<tr><td>Logarithm & Inequalities 02 : Logarithm & Inequalities Revision (Part -02) || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=e5166d0b-d10a-4d70-9a36-62b343ac11bf &n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c1ac8f68-8523-4753-9009-1cf99efd470a.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Logarithm & Inequalities 01 : Logarithm & Inequalities Revision || NO DPP || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=82b0040a-ffb7-4e3b-a318-363b4f084b3e &n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/266efdfd-6457-41be-8f31-f35cdd705b9d.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+              case 2:
+                    chapterTitle.textContent = 'Sequence & Series';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+<tr><td>Sequence & Series 02 : Arithmetic Geometric Progression (AGP) || Series || Exponential & Logarithmic Series || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=7c790e26-9a2a-4e43-86a7-48578689b212 &n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/817beb98-f28a-4bba-8b6c-11033058475c.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Sequence & Series 01 : Arithmetic Progression || Geometric Progression || Insertion Of Means - A.Ms & G.Ms || NO DPP || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=0fc89758-b739-40f3-a323-f25deb88c0cb &n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/53929c0e-92a1-4e31-8acb-931a467f9958.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+                  case 3:
+                    chapterTitle.textContent = 'Quadratic Equations';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+
+<tr><td>Quadratic Equations 02 : Equation Revisions (Part -02) || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=d2891310-3f6a-40a2-aa55-67ed24d0555b &n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/21359dff-9cc4-49df-a0b8-0b31c2d538de.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Quadratic Equations 01 : Equations Revision || NO DPP || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=32e4a4d3-3af8-4d4b-89e3-086eeef6bfcf &n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/01c09a94-0910-465b-9f04-e29b37634cbc.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+                  case 4:
+                    chapterTitle.textContent = 'Binomial Theorem';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+<tr><td>Binomial Theorem 02 : Properties Of Binomial Coefficients || Binomial Series || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=8b598a82-c41b-4ac3-b5c0-1498cf44b087 &n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/04c1961d-dc88-4560-8d71-c58dead83a2a.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Binomial Theorem 01 : Binomial Expansion || General Term & Middle Term || Finding Remainder || NO DPP || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=cbdafb29-594c-4a43-abd6-82c49284b10f &n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/efbaec28-9ad1-440e-aa2a-1dd0ef5206bb.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+                // Add cases for other chapters as needed
+
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+      
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+      </body>
+      </html>
