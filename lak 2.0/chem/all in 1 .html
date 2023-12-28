@@ -1,98 +1,43 @@
-<html>
-    <head>
-  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
-        <meta content="text/html; charset=UTF-8" http-equiv="CONTENT-TYPE"></meta>
-       
-        <style> 
-          /* Desktop styles */
-          table {
-           border-collapse: collapse;
-           width: 100%;
-          }
-          th, td {
-           text-align: left;
-           padding: 8px;
-           border: 1px solid black;
-          }
-          th {
-           background-color: #f2f2f2;
-          }
-          img {
-           max-width: 100%;
-           height: auto;
-          }
-          
-          /* Mobile styles */
-          @media only screen and (max-width: 600px) {
-            table {
-              font-size: 12px;
-            }
-            th, td {
-              padding: 4px;
-            }
-            img {
-              height: 200px;
-            }
-            body {
-              margin: 0;
-              padding: 0;
-            }
-          }
-          </style>
-  </head>
-      <h2> USE  DESKTOP MODE FOR BETTER EXP.. </h2>
-     <h3></h3>
-  <div id="cont">
-    <div id="wifi-loader">
-     <svg class="circle-outer" viewBox="0 0 86 86">
-         <circle class="back" cx="43" cy="43" r="40"></circle>
-         <circle class="front" cx="43" cy="43" r="40"></circle>
-         <circle class="new" cx="43" cy="43" r="40"></circle>
-     </svg>
-     <svg class="circle-middle" viewBox="0 0 60 60">
-         <circle class="back" cx="30" cy="30" r="27"></circle>
-         <circle class="front" cx="30" cy="30" r="27"></circle>
-     </svg>
-     <svg class="circle-inner" viewBox="0 0 34 34">
-         <circle class="back" cx="17" cy="17" r="14"></circle>
-         <circle class="front" cx="17" cy="17" r="14"></circle>
-     </svg><br><br>
-      <br><br><br>
-     <div class="text" data-text="RECEVING DATA"></div>
-      <br><br><br>
- </div>
- 
- </div>
- 
- <br><br>
- <div id="contoload" style="display: none;">
-     <h2>  ↓↓ ↓↓ </h2>
-<table id="myTable">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+</head>
+<body>
+    <h2>Chapter List Click On Name </h2>
 
-  <tr><h5><th style="color: #0b50be; font-size: 25px;">  TOPIC </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LINK</th></tr>
+    <!-- Chapter buttons -->
 
-<tr>  <td>ORGANIC CHEM </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href ='#ochem';" type="button">  CLICK ME</button></td></tr>
+    <button onclick="showChapterContent(50)"> ORGANIC CONTENT  </button>
+    <button onclick="showChapterContent(51)"> INORGANIC CONTENT </button>
+    <button onclick="showChapterContent(52)">  PHYSICAL CONTENT</button>
 
-    <tr>  <td> INORGANIC CHEM </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href ='#ichem';" type="button">  CLICK ME</button></td></tr>
+    
+    <!-- Chapter content -->
+    <div id="chapterContent">
+        <h3 id="chapterTitle"></h3>
+        <p id="chapterText"></p>
+    </div>
 
-    <tr>  <td>PHYSICAL CHEM </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href ='#pchem';" type="button">  CLICK ME</button></td></tr>
-     
-      </table>
+    <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
 
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
 
-   <div id="ochem">
-  <h2>  ↓↓ REVISION (Nomenclature , GOC &  Isomerism)  STARTS BELOW ↓↓ </h2>
-
-    <table id="myTable">
-
-          <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-       
-        <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
-
+                case 1:
+                    chapterTitle.textContent = 'Chapter 1: REVISION';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
       
 <tr>  <td> Isomerism 15 : Closed Chain Conformation || NO DPP || Recorded || (Extra Lec) </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=282ee675-cf1f-4471-bac2-bcde466425da&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/75057688-473b-4166-8fc2-1908b93fed33.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
@@ -206,16 +151,18 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=308df59b-bd7c-47f2-98dc-ea6a4b9f84cc&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9649ed08-86cf-40b2-9006-162acc73d68a.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
- 
-</table>
 
 
-<h2>  ↓↓  Isomerism  STARTS BELOW ↓↓ </h2>
+   </table>`
+   replaceLinks();
+                    break;
 
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+                    case 2:
+                    chapterTitle.textContent = 'Isomerism';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
 
 <tr>  <td> Isomerism 04 : Calculation Of Stereoisomer || R And S Nomenclature || NO DPP </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=f9b1b4b6-2313-4da8-add5-bdf923d11ade&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/56dc0237-9f02-4375-9b0c-93330175012d.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
@@ -232,17 +179,15 @@
 
 
 
-  
+   </table>`
+   replaceLinks();
+                    break;
 
-</table>
-
-<h2>  ↓↓  Hydrocarbon  STARTS BELOW ↓↓ </h2>
-
-
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+                       case 3:
+                    chapterTitle.textContent = ' Hydrocarbon ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
 
 
 <tr>  <td> Hydrocarbon 14 : Friedel Craft Alkylation & Acylation || Some Other Reaction </td>   <td style="padding: 10px;"> 
@@ -288,15 +233,18 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=26ff8164-533d-41e0-a8a3-4217d8631896&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/79d56658-129e-4a67-a397-12b310b255e1.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-</table>
+
+   </table>`
+   replaceLinks();
+                    break;
 
 
-<h2>  ↓↓ Haloalkanes and Haloarenes STARTS BELOW ↓↓ </h2>
+         case 4:
+                    chapterTitle.textContent = 'Haloalkanes and Haloarenes ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
 
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
 
 <tr>  <td> Haloalkanes and Haloarenes 08 : SN Vs E || Williamson Ether Synthesis || Ei Reaction </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=2f8e3ac7-f3bf-4281-a672-d19c65c9907b&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c1ef30fa-bd98-4e14-8919-527e93839457.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
@@ -323,18 +271,18 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=aa6b517d-25c1-4787-9aae-c70fea17d029&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/620e1c58-e6b1-4dc3-919c-af1d1481afbd.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-
-</table>
-
-
-
-<h2>  ↓↓ Alcohol, Phenol, & Ether  STARTS BELOW ↓↓ </h2>
+   </table>`
+   replaceLinks();
+                    break;
 
 
-<table id="myTable">
 
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+         case 5:
+                    chapterTitle.textContent = 'Alcohol, Phenol, & Ether ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+
 
 <tr>  <td> Alcohol, Phenol, & Ether 05 : Abnormal Reimer Tiemann || Test Alcohol & Phenol || Hydrolysis of Cumene Hydroperoxide </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=c4c046dc-d577-4080-93b2-6828bd1ff6fe&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a7cf6986-8c6c-417c-9797-e54382dc2ce9.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
@@ -352,18 +300,16 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=aeccb929-f515-4264-9c49-37bd510b67a6&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bb0caf60-88bb-45cb-a27a-0842541b8565.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
+   </table>`
+   replaceLinks();
+                    break;
 
 
-
-     <h2>  ↓↓   Amines STARTS BELOW ↓↓ </h2>
-
-
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+         case 6:
+                    chapterTitle.textContent = 'Amines ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
 
 <tr>  <td> Amines 02 : Beckmann Rearrangement || Gabriel Phthalimide Synthesis || Separation Of Amines </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=8bc83466-ce3c-43e9-a2f1-d3c508e55758&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8e982d90-3771-4204-829b-23a15ab7cc19.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
@@ -372,18 +318,19 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=ee7ff96e-7f7f-4498-9551-def37ea789c3&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ff4b18f1-83b5-4c51-a564-1a6729cd0fc5.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
+
+   </table>`
+   replaceLinks();
+                    break;
 
 
 
-     <h2>  ↓↓  Aldehydes, Ketones, and Carboxylic  STARTS BELOW ↓↓ </h2>
+         case 7:
+                    chapterTitle.textContent = ' Aldehydes, Ketones, and Carboxylic ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
 
-
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
 
 
 <tr>  <td> Aldehydes, Ketones, and Carboxylic Acids 06 : Acidic Haloform || Acidic Aldol || HVZ Reaction || Rescheduled @03:35 PM </td>   <td style="padding: 10px;"> 
@@ -405,17 +352,19 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=77104521-f0a7-422c-b7db-dfede8e13d56&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9f789364-fb19-4f08-a758-4c358a816940.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
+
+   </table>`
+   replaceLinks();
+                    break;
 
 
 
 
-     <h2>  ↓↓ Biomolecules  STARTS BELOW ↓↓ </h2>
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+         case 8:
+                    chapterTitle.textContent = 'Biomolecules';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
 
 
 <tr>  <td> Biomolecules 04 : Amino Acid || Protein || Test Of Carbohydrate & Protein || NO DPP || Extra Lecture </td>   <td style="padding: 10px;"> 
@@ -431,17 +380,21 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=a05253c5-c13f-4c10-9197-3688b84fa84e&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/edf36b55-eaa8-4f91-997a-fa9847b4e639.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
+
+   </table>`
+   replaceLinks();
+                    break;
 
 
-        <h2>↓↓ NCERT DISCUSSION  BELOW ↓↓</h2>
 
-      <table id="myTable">
 
+
+
+         case 9:
+                    chapterTitle.textContent = 'NCERT DISCUSSION ';
+                    chapterText.innerHTML = ` <table>
         <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-      <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC </th></tr>
-
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
 
 
 <tr>  <td> Biomolecules 02 : NCERT Discussion || Recorded </td>   <td style="padding: 10px;"> 
@@ -473,15 +426,22 @@
 
 
 
-      </table>
 
-        <h2>↓↓ DPP SOLN ARE BELOW ↓↓</h2>
 
-      <table id="myTable" >
 
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+
+         case 10:
+                    chapterTitle.textContent = 'DPP SOLN ';
+                    chapterText.innerHTML = ` <table>
         <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-     
-      <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC </th></tr>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+
 
 <tr>  <td> Aldehydes, Ketones & Carboxylic Acids : Solution To DPP 06 || Only Video </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=6a721a3b-7ab7-4ddc-9791-a8facf1c65dd&n=&d=&q=';" type="button">  WATCH</button></td></tr>
@@ -613,18 +573,19 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=5ad31cc4-2f9c-45a2-89b3-c9da723eea7f&n=&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-    
-    </table>
+   </table>`
+   replaceLinks();
+                    break;
 
 
 
-        <h2>↓↓ DPP/ SOLN NOTES ARE BELOW ↓↓</h2>
-
-      <table >
-
+         case 11:
+                    chapterTitle.textContent = ' ORGANIC ALL DPPS  ';
+                    chapterText.innerHTML = ` <table>
         <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-     
-      <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPP  NOTES / DPP</th></tr>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+
+
 
 <tr>  <td> Biomolecules : DPP 03 || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a6bf8bb2-1447-44da-8530-fbc0b466506d.pdf';" type="button">  VIEW NOTES</button></td></tr>
@@ -848,28 +809,18 @@
 
 
 
-    </table>
-   </div>
-
-   
-   <h2> <--- ORGANIC CHEM ENDS HERE ---> </h2>
-<h2> </h2>
-     <BR><BR>
+   </table>`
+   replaceLinks();
+                    break;
 
 
 
 
-      <h2> <--- INORGANIC CHEM STARTS HERE ---> </h2>
-<div id="ichem">
-     <h2>  ↓↓ Revision   STARTS BELOW ↓↓ </h2>
+   case 12:
+                    chapterTitle.textContent = ' Revision ';
+                    chapterText.innerHTML = ` <table>
 
 
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES </th></tr>
-
-  
 <tr>  <td> Revision 02 : Chemical Bonding (One Shot) || Extra Lecture || (Recorded) || NO DPP </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=a473cb31-2076-41f7-a282-b04a40d39502&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9f1e3aff-3c8d-430d-b009-89592b9a29bb.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
@@ -878,16 +829,19 @@
 
 
 
-      
-      </table>
-
-       <h2>  ↓↓ Coordination Chemistry STARTS BELOW ↓↓ </h2>
 
 
-<table id="myTable">
 
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES </th></tr>
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+   case 13:
+                    chapterTitle.textContent = 'Coordination Chemistry';
+                    chapterText.innerHTML = ` <table>
+
 
 <tr>  <td> Coordination Chemistry 15 : Stability Of Complex || Structural Isomerism || Stereoisomerism || NO DPP || (Reschedule @7:30 PM) </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=1f3fc862-bee7-4928-96da-419d7c9c3da2&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/edcec49c-3cda-4275-90c7-0e4a3c5b49b7.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
@@ -935,17 +889,21 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=878e5da7-0f3c-4772-972e-58a2b4a85ede&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2fed7758-6734-4efd-a80b-e096402ff07b.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
 
 
-       <h2>  ↓↓ Salt Analysis STARTS BELOW ↓↓ </h2>
 
 
-<table id="myTable">
+   </table>`
+   replaceLinks();
+                    break;
 
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES </th></tr>
+
+
+
+
+   case 14:
+                    chapterTitle.textContent = 'Salt Analysis  ';
+                    chapterText.innerHTML = ` <table>
 
 <tr>  <td> Salt Analysis 07 : Test For Anions || Test For Cations || Coordination Chemistry Revision || Question Analysis (Part- 04) </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=d6e9895b-2b9c-4941-8cf8-432533f85259&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6444257c-07e2-4b66-8eb7-7078beaaab5a.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
@@ -969,17 +927,19 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=04e9e570-faeb-4b38-bd8d-18925171514a&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/59f3d202-e876-435c-9718-3917eab99c4b.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
 
 
-       <h2>  ↓↓ NCERT Discussion STARTS BELOW ↓↓ </h2>
 
 
-<table id="myTable">
+   </table>`
+   replaceLinks();
+                    break;
 
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES </th></tr>
+
+
+   case 15:
+                    chapterTitle.textContent = ' NCERT Discussion ';
+                    chapterText.innerHTML = ` <table>
 
 
 <tr>  <td> Coordination Compounds 02 : NCERT Discussion || Recorded </td>   <td style="padding: 10px;"> 
@@ -987,14 +947,20 @@
 
 <tr>  <td> Coordination Compounds 01 : NCERT Discussion || Recorded </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=72a292f4-f6ab-483e-8e24-86c0de542fb0&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1504697a-6729-4642-8861-04e648b09d1a.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
-      </table>
 
 
-     <h2>↓↓ DPP ARE BELOW ↓↓</h2>
 
-      <table >
-        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-      <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;"> NOTES / DPP</th></tr>
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+   case 16:
+                    chapterTitle.textContent = ' ALL DPPS  ';
+                    chapterText.innerHTML = ` <table>
+
 
 <tr>  <td> Salt Analysis : DPP 05 (of Lec 07) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6c3368c9-f4e7-4299-a076-2ecd5f81faf4.pdf';" type="button">  VIEW NOTES</button></td></tr>
@@ -1046,30 +1012,18 @@
 
 
 
-    
-    </table>
-
-</div>
 
 
-      <h2> <--- INORGANIC CHEM ENDS HERE ---> </h2>
-<h2> </h2>
-     <BR><BR>
-     
- <h2> <--- PHYSICAL CHEM STARS HERE ---> </h2>
 
-<div id="pchem">
+   </table>`
+   replaceLinks();
+                    break;
 
 
-    
 
-     <h2>  ↓↓ Solution STARTS BELOW ↓↓ </h2>
-
-
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES</th></tr>
+   case 17:
+                    chapterTitle.textContent = ' Solution ';
+                    chapterText.innerHTML = ` <table>
 
 
 <tr>  <td> Solution : Summary Lecture || No DPP || Recorded || Extra Lecture </td>   <td style="padding: 10px;"> 
@@ -1115,19 +1069,19 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=ef73e269-9680-4b0c-b2e0-e2f4771d41bb&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e96dc7d5-be9d-408c-84d7-862a921ae80c.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
 
 
 
 
-     <h2>  ↓↓  Chemical Kinetics STARTS BELOW ↓↓ </h2>
+   </table>`
+   replaceLinks();
+                    break;
 
 
-<table id="myTable">
 
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES</th></tr>
+   case 18:
+                    chapterTitle.textContent = 'Chemical Kinetics ';
+                    chapterText.innerHTML = ` <table>
 
 
 <tr>  <td> Chemical Kinetics : Summary Lecture || No DPP || Recorded || Extra Lecture </td>   <td style="padding: 10px;"> 
@@ -1164,18 +1118,22 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=3b57fc99-3756-4050-af70-c14b39da515c&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0e2e3a0b-94a4-4444-92db-168d4c02f2d9.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
 
 
 
 
-     <h2>  ↓↓ Electrochemistry  STARTS BELOW ↓↓ </h2>
+
+   </table>`
+   replaceLinks();
+                    break;
 
 
-<table id="myTable">
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES </th></tr>
+
+   case 19:
+                    chapterTitle.textContent = ' Electrochemistry';
+                    chapterText.innerHTML = ` <table>
+
+
 
 
 <tr>  <td> Electrochemistry : Summary Lecture || NO DPP || (Recorded) || (Extra Lec) </td>   <td style="padding: 10px;"> 
@@ -1218,19 +1176,18 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=20d0b0d8-3149-44da-bc81-3675cdc6860b&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b001d598-ac3d-4020-81d3-5924adfe798e.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
+
+   </table>`
+   replaceLinks();
+                    break;
 
 
 
+   case 20:
+                    chapterTitle.textContent = 'Solid State ';
+                    chapterText.innerHTML = ` <table>
 
-     <h2>  ↓↓ Solid State  STARTS BELOW ↓↓ </h2>
 
-
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES</th></tr>
 
 
 <tr>  <td> Solid State 08 : Electrical And Magnetic Properties </td>   <td style="padding: 10px;"> 
@@ -1258,16 +1215,16 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=add12e9c-2bdb-4b06-a5a3-23abe53435d7&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/14b34171-b3d1-4d15-878b-78ef04411123.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
 
-     <h2>  ↓↓ Nuclear Chemistry  STARTS BELOW ↓↓ </h2>
+   </table>`
+   replaceLinks();
+                    break;
 
 
-<table id="myTable">
 
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
+   case 21:
+                    chapterTitle.textContent = ' Nuclear Chemistry';
+                    chapterText.innerHTML = ` <table>
 
 
 <tr>  <td> Nuclear Chemistry 02 : Kinetics Of Nuclear Reaction </td>   <td style="padding: 10px;"> 
@@ -1277,19 +1234,17 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=5d9b3b1f-eb1c-4f73-b813-af9a76e76130&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8d70e652-9150-473f-881d-962f7912dfa9.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
 
 
 
+   </table>`
+   replaceLinks();
+                    break;
 
-     <h2>  ↓↓ Surface Chemistry STARTS BELOW ↓↓ </h2>
 
-
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES </th></tr>
+   case 22:
+                    chapterTitle.textContent = 'Surface Chemistry';
+                    chapterText.innerHTML = ` <table>
 
 
 <tr>  <td> Surface Chemistry 02 : Colloids || NO DPP || Extra Lecture </td>   <td style="padding: 10px;"> 
@@ -1299,17 +1254,17 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=31e9eb01-7ce5-4fa9-9b14-f309f1448ba7&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ac676e7f-1c8c-44a0-a38e-c38e3c40959a.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-      
-      </table>
-
-    
-     <h2>  ↓↓ Surface Chemistry STARTS BELOW ↓↓ </h2>
 
 
-<table id="myTable">
 
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES </th></tr>
+   </table>`
+   replaceLinks();
+                    break;
+
+                       case 23:
+                    chapterTitle.textContent = 'NCERT Discussion ';
+                    chapterText.innerHTML = ` <table>
+
 
 <tr>  <td> Surface Chemistry 02 : NCERT Discussion || Only Video || (Recorded) </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=75775298-c033-44b3-936c-8908455fef9f&n=&d=&q=';" type="button">  WATCH</button></td></tr>
@@ -1342,7 +1297,6 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=7dbfee98-82de-469f-a108-d3e0f617957b&n=&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
-
 <tr>  <td> ------- NOTES BELOW ----------</td>  
     <td style="padding: 10px;"> ------- </td></tr>
 
@@ -1369,211 +1323,19 @@
   <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f12f4ca9-5a6b-47ba-b54e-ce8339122484.pdf';" type="button">  VIEW NOTES</button></td></tr>
 
 
-      </table>
 
 
 
+   </table>`
+   replaceLinks();
+                    break;
 
-      <h2>↓↓ DPP ARE BELOW ↓↓</h2>
 
-      <table >
 
-        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-      <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES / DPP</th></tr>
-"D:\NODE JS\node.exe" ".\dpp nahi de raha  lak 1 scrape  but can use.js"
-<tr>  <td> Surface Chemistry : DPP 03 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0250a368-e44a-4c5e-bd0a-0d80834b74ea.pdf';" type="button">  VIEW NOTES</button></td></tr>
+     case 24:
+                    chapterTitle.textContent = ' DPP SOLUTION ';
+                    chapterText.innerHTML = ` <table>
 
-<tr>  <td> Surface Chemistry : DPP 02 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/72c38f45-5083-4f72-8869-5a4f899e2650.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Surface Chemistry : DPP 01 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/30b286bc-63c1-48a5-ad78-1be44dc6fcf1.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Surface Chemistry : DPP 03 (Extra DPP) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1d2f642a-d945-4b0d-82de-bedec8a1cca8.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Surface Chemistry : DPP 02 (Extra DPP) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/62a27840-1f9f-4284-afc3-85929d3b6b95.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Surface Chemistry : Practice Sheet || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8a4f7c05-7906-4625-ae0d-d2921fc9a08d.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Surface Chemistry : DPP 01 || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c43b409e-cb39-4ac5-bc30-e5ba40629aba.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Nuclear Chemistry : Practice Sheet || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/85b0547a-4c2d-470b-8d14-d62cc16005a3.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Nuclear Chemistry : DPP 01 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/18049a73-4fd5-4b9f-a0e2-4b4b6c9f8804.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 07 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/63137f42-7b54-420d-810a-d31c93699308.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Nuclear Chemistry : DPP 01 (Of Lec 02) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0c521e86-6af2-4e4b-a26a-111db897fe4e.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 06 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d200c7ff-df21-4250-a9c7-899d60d6050f.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 07 (Extra DPP) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/56788494-e4b3-4627-b949-c18c0c9a0b22.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : Practice Sheet || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/11a05c15-d2a3-4766-b7db-b8492c90fbde.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 05 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f709eeec-4d25-490d-8cdb-f91fbce49817.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 06 (Of Lec 08) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/030d01ac-13cb-4f17-b87f-3b77e5a2d036.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 04 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/dbf6cbcc-dd28-4abe-9d7c-91aa5b6139cd.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 05 (Of Lec 07) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f8d9db27-aa95-4fbe-a3cc-c5464df633f1.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 04 (Of Lec 06) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ff17294f-5f11-449c-924f-7ab28a50c250.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 03 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b1e67f5c-ba04-4951-a6d3-b2ada7bbcec6.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 03 (Of Lec 05) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d0f9d0aa-8c34-452b-8854-00418afb3a70.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 02 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/78c26c5f-d4ec-482e-81b3-5c8eea689ade.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 01 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a7240c99-4202-4647-bf38-f9141c001223.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 02 (Of Lec 04) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c18a2c7b-78ad-4af6-a417-2ec4aa3ee4d4.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 09 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6fd48b83-1318-4777-8ee3-fcbd77209576.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solid State : DPP 01 (Of Lec 02) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f4e8010b-cc9f-4708-b307-e955d27f758e.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 08 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3db30b4e-3308-4cd0-97cd-c3b5f1a9918e.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 07 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ad240b13-d5d1-4e09-a9ee-d9d5b071f444.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 06 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0e93806e-3d82-4af1-8403-8d8fa79284ce.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 09 (Extra DPP) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bd0dc812-364d-4818-bb8f-c5f5bed1e106.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : Practice Sheet || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f37bbee2-4824-4be3-9303-698d10f79bd7.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 08 (of lec 12) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/48c4c054-1265-4d9c-bd68-536513d98105.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 05 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/556c4dbe-7f60-4ac1-96ac-fe391372ed82.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 07 (of lec 11) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/87f88b2c-206f-4d14-a62f-e61c6104cb2d.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 06 (of lec 10) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/35213c15-864f-47e1-854b-7bfd5dcb5034.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 04 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/637a7a9f-bb08-4a18-9754-de7c4652611d.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 05 (of lec 09) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/604a6165-6f52-4cd9-a380-37b40560cd00.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 04 (of lec 08) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d1b526da-d714-4277-8bab-f58ebf48f4d8.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 03 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/48ab1579-bd53-4bba-8742-5e193b352c43.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 03 (of lec 06) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a4830b43-1ed7-490a-ab54-4e344d68b2f8.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 02 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f496466c-bc8d-43aa-8f92-80f5f2fe93ae.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 02 (Extra DPP) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f801de8a-6241-46d1-88fc-e74eee1c2811.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 01 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3b5a3170-a6e0-4955-ac4e-051354c85766.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 07 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d58df331-c32f-4a1e-afe1-de21eb62e178.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 06 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d5ef215f-a314-4328-a2e3-1b69a0542ce6.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : Practice Sheet || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/47c93e80-b07d-47fa-a39f-03a6c2fcbb70.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Electrochemistry : DPP 01 (Of Lec 02) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0063446d-a77c-40fc-835b-c579f3b37954.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 07 || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f902a913-8634-4b1b-8f47-9d8fdb065e0e.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 06 || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/17b4df7a-e543-4de4-ad66-315388fca66c.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 05 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/56b89583-9554-49b0-a524-e91a039efc8d.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 04 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6694bbca-e525-4369-9976-8a9f4fdd91eb.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 05 (Of Lec 08) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a90fe74c-b8a4-4376-8f09-990c7440f2d1.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 04 (Of Lec 07) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/49e25075-76a3-4b19-9879-70e10f1d6214.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 03 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9d8bd79e-acb8-40f9-bfcf-13336a7c652d.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 02 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fcd25a65-54af-41a0-a9eb-aa37aa829c20.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 03 (Of Lec 05) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7e81ae9e-3d0b-420d-b778-4d8aa6321ada.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 02 (Of Lec 04) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7c6236c8-2b19-4a9a-b1d7-83d6804f48b5.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 01 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fb9000d0-72ca-4708-83f1-a58b7b88d5f5.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Chemical Kinetics : DPP 01 (Of Lec 03) || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1eb6dfdf-08db-4de0-a11c-1e8075ed43aa.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-<tr>  <td> Solution : DPP 11 Solution Notes || Lakshya JEE 2.0 2024 </td>   <td style="padding: 10px;"> 
-  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f9d1b6c2-25eb-4f85-b8dd-be1410d5f803.pdf';" type="button">  VIEW NOTES</button></td></tr>
-
-
-
-    
-    </table>
-
-    
-     <h2>  ↓↓ DPP SOLUTION STARTS BELOW ↓↓ </h2>
-
-
-<table id="myTable">
-
-  <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
-<th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC / NOTES </th></tr>
 
 <tr>  <td> Surface Chemistry : Solution To DPP 03 </td>   <td style="padding: 10px;"> 
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=0517eace-fc2b-4b70-b2e0-ee9fee7207b2&n=&d=&q=';" type="button">  WATCH</button></td></tr>
@@ -1690,504 +1452,237 @@
   <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=563ef321-b087-4475-8ab6-20742d1c74f2&n=&d=&q=';" type="button">  WATCH</button></td></tr>
 
 
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+    case 50:
+                    chapterTitle.textContent = ' ORGANIC CONTENT  ';
+                    chapterText.innerHTML = `   
+       <button onclick="showChapterContent(1)">REVISION </button>
+       <button onclick="showChapterContent(2)">Isomerism </button>
+       <button onclick="showChapterContent(3)"> Hydrocarbons </button>
+        <button onclick="showChapterContent(4)"> Haloalkanes and Haloarenes  </button>
+        <button onclick="showChapterContent(5)"> Alcohol, Phenol, & Ether  </button>
+        <button onclick="showChapterContent(6)">  Amines </button>
+        <button onclick="showChapterContent(7)">  Aldehydes, Ketones, and Carboxylic  </button>
+        <button onclick="showChapterContent(8)"> Biomolecules  </button>
+        <button onclick="showChapterContent(9)">  NCERT DISCUSSION </button>
+        <button onclick="showChapterContent(10)"> DPP SOLN  </button>
+        <button onclick="showChapterContent(11)"> ORGANIC ALL DPPS  </button>
+        <HR> 
+  `
+                    break;
+
+
+
+
+    case 51:
+                    chapterTitle.textContent = 'INORGANIC CONTENT ';
+                    chapterText.innerHTML = ` 
+<button onclick="showChapterContent(12)"> Revision</button>
+<button onclick="showChapterContent(13)"> Coordination Chemistry </button>
+<button onclick="showChapterContent(14)"> Salt Analysis </button>
+<button onclick="showChapterContent(15)">  NCERT Discussion</button>
+<button onclick="showChapterContent(16)"> ALL  DPPS </button>
+<button onclick="showChapterContent(17)"> DPP SOLN [SOON ] </button>
+
+ <HR>  `
+  
+                    break;
+
+
+
+
+    case 52:
+                    chapterTitle.textContent = ' PHYSICAL CONTENT   ';
+                    chapterText.innerHTML = ` 
+
+<button onclick="showChapterContent(18)"> Solution   </button>
+<button onclick="showChapterContent(19)"> Chemical Kinetics </button>
+<button onclick="showChapterContent(20)"> Electrochemistry </button>
+<button onclick="showChapterContent(21)">  Solid State</button>
+<button onclick="showChapterContent(22)"> Nuclear Chemistry </button>
+<button onclick="showChapterContent(23)"> NCERT Discussion </button>
+<button onclick="showChapterContent(24)">  DPP </button>
+<button onclick="showChapterContent(25)"> DPP SOLUTION </button>
+<HR> `
+                    break;
+
+
+
+               
+
+            
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
       
-      </table>
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+</body>
+</html>
 
-</div>
-  </div>
-  <br><br> <br><br>
 
-  </html>
 
-        <style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <style> 
+          /* Desktop styles */
+          table {
+           border-collapse: collapse;
+           width: 100%;
+          }
+          th, td {
+           text-align: left;
+           padding: 8px;
+           border: 1px solid black;
+          }
+          th {
+           background-color: #f2f2f2;
+          }
+          img {
+           max-width: 100%;
+           height: auto;
+          }
+          
+          /* Mobile styles */
+          @media only screen and (max-width: 600px) {
+            table {
+              font-size: 12px;
+            }
+            th, td {
+              padding: 4px;
+            }
+            img {
+              height: 200px;
+            }
             body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+              margin: 0;
+              padding: 0;
+            }
           }
+          </style>
 
-          h2{
-            JUSTIFY-CONTENT: CENTER;
-    TEXT-ALIGN: CENTER;
-    BORDER-TOP: DASHED DARKBLUE;
-    PADDING-TOP: 20PX;
 
+
+    <style> 
+        /* Desktop styles */
+        table {
+         border-collapse: collapse;
+         width: auto;
+        }
+        th, td {
+         text-align: left;
+         padding: 8px;
+         border: 1px solid black;
+        }
+        th {
+         background-color: #f2f2f2;
+        }
+        img {
+         max-width: 100%;
+         height: auto;
+        }
+        
+        /* Mobile styles */
+        @media only screen and (max-width: 600px) {
+          table {
+            font-size: 12px;
           }
-   
-.btn {
-  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
-  --border-width: .125em;
-  --curve-size: .5em;
-  --blur: 30px;
-  --bg: #080312;
-  --color: #afffff;
-  color: var(--color);
-    /* use position: relative; so that BG is only for .btn */
-  position: relative;
-  isolation: isolate;
-  display: inline-grid;
-  place-content: center;
-  padding: .5em 1.5em;
-  font-size: 17px;
-  border: 0;
-  text-transform: uppercase;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
-  clip-path: polygon(
-            /* Top-left */
-            0% var(--curve-size),
-
-            var(--curve-size) 0,
-            /* top-right */
-            100% 0,
-            100% calc(100% - var(--curve-size)),
-
-            /* bottom-right 1 */
-            calc(100% - var(--curve-size)) 100%,
-            /* bottom-right 2 */
-            0 100%);
-  transition: color 250ms;
-}
-
-.btn::after,
-.btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-}
-
-.btn::before {
-  background: var(--border-color);
-  background-size: 300% 300%;
-  animation: move-bg7234 5s ease infinite;
-  z-index: -2;
-}
-
-@keyframes move-bg7234 {
-  0% {
-    background-position: 31% 0%
-  }
-
-  50% {
-    background-position: 70% 100%
-  }
-
-  100% {
-    background-position: 31% 0%
-  }
-}
-
-.btn::after {
-  background: var(--bg);
-  z-index: -1;
-  clip-path: polygon(
-            /* Top-left */
-            var(--border-width) 
-            calc(var(--curve-size) + var(--border-width) * .5),
-
-            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
-
-            /* top-right */
-            calc(100% - var(--border-width)) 
-            var(--border-width),
-
-            calc(100% - var(--border-width)) 
-            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
-
-            /* bottom-right 1 */
-            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
-            /* bottom-right 2 */
-            var(--border-width) calc(100% - var(--border-width)));
-  transition: clip-path 500ms;
-}
-
-.btn:where(:hover, :focus)::after {
-  clip-path: polygon(
-                /* Top-left */
-                calc(100% - var(--border-width)) 
-
-                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-    
-                calc(100% - var(--border-width))
-
-                var(--border-width),
-    
-                /* top-right */
-                calc(100% - var(--border-width))
-
-                 var(--border-width),
-    
-                calc(100% - var(--border-width)) 
-
-                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
-    
-                /* bottom-right 1 */
-                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
-                calc(100% - var(--border-width)),
-
-                /* bottom-right 2 */
-                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
-                calc(100% - var(--border-width)));
-  transition: 200ms;
-}
-
-.btn:where(:hover, :focus) {
-  color: #fff;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-          
-          
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 40%;
-  top : 10% ;
-  right : 10%;
-  position: relative;
-  transition: all 5s ease-in-out;
- background-color:#808080;
-}
-
-.popup h2 {
-  margin-top: 0;
-  font-family: Tahoma, Arial, sans-serif;
-  color :#90EE90;
- 
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06D85F;
-}
-.popup .content {
-  max-height: 40%;
-  overflow: auto;
-  color :#90EE90;
-  font-weight: 600;
- 
-}
-       
-          
-@media screen and (max-width: 600px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 60%;
-  }
-}
-
-  
-        </style> 
-
-<style>
-      
-  #wifi-loader {
---background: #62abff;
---front-color: #4f29f0;
---back-color: #c3c8de;
---text-color: #414856;
-width: 150px;
-height: 64px;
-border-radius: 50px;
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
- padding-bottom: 90px;
-padding-top: 90px;
-padding-left: 150px;
-padding-right: 150px;
-}
-
-#wifi-loader svg {
-position: absolute;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-#wifi-loader svg circle {
-position: absolute;
-fill: none;
-stroke-width: 6px;
-stroke-linecap: round;
-stroke-linejoin: round;
-transform: rotate(-100deg);
-transform-origin: center;
-}
-
-#wifi-loader svg circle.back {
-stroke: var(--back-color);
-}
-
-#wifi-loader svg circle.front {
-stroke: var(--front-color);
-}
-
-#wifi-loader svg.circle-outer {
-height: 86px;
-width: 86px;
-}
-
-#wifi-loader svg.circle-outer circle {
-stroke-dasharray: 62.75 188.25;
-}
-
-#wifi-loader svg.circle-outer circle.back {
-animation: circle-outer135 1.8s ease infinite 0.3s;
-}
-
-#wifi-loader svg.circle-outer circle.front {
-animation: circle-outer135 1.8s ease infinite 0.15s;
-}
-
-#wifi-loader svg.circle-middle {
-height: 60px;
-width: 60px;
-}
-
-#wifi-loader svg.circle-middle circle {
-stroke-dasharray: 42.5 127.5;
-}
-
-#wifi-loader svg.circle-middle circle.back {
-animation: circle-middle6123 1.8s ease infinite 0.25s;
-}
-
-#wifi-loader svg.circle-middle circle.front {
-animation: circle-middle6123 1.8s ease infinite 0.1s;
-}
-
-#wifi-loader svg.circle-inner {
-height: 34px;
-width: 34px;
-}
-
-#wifi-loader svg.circle-inner circle {
-stroke-dasharray: 22 66;
-}
-
-#wifi-loader svg.circle-inner circle.back {
-animation: circle-inner162 1.8s ease infinite 0.2s;
-}
-
-#wifi-loader svg.circle-inner circle.front {
-animation: circle-inner162 1.8s ease infinite 0.05s;
-}
-
-#wifi-loader .text {
-width:auto;
-position: absolute;
-bottom: -40px;
-display: flex;
-justify-content: center;
-align-items: center;
-/*text-transform: lowercase;*/
-font-weight: 500;
-font-size: 16px;
-letter-spacing: 0.2px;
-}
-
-#wifi-loader .text::before, #wifi-loader .text::after {
-content: attr(data-text);
-width:auto;
-}
-
-#wifi-loader .text::before {
-color: var(--text-color);
-width:auto;
-}
-
-#wifi-loader .text::after {
-color: var(--front-color);
-animation: text-animation76 3.6s ease infinite;
-position: absolute;
-left: 0;
-width:auto;
-}
-
-@keyframes circle-outer135 {
-0% {
-stroke-dashoffset: 25;
-}
-
-25% {
-stroke-dashoffset: 0;
-}
-
-65% {
-stroke-dashoffset: 301;
-}
-
-80% {
-stroke-dashoffset: 276;
-}
-
-100% {
-stroke-dashoffset: 276;
-}
-}
-
-@keyframes circle-middle6123 {
-0% {
-stroke-dashoffset: 17;
-}
-
-25% {
-stroke-dashoffset: 0;
-}
-
-65% {
-stroke-dashoffset: 204;
-}
-
-80% {
-stroke-dashoffset: 187;
-}
-
-100% {
-stroke-dashoffset: 187;
-}
-}
-
-@keyframes circle-inner162 {
-0% {
-stroke-dashoffset: 9;
-}
-
-25% {
-stroke-dashoffset: 0;
-}
-
-65% {
-stroke-dashoffset: 106;
-}
-
-80% {
-stroke-dashoffset: 97;
-}
-
-100% {
-stroke-dashoffset: 97;
-}
-}
-
-@keyframes text-animation76 {
-0% {
-clip-path: inset(0 100% 0 0);
-}
-
-50% {
-clip-path: inset(0);
-}
-
-100% {
-clip-path: inset(0 0 0 100%);
-}
-}
-
-  
-  
-  
-  
-
-</style>
-
-
-<script>
-
-window.onload = setTimeout(tablehide, 4500);
-
-function tablehide()
-{
-var ab = document.getElementById('contoload');
-ab.style.display="block";
-
-var cd = document.getElementById('cont');
-cd.style.display="none";
-
-}
-
-
-
-</script>
-
-
-
-<script>
-  // Function to shorten a URL using the https://tnshort.net API
-async function shortenURL(url) {
- const apiEndpoint = "https://tnshort.net/api?api=9125d560a0a9cf40622a805f6d0282a605da2e4d&url="; 
- try {
-   const response = await fetch(apiEndpoint + encodeURIComponent(url));
-   const data = await response.json();
-
-   if (data.shortenedUrl) {
-     return data.shortenedUrl;
-   }
- } catch (error) {
-   console.error("Error fetching short link:", error);
- }
-
- return url; // Return the original URL if shortening fails
-}
-
-
-// Function to replace old links with new links, preserve query parameters, and then shorten the resulting link
-async function replaceAndShortenLinks() {
- const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
- const newLink = "https://devanshop12.github.io/lak/player.html";
-
- // Select all elements with an onclick attribute
- const elements = document.querySelectorAll('[onclick]');
-
- // Loop through the selected elements
- for (const element of elements) {
-   const onclickAttribute = element.getAttribute('onclick');
-
-   // Check if the onclick attribute contains the oldLink
-   if (onclickAttribute.includes(oldLink)) {
-     // Extract the query parameters from the old link
-     const queryParameters = onclickAttribute.split(oldLink)[1];
-
-     // Build the new URL with the query parameters
-     const newURL = newLink + queryParameters;
-
-     // Shorten the new URL
-     const shortNewLink = await shortenURL(newURL);
-
-     // Replace the entire onclick attribute value with the shortened URL
-     element.setAttribute('onclick', `window.location.href='${shortNewLink}'`);
-   }
- }
-}
-
-// Call the replaceAndShortenLinks function to replace and shorten the links in the onclick attributes
-replaceAndShortenLinks();
-     </script>
+          th, td {
+            padding: 4px;
+          }
+          img {
+            height: 200px;
+          }
+          body {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        </style>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
