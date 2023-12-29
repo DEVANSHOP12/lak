@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+</head>
+<body>
+    <h2>Chapter List Click On Name </h2>
+
+    <!-- Chapter buttons -->
+ 
+    
+    <button onclick="showChapterContent(2)">  Wave Optics </button>
+    <button onclick="showChapterContent(3)"> Semiconductors  </button>
+    <button onclick="showChapterContent(4)">  Ray Optics and Op.... </button>
+    <button onclick="showChapterContent(5)">  Nuclei </button>
+    <button onclick="showChapterContent(6)"> Moving Charges & Magnetism  </button>
+    <button onclick="showChapterContent(7)">  Magnetism & Matter </button>
+    <button onclick="showChapterContent(8)">   Electrostatic Potential and Capacitance</button>
+    <button onclick="showChapterContent(9)">  Electromagnetic Waves </button>
+    <button onclick="showChapterContent(10)"> Electromagnetic Induction  </button>
+    <button onclick="showChapterContent(11)">  Electric Charges And Field </button>
+    <button onclick="showChapterContent(12)"> Dual Nature Of Matter &...  </button>
+    <button onclick="showChapterContent(13)">  Current Electricity  </button>
+    <button onclick="showChapterContent(14)">  Communications </button>
+    <button onclick="showChapterContent(16)">  Atoms  </button>
+    <button onclick="showChapterContent(17)"> Alternating Current  </button>
+    <button onclick="showChapterContent(19)">  NCERT Discussion </button>
+    <button onclick="showChapterContent(1)"> EXTA PDFS  </button>
+    <button onclick="showChapterContent(18)">  ADVANCE CLASSE </button>
+    <button onclick="showChapterContent(15)"> ALL DPPS & NCERT DISS. NOTES </button>
+    
+    <!-- Add buttons for other chapters as needed -->
+
+    <!-- Chapter content -->
+    <div id="chapterContent">
+        <h3 id="chapterTitle"></h3>
+        <p id="chapterText"></p>
+    </div>
+
+    <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'Chapter 1: ';
+                    chapterText.innerHTML = `
+
+
+ <H3> PHYSICS PDF BELOW </H3>
+    <table>
+      <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+        <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;" NOTES</th></tr>
+
+
+<tr>  <td> Ray Optics : Mind Maps (Part -02) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/07f9551d-9ba0-4f80-867e-b49ab419a1a1.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6f5991f1-f82c-4a36-a3b5-6fa83c102f6a.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Alternating Current : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b2ca05cc-b5bd-47b0-95ef-aeac7e04e180.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electromagnetic Induction : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c42eb35c-c715-444e-8cff-6dd7586392d5.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Magnetism & Matter : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/78f70e43-4392-4621-8b98-b66b213fedd4.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Moving Charges & Magnetism : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0313ff70-af77-490e-b858-b3ac309aee2a.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Current Electricity :  Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a7f05e88-e580-45dc-9189-a45a8fba0873.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Capacitance : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/07b1c9d4-d443-4d70-ace7-a9df745dff31.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electric Charges and Fields : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/00746449-31ed-425e-8c18-af635985ffd4.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> STUDY MODULES  ARE BELOW  </td> <td> ------ </td></tr>
+
+
+<tr>  <td> Chapter 02 : Study Module  - Electrostatic Potential and Capacitance || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/06ca5725-a804-472e-b87b-42eb60259989.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Chapter 01 : Study Module - Electric Charges and Field || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c8885358-e4ce-4cdb-82ca-343989887ff7.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Study Module - CONCEPTS OF PHYSICS [VOLUME 2] || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/56ff54b5-1759-44fe-b01d-087e058030bb.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+
+<tr>  <td> PRACTICE SHEETS ARE BELOW  </td> <td> ------ </td></tr>
+
+<tr>  <td> Current Electricity : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e4a70446-50fb-41df-b9a8-7d60c7b0d7da.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electromagnetic Induction : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a4af6703-4300-4105-a246-24c9dcb05231.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Alternating Current : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7a72adb9-292d-46fd-89e5-fb96d02b457b.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Magnetism and Bar Magnet : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4efc9e9f-0d7c-4b6d-a102-4cb9f7d80101.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Magnetic Effect of Current : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e774c0ac-de70-49ca-a015-5c334a48ba5f.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electric potential and capacitance : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/67b63144-3ca6-4ea3-a744-f61e3098c69a.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electric charges And Field : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/27cbbdda-7d04-48a8-a6b7-ba202eafaa7a.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+      
+</table>
+
+<BR><BR>
+<h3>   CHEMISTRY BELOW   </h3>
+
+ <table>
+      <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+        <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;" NOTES</th></tr>
+
+
+
+<tr>  <td> The p-Block Elements : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6795217d-069a-4039-8aa5-47cdb15f7d2b.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Metallurgy : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b04f6529-492b-481e-b3fc-a6773c7f3496.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Coordination Compounds : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/99c2b8f5-f572-464b-b091-ad238042476d.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Surface Chemistry : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/31b2cea3-961a-4c24-82f1-e03dd60c606f.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Solid State : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0f0d4cec-e124-4643-b46a-7280b64368b4.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electrochemistry  : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/248dabe5-82f3-434a-bef5-264d75ad11f7.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Chemical Kinetics : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2ba2b7ae-61d4-49c7-9483-c7951a896a07.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Solution : Mind Maps ||  Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/df185fbf-ab47-4af0-87f6-7bd5eb31a0a7.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+<tr>  <td> STUDY MODULES  ARE BELOW  </td> <td> ------ </td></tr>
+
+<tr>  <td> Chapter 02 : Study Module  - Chemical Kinetics || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b04264a2-2556-4d9a-b6b9-3631226ac67b.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Chapter 01 : Study Module  - Solutions || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b9604bed-ac1c-4dee-a820-2d32273f3982.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+<tr>  <td> SHORT NOTES  ARE BELOW  </td> <td> ------ </td></tr>
+
+<tr>  <td> Haloalkanes and Haloarenes : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8f21bb3d-47af-4fea-80cb-8f8340d6543e.pdf';" type="button">  VIEW NOTES</button></td></tr>  
+
+<tr>  <td> Salt Analysis (Soluble) : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/678d21be-2c8d-4818-88ef-c50b00b6323d.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Colour Of Compound : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/df2b1e73-519a-40ba-9c04-0b2da2c18cda.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Heating Effect : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e3c6aea6-d8c7-4f11-84df-cb8358994326.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Salt Analysis (Insoluble) : Short Notes  || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6ff98df1-a59e-4788-b9ca-23d7924b5837.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> The p-Block  Elements : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b7f1c06a-2c1d-497f-8257-ef6824f11c50.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Salt Analysis : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a749f67c-bd96-4c40-a1da-8ae34d59d60c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Coordination Compound : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7ef1b12f-e3b1-43cc-9ae0-fa2b271097d3.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> The Solid State : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/78bf97b4-92d4-4b49-805d-a2b611b1308b.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Solutions : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/604fd53c-ce66-4b8d-abf3-a13420e20bb9.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electrochemistry : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d901dac5-157b-40af-9aae-203e1816ef19.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Surface Chemistry : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/49dc3865-afba-494c-8b70-b8b43cf94ac9.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Chemical Kinetics : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c0a86f73-933d-43cf-a596-b9cf97ffa311.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+
+
+<tr>  <td> PRACTICE SHEETS ARE BELOW  </td> <td> ------ </td></tr>
+
+
+<tr>  <td> p-Block Elements : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0325e364-cf01-4b99-b843-a6ea707ca9ac.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Coordination Chemistry : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7f28377a-4bda-45e6-bc77-4a692f56a876.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Metallurgy : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e99f35ca-5367-48b6-8763-4320bdac9c26.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Surface Chemistry : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d6eafbda-24cd-46bd-b9f8-d92c75899784.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electrochemistry : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f63f9f63-dff7-4795-bf62-f33ac19caaca.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Nuclear Chemistry : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/67d97a7c-c6f1-4ddf-96c4-6542426a01ba.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Solid State : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d2bc500d-103d-4cdf-bd3e-058c2f72a08d.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Liquid Solutions & Colligative Properties : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/38321006-5817-4ad2-856a-77b5c6423893.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Chemical Kinetics : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c00b3904-dc77-474b-9381-16976ebc5ecb.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+
+
+
+</table>
+
+
+<BR><BR>
+
+<h3>  MATH BELOW   </h3>
+
+ <table>
+      <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+        <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;" NOTES</th></tr>
+
+
+<tr>  <td> Differential Equations : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c9218254-d185-4921-8774-70107bd76a5c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Definite Integration & AOI : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/21c6804f-6e60-4fdf-99fa-131b55897c4d.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Indefinite Integration : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/dda76ae0-73f4-4afd-a0a7-f9dab9cdd6cc.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Application of Derivatives : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a2c3ff3f-6026-4945-bda6-955fefe19654.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Differentiation : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fce16dfe-e4e2-44b5-a4ce-2e013a5dee5f.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Continuity & Differentiability : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7d5e31c9-4687-431c-815b-ea40fb90a8d7.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Limit : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3624806b-bf1f-4136-ae2e-976a7ab06e2f.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Matrices : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a3a3ed81-65f7-437e-96ef-ec9435b087ca.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Determinant : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/405c70d4-10db-438b-bc38-305df069f653.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Inverse Trigonometric Functions : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8c766923-d75b-470b-b62f-53dfc9946d91.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Functions : Mind Maps || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5e77b3aa-a151-4264-a7aa-fb1c4e7e2b23.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+<tr>  <td> STUDY MODULES  ARE BELOW  </td> <td> ------ </td></tr>
+
+
+
+<tr>  <td> Chapter 03 : Study Module  - Inverse Trigonometric Functions || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/186dfc83-6a13-4546-9dee-a1327a16798f.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Chapter 02 : Study Module  - Relations and Functions || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d629c6cf-49d2-4869-8063-d81d552f0c8c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+
+<tr>  <td> SHORT NOTES  ARE BELOW  </td> <td> ------ </td></tr>
+
+
+<tr>  <td> Differential Equations : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/975e6711-7c9c-4edb-8c9e-dfbce5a85c6d.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Application of Integral : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/311887c3-1e2a-4a4f-a71d-715c6498ef59.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Definite Integration : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f3cc0ac5-cb94-4d7e-ac34-a6d21ff36dbc.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Indefinite Integration : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9434da9c-4724-4fdf-9463-c315e2dfa6e3.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Application of Derivatives : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/65b9d864-f290-41bd-8567-b2646102a38d.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Continuity and Differentiability, Methods of Differentiation : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/049a12a0-e09f-443f-ac22-10969b42d562.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Limits of Functions : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/081d1664-89f9-495f-a216-383845821fb3.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Determinant : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e1b3569c-6c4b-4ff8-b74e-1722fd5b1a3a.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Relations and Functions : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/40ca2031-2214-49a8-b463-aa7977b1bdcb.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Inverse Trigonometric Functions : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/98c7d2e9-eee5-4732-9373-8f3df5478dff.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Matrices : Short Notes || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4ece2eab-a8df-4e3b-9a92-022d384a2f00.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+
+
+
+<tr>  <td> PRACTICE SHEETS ARE BELOW  </td> <td> ------ </td></tr>
+
+
+<tr>  <td> Methods of Differentiation : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/04073d72-bf31-4dd8-95d8-93d12d7c021a.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Matrix : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/77af52ea-7f03-4048-a6fe-a123bb51b399.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Determinants : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c5891a3c-1719-45ee-9d83-ccb5a546a6a7.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Application of Derivatives : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b4d2d219-4277-4591-a728-f0b63d2a0b8d.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Limit, Continuity and Differentiability : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d157c1b1-d044-4ac7-a416-b0475a9e11a0.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Inverse Trigonometry Function : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ec3cfee0-5251-49b5-ba54-2121f11b2657.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Relations & Functions : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/87161dbd-6173-434f-af7f-8719176dbabf.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+
+</table>
+
+`
+   replaceLinks();
+                    break;
+
+                    case 2:
+                    chapterTitle.textContent = 'Chapter 2:Wave Optics';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+  <tr>  <td> Wave Optics 09 : Diffraction OR Single Slit Experiment || NO DPP || Extra Lecture || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=cb9b577b-10cd-4f97-9b2b-7f140385f9f4&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a84a4fb5-4d0e-44ea-b737-092c8c9e670d.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+     
+<tr>  <td> Wave Optics 07 : Questions On YDSE & Introduction To Photoelectric Effect || NO DPP || Rescheduled @ 3:30 PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=228133b9-9987-44dc-a1c2-7c009b1438f2&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e3013f50-b73c-4f9e-89fe-fce2f743c2d2.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Wave Optics 08 : Polarisation || Extra Lecture || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=7ee24d09-4891-481c-a0e8-cc533ad2a879&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/720663df-247d-48ac-baa0-22fc6bc54981.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c333eeff-584c-4afe-9127-91c44cc56e0c.pdf&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Wave Optics 06 : Questions On YDSE || Rescheduled @ 3:30 PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=aebf602b-6cb4-4c06-af14-c63c0548f8e3&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fbe416f4-d02d-4556-aa85-0a38de7d6a01.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c92b3d36-a7d5-408b-afcd-d6813ef6ad36.pdf&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Wave Optics 05 : Modification In YDSE </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=25e84bf4-6e90-4bb5-a3b0-e26684d70de4&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2c698ee0-5825-4138-8583-991675875032.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c5058639-c322-4aba-a90a-812f7dd67ad4.pdf&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Wave Optics 04 : Young Double Slit Experiment </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=041d041c-6ce4-49c5-9763-54384de25f22&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8067382a-c1e0-466c-86f6-5859bb75b185.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8b836c19-41ca-4f3b-b2b5-9d83669e9190.pdf&q=';" type="button">  WATCH</button></td></tr>
+
+      
+<tr>  <td> Wave Optics 03 : Question On Interference </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=9fd35eb8-c258-4134-88cf-7a054ea8d3a6&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c50fb822-a9aa-4153-8cc0-0d2a96d7c0da.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6bf3a19f-82b5-42e5-a9dd-7f6e628fc99b.pdf&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Wave Optics 02 : Interference || Reschedule @ 3:30 PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=6505c36b-1874-4dff-bd20-bb346a58b619&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bf60456c-24fa-4a07-8cf5-0a995c08f9ea.pdf&d=URL: https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3045029e-a946-4d74-aff4-6391b70e71d9.pdf&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Wave Optics 01 : Wave Fronts & Huygens Principle </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=475f597a-0c8f-4a5d-bd9c-715acda527bc&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3d356d60-7602-4f77-8e11-f938665a8053.pdf&d=URL: https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/48bb13fa-8ede-4870-8ffc-c3e442c50404.pdf&q=';" type="button">  WATCH</button></td></tr>
+
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+                     case 3:
+                    chapterTitle.textContent = 'Chapter 3: Semiconductors';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+<tr>  <td> Semiconductors 06 : Application For PN Junction & Logic Gates || NO DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=7f60c9b2-cdee-46ee-8e1b-27c1471cf7fe&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f2ec341f-ed13-47d1-89c2-0f83b003576b.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Semiconductors 05 : Application Of PN Junction Diode || Questions || Logic Gates || (Rescheduled @ 3:30 PM) || NO DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=950a6b92-20d5-4467-af80-f269b1259915&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/07881fd0-0ce9-4b8d-8c2b-c2f1e9461f3d.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Semiconductors 04 : Application Of  PN Junction Diode || NO DPP || Rescheduled @03:30PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=a0f73b87-ff57-4486-a7af-0536533b537f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/59ee97da-1fe2-4f94-9b19-f76fd64f03e9.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Semiconductors 03 : PN Junction || Rescheduled @03:30PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=e2969d6c-32eb-4efc-a417-93dfcd49fdd1&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ee2e07c4-5955-4d6c-a4be-e8cb415c98c4.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ac459bc0-0734-453d-bf37-1de11c2cf0d9.pdf&q=';" type="button">  WATCH</button></td></tr>
+      
+<tr>  <td> Semiconductors 02 : Extrinsic Semiconductor || Rescheduled @ 3:30 PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=4e468162-f181-4f5b-9baa-add9e5566d53&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c2b26b13-1793-4068-a460-543b1a626a83.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d79741e8-388f-4f99-8b3e-5cdce08df0a4.pdf&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Semiconductors 01 : Band Theory & Extrinsic Semiconductor || NO DPP || Rescheduled @ 3:30 PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=e52cd366-750c-4b39-a2f8-e94ea62c9a57&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3092ac8a-b730-4c68-b5ee-15be3bf5aa67.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+               
+         case 4:
+                    chapterTitle.textContent = 'Chapter 4: Ray Optics and Optical Instrument';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+<tr>  <td> Ray Optics and Optical Instruments 20 : Power Of Lens & Mirror || Question On Thin Lenses || Optical Instruments || NO DPP || Extra Lecture || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=de46dbff-fdc5-4dfe-ace2-57635e0a0f49&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a5dae39a-1e0c-42e3-bdd8-8c856067a824.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 19 : Question On Thin Lenses || NO DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=5882668b-1aca-4063-973a-9bcafe9deaf3&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/76cb5bb9-a64c-4c99-bed8-89346f0aa97d.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 18 : Important Points Of Thin Lenses || Reschedule @ 3:30PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=1b6ed979-272a-4ce6-8f9f-54952870a53a&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fff9a499-72c6-4838-a217-6e8c6da941c3.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5743b5d7-e23b-44ad-bbbf-7caba33b177c.pdf&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 17 : Lens Maker Formula & Thin Lenses </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=4d32fa9b-a834-4aed-bee8-850934898e0f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/29a04594-7cb0-4128-9594-de63bd48563d.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/14d224cd-0222-46b8-82cd-79b9d63cf981.pdf&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+          
+<tr>  <td> Ray Optics and Optical Instruments 16 : Questions On Refraction From Plane Surface & Thin Lenses </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=35385abb-6fd8-4187-9d95-14aec514d6ee&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7e2c0abb-0bf1-4a83-96bf-a63aca163e67.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2a06e8d5-ca49-441d-8f57-e536f2fc5ad9.pdf&q=https://www.pw.live/study/q-bank-exercise/6528ea0bf813f7c08fe097f5?contentSlug=6528ea0bf813f7c08fe097f5&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2014%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 15 : Refraction From Plane Surface </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=7ce73bb6-3278-471c-bf2c-36903dd22ef1&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4322bc1a-9a4d-41f2-9fbc-bf8789a41f37.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e8eb01b6-1904-4ba8-89ae-a9418887637e.pdf&q=https://www.pw.live/study/q-bank-exercise/6527c1781d4edc7e02915c2e?contentSlug=6527c1781d4edc7e02915c2e&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2013%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 14 : Refraction Through Curved Surface </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=09c36e0d-60f7-4859-a140-7562b6192cc0&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/70c560a5-b3b7-4c54-b6ff-88829da9834f.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/774ae41e-cfac-4c47-9b85-40bb21acbbac.pdf&q=https://www.pw.live/study/q-bank-exercise/65267085c573ff83c208fbc3?contentSlug=65267085c573ff83c208fbc3&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2012%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+
+<tr>  <td> Ray Optics and Optical Instruments 13 : Dispersion & Questions On Prism || DPP QUIZ SOON </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=f1dac785-ecdf-4ddf-b9c4-f100bd02746f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e96a782c-de00-4cf6-9f81-a759302b42d4.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/dc124530-0260-4a68-8868-844d88926706.pdf&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 12 : Prism Theory </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=34f67968-bf49-4d06-940c-e3ef75464af6&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/257bfd9f-45eb-452f-9b71-04bb8cc8a1b5.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/198818fd-6f94-4a5a-97f2-987827d39c7c.pdf&q=https://www.pw.live/study/q-bank-exercise/652154a7779b63f333f0b9c4?contentSlug=652154a7779b63f333f0b9c4&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2010%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 11 : Questions On TIR </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=9ac83320-fc56-4846-b71f-bc110dd0da2a&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ce605c46-c666-4cca-8805-386847204ec7.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4ea73274-9428-4d3b-b1cc-5d12c55ebf23.pdf&q=https://www.pw.live/study/q-bank-exercise/652003c6b394996dddcd5244?contentSlug=652003c6b394996dddcd5244&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2009%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 10 : Total Internal Reflection  </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=4fa3305d-85bf-4b77-9ee2-41a49b410f6d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b7e75f43-362c-4cfe-a662-4abd19a205cc.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/545ce3d8-9af1-43f6-ba4b-f879ec3e256f.pdf&q=https://www.pw.live/study/q-bank-exercise/652000c4ea37e2d2c08eeeec?contentSlug=652000c4ea37e2d2c08eeeec&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2008%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 09 : Refraction through slab || TIR Introduction </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=08972df7-c465-4283-a00b-fb635b285a23&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b07fc6e4-130f-4c36-b4b0-b1d33ad16cb4.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/456b9605-9080-4a7e-8031-b160a6214e7c.pdf&q=https://www.pw.live/study/q-bank-exercise/6518281f548f096cadbafee3?contentSlug=6518281f548f096cadbafee3&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2007%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 08 : Introduction To Refraction & Refraction Through Slab </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=cf01e744-62a5-4ccf-84de-027a1b0d5d3d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/aef13a5e-97bf-436d-8750-b287fa1d6568.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bbe75434-0cc2-4e3e-9b8f-4c46909ad2e3.pdf&q=https://www.pw.live/study/q-bank-exercise/6516f06c94767175717c813d?contentSlug=6516f06c94767175717c813d&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2006%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 07 : Velocity Magnification Of Spherical Mirror & Questions || NO DPP  </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=3e7b5458-c00c-4a8f-933b-8e6edc3ccfa7&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/595f6f42-e289-4bb6-92f3-b33f4f5fb57f.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 06 : Mirror Formula & Magnification </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=cc3a660c-eb36-430f-8eaf-9e8f78c48003&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a5bef2bf-93b5-4751-8395-84a722e2061a.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/32327384-fcba-420c-b172-54436f4abe8d.pdf&q=https://www.pw.live/study/q-bank-exercise/650d6285963879aae172541c?contentSlug=650d6285963879aae172541c&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2005%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 05 : Spherical Mirrors & Ray Diagram  </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=4b60c93e-ec7f-423f-9d5c-f99f9e8c7ad1&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1023d101-17d1-462e-8199-275dfbd6ebd6.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/59c24df0-bab1-4843-8ff9-776bea8623ed.pdf&q=https://www.pw.live/study/q-bank-exercise/650c49ce619aa29e04372cd7?contentSlug=650c49ce619aa29e04372cd7&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2004%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 04 : Field Of View, Length Of Mirror & No. Of Images  </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=eb439f8c-ece4-41ac-a00e-d23dff52b25b&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/75caa541-8b9b-4d8e-be35-840a84f15935.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/dc14a71f-39ee-4aae-be0e-45fe2397dad6.pdf&q=https://www.pw.live/study/q-bank-exercise/650b1a30bb8add48ee86f28c?contentSlug=650b1a30bb8add48ee86f28c&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2003%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 03 : Image Formation & Velocities For Plane Mirror </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=603be65c-1523-4a22-a1c3-e29e7e87622d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3ef520a0-ed6d-46a6-b524-16e530ce26cf.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c223881e-ec22-4f90-8fb1-ad46ae50d2f3.pdf&q=https://www.pw.live/study/q-bank-exercise/6506d6cb84f6cdb3985a963c?contentSlug=6506d6cb84f6cdb3985a963c&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2002%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 02 : Plane Mirror || Image Formation & Velocities </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=1a9e839d-ede0-4b44-87cb-cb04da878cdd&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fdb68109-de84-4fb3-87d4-05fb76bfe40b.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/70c12a0c-e91d-4c4a-a9e3-a0308e94fc7b.pdf&q=https://www.pw.live/study/q-bank-exercise/65033d7540740cfaf51f1786?contentSlug=65033d7540740cfaf51f1786&title=Ray%20Optics%20and%20Optical%20Instruments%20:%20DPP%2001%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments 01 : Introduction To Light || Reflection & Plane Mirror || NO DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=6baa0197-6fd3-4c17-921c-ef27ee2c2c3a&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a516e2bc-3215-44f1-a070-6a4139487005.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+ case 5:
+                    chapterTitle.textContent = 'Chapter 5: Nuclei ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+
+<tr>  <td>Nuclei 01 : Components of Nuclei || Nuclear Force || Binding Energy || Q values and questions || No DPP || Extra Lecture || Recorded</td>  
+  <td style="padding: 10px;">
+ <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=33b8fadf-771b-4153-b027-9efa4f41c449&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fbe65259-dbf8-450e-9e7f-ceccd65efc42.pdf&d=&q= ';" type="button"> WATCH/NOTES </button></td></tr> 
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+
+
+
+ case 6:
+                    chapterTitle.textContent = 'Chapter 6: Moving Charges & Magnetism ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+<tr><td>Moving Charges & Magnetism 14 : Moving Coil Galvanometer & Questions || (NO DPP)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=c26181da-e62b-4fc0-8fde-6e05f9932b45&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/53415363-7270-4aaf-b371-2898640406fc.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 13 : Magnetic Moment & Torque On Coil || Moving Coil Galvanometer</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=1db2c7f8-c881-4e92-a591-5d321fc70822&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9726f347-e90a-4bbc-9a9d-72333bcafda9.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 12 : Magnetic Moment & Torque On Coil</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=ea5f7b74-11dc-4726-a21b-54cc8427eb06&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/384f8d17-f086-421e-beb4-34fc232cbbce.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 11 : Questions On Force On Current Carrying Conductor In External Field</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=a1863cc2-9019-4203-9f17-a9a169427036&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4f8f6e77-9104-4182-bac1-0709ebac34d0.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 10 : Force On Current Carrying Wire || (NO DPP)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=46909c2c-e4bb-4ec1-a88e-7f0f318c2c98&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fd3b47a0-15e4-48db-a302-7f97cf82b8b3.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 09 : Questions On Motion Of Charge Particle</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=90f9021f-973f-4605-968f-8fd5f8cf1df6&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d8770462-c950-4cf2-8179-22ceb1f2cbeb.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 08 : Velocity Selector & Cyclotron</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=f0614086-d717-4edd-b335-12b092e147c8&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e3919a45-12b8-46cb-8151-a43af1a5ad38.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 07 : Motion Of Charge In Magnetic Field & Velocity Selector</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d3nzo6itypaz07.cloudfront.net/024fb873-e66d-42d4-b88a-bcd7c11f422c&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bab85db8-877d-46df-9f7b-9206f643831a.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 06 : Solenoid || Toroid || Motion Of Charge Particle In Magnetic Field</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=038851d2-cdd8-4303-8c26-735ba213e452&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1cd79fd1-fd5d-4eba-8c53-969d5a4b36cb.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 05 : Application Of Ampere Circuital Law, Solenoid & Toroid</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=9cccdeac-56a6-4868-905e-5fba89adb504&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6cf70cd3-6ad6-48ad-ad46-66eafdebc95d.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 04 : Magnetic Field Due To Current Loop And Ampere Circuital Law</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=900a98fe-9e0e-4f83-a311-67d483b26412&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/026175bb-421b-4acb-ac64-f4c52b67fc73.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 03 : Questions On Biot Savart's Law</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=950df758-a2c8-4680-a1b8-980662a9ea8f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bf84e528-e553-4c03-9d9e-d2edf8e29c5d.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 02 : Questions On Biot Savart's Law</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d3nzo6itypaz07.cloudfront.net/572bd0b2-03a5-41f3-8b65-e06aa5bc84ff&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/baf9316a-f99d-468b-8513-f0ce7829b752.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 01 : Biot Savart's Law || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=36b16145-1dad-4758-8dea-9bfeae6fe7e8&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4310cc6d-2b4c-45aa-8b0b-99301793631b.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+
+ case 7:
+                    chapterTitle.textContent = 'Chapter 7: Magnetism & Matter ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+<tr><td>Magnetism & Matter 05 : Earth Magnetism || Properties Of Material || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=659c44f6-e1ed-4b33-aad4-886e11633c85&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/abde3798-dbea-45e6-9b38-48656f22d38a.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Magnetism & Matter 04 : Earth Magnetism</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=34e4bd14-0d2f-422d-bc5a-708bc866ed68&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d308f4b3-db51-43b8-85b3-94f1aef53679.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Magnetism & Matter 03 : Magnetic Material & Their Properties</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=97c0bc65-d18d-472f-bb2b-7097a38c1c2c&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d08f2bb7-6ab1-4351-870e-3ed7f2961125.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Magnetism & Matter 02 : Magnetic Moment & Magnetic Field Due To Magnet</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=48ed56ce-4443-4f7d-b800-697178e87e4d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fb41cdb1-487c-451c-b505-373e50b9732d.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Magnetism & Matter 01 : Magnetic Field & Bar Magnet</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=b711d04c-1214-4608-be88-e78f8d3b46f4&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c1d61ee0-b05b-4a3d-b6a1-4269311dc420.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+
+ case 8:
+                    chapterTitle.textContent = 'Chapter 8:  Electrostatic Potential and Capacitance ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+<tr>  <td> Electrostatic Potential and Capacitance 14 : Dielectric & Charge Sharing || (Extra) || (Recorded) </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=1773c100-fd5b-4192-a1de-ee12367cce80&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b8604a9a-b35b-4a1d-beab-cb158955bc2f.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b4f8bf45-5994-4fc3-8672-ffdd39855965.pdf&q=https://t.me/+9AOFWqiq7wphMThl';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 13 : Question On Series & Parallel Combination & Dielectrics || NO DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=b6770b96-fb61-4890-9de9-95414c0364dc&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a5a3c272-7919-478a-8e87-6e68e2d7eca0.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 12 : Questions On Combination Of Capacitor </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=b8010d40-8f0c-43f9-8441-a0881c687c1d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2eba6770-814d-40e8-9d8a-6df760ccd56a.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4d047194-e686-4244-b17e-0b5b496a42de.pdf&q=https://www.pw.live/study/q-bank-exercise/646ec825d4d8ac4290df40f9?contentSlug=electrostatic-potential-and-capacitance---dpp-09-mcq-quiz-893495&title=Electrostatic%20Potential%20and%20Capacitance%20:%20DPP%2009%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=646ecf276b445a0018e37330&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 11 : Questions On Series And Parallel Of Capacitance </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=3682e5f9-f54b-4791-a351-308f79ead669&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/aee8f456-6150-4233-986c-c475f969fd59.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/be24b47f-e27a-490e-ae60-409f45c69305.pdf&q=https://www.pw.live/study/q-bank-exercise/646dd100b12c02c0b1479f5f?contentSlug=electrostatic-potential-and-capacitance---dpp-08-mcq-quiz-695198&title=Electrostatic%20Potential%20and%20Capacitance%20:%20DPP%2008%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=646dd287c9cacb00184f3d63&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 10 : Series And Parallel Connection Of Capacitor </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=cc18e6ee-7fa3-4573-891d-5c39e222aa67&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/22641562-5116-4386-bfe2-15ba5dceb611.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/269df52d-3ac8-4728-b514-7c61323cce46.pdf&q=https://www.pw.live/study/q-bank-exercise/646c72fd3d3ea3e95b163c4a?contentSlug=electrostatic-potential-and-capacitance---dpp-07-mcq-quiz-848460&title=Electrostatic%20Potential%20and%20Capacitance%20:%20DPP%2007%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=646c7536c0fc4500180f516d&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 09 : Parallel Plate Capacitor And It's Connection With Battery </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=da23d77e-01a1-4d41-a7d8-7774813d696f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5431adec-2f88-4956-bcdd-d84e9c120c71.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b6761198-b630-48ad-ba86-301de4f076f9.pdf&q=https://www.pw.live/study/q-bank-exercise/646b1a31d57297bfbe28b499?contentSlug=electrostatic-potential-and-capacitance---dpp-06-mcq-quiz-003375&title=Electrostatic%20Potential%20and%20Capacitance%20:%20DPP%2006%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=646b1afc9dec970018a48158&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 08 : Conductor Properties || Important Points || NO DPP || (Extra) || (Recorded) </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=73aa07ea-5f29-4aff-b2a1-f0018092d91f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d3b3db3a-b7f4-4d8c-b169-01d3e08714c5.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 07 : Calculating Capacitance And Parallel Plate Capacitor </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=659a65ec-1dc3-4af4-b442-1bbdd362c5e4&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/17b1a014-d693-4a5d-8001-0a5e9670138f.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7ec5f3db-fc27-45d0-a98e-b472dd21551c.pdf&q=https://www.pw.live/study/q-bank-exercise/6466d869962edd72f56e1012?contentSlug=electrostatic-potential-and-capacitance---dpp-05-mcq-quiz-215379&title=Electrostatic%20Potential%20and%20Capacitance%20:%20DPP%2005%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=6466dcd17c58930018ba59b4&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 06 : Introduction To Capacitors || NO DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=29ea116b-a089-4fdb-bb42-5edd52eeb549&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/36625005-fcbd-42b7-98f5-13be49580ea3.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 05 : Relation Between Electric Field And Potential </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=9e63df93-59c1-4cd3-b627-23ec34a58fc6&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/909a1957-de57-41fe-bfdf-5e7fdb3b8924.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/05cadccd-34ce-4b15-b89a-f4a0cc52102b.pdf&q=https://www.pw.live/study/q-bank-exercise/64640b47dc957b3040786cdd?contentSlug=electrostatic-potential-and-capacitance---dpp-04-mcq-quiz-004616&title=Electrostatic%20Potential%20and%20Capacitance%20:%20DPP%2004%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=64640bd24010510018d5004e&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 04 : Electric Potential Due To Continuous Charge Distribution </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=c753f54e-6ab4-447e-932b-a96466fce621&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/91d06bdc-a7a7-4bee-8934-5a4a88a9c423.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/eb4d5c28-d3da-4704-a0ea-4247cccf77d4.pdf&q=https://www.pw.live/study/q-bank-exercise/64635020bac774b5fd633125?contentSlug=electrostatic-potential-and-capacitance---dpp-03-mcq-quiz-627720&title=Electrostatic%20Potential%20and%20Capacitance%20:%20DPP%2003%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=646350bcc9ed530018c8e3e4&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 03 : Electric Potential || Potential Difference </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=312dc438-e999-4b82-918e-2b2940bf4fdb&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bf0c7943-fe08-4ca0-a6d1-cd90148ccc8f.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/336728cf-e404-49ef-8182-e736327c47db.pdf&q=https://www.pw.live/study/q-bank-exercise/64619859d2062fabc41b9c7d?title=Electrostatic%20Potential%20and%20Capacitance%20:%20DPP%2002%20MCQ%20Quiz&cameFrom=dpp?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 02 : Questions On Potential Energy </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=1e23957f-c50e-422d-b4e7-143c17a164a5&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/081bb153-edb7-49d4-bce4-997ade104f8d.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/af17216d-2891-41d9-a5d4-da22c33e898c.pdf&q=https://www.pw.live/study/q-bank-exercise/645c0b31c74bec07b7f0482f?title=Electrostatic%20Potential%20and%20Capacitance%20:%20DPP%2001%20MCQ%20Quiz&cameFrom=dpp?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electrostatic Potential and Capacitance 01 : Electric Potential Energy || No DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=bdc9d566-6ac4-46ad-8b1f-e2bfd2d9fc9c&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/cfcbbc30-cc0f-4f2c-a01e-9156bb9f8d6a.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+
+
+ case 9:
+                    chapterTitle.textContent = 'Chapter 9: Electromagnetic Waves ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+<tr>  <td> Electromagnetic Waves 03 : Questions On EM Waves || NO DPP  </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/ur-lec.html?vid=4ffffdc3-e577-4068-9be5-4cae6fd3e428&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ee1287f1-879e-4acc-9bb6-713a9a8ac33a.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electromagnetic Waves 02 : Properties Of EM Waves || NO DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/ur-lec.html?vid=28d6d981-e209-4f1c-b9fe-17398283a9d8&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/728ca5e4-922a-4fbb-8629-0f58809b9c56.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Electromagnetic Waves 01 : Displacement Current || Analysis Of Displacement Current || Maxwell Equations || Equation Of Wave Revisit || NO DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/ur-lec.html?vid=f320fae4-5fcf-4742-933c-b343861b05b9&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7621e92e-17a4-4937-9b9d-ec03ce805577.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+ case 10:
+                    chapterTitle.textContent = 'Chapter 10: Electromagnetic Induction ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+<tr><td>Electromagnetic Induction 10 : RL Circuits & Earth Magnetism || NO DPP || Recorded || Extra Lecture</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=d68ef546-da11-44fe-8d95-1376c5ebcbc5&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3bda1aad-b114-4d3b-bf18-e1504945f858.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 09 : TVMF and It's Question || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=78f12d42-1753-42ed-9ec2-14b0a9c4e040&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f024ece4-27ff-4dd4-bec8-e3d9b3b10881.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 08 : Questions On Self Induction & Mutual Induction || Extra Lecture</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=6a55d96d-4ea1-41be-a214-1207c04ece5f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fde80db2-25db-4140-b7ed-f0788f888019.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 07 : Self inductance and mutual inductance</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=0d6423a5-252a-4328-ad49-1e4999856e01&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0fb58efc-68e5-40d5-afec-8020d7eef0f0.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 06 : Advance Question On EMI & Self Inductance || Questions On Motional EMF</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=428e3a74-2bc6-4c48-9977-2ff42c620db7&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b721d4ab-b27d-422e-8cd7-0f3f0bc91402.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 05 : Motion Of Rod By Applying External Force In Field || Questions On Motional EMF</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=196da7de-960f-4865-90db-b23d749afb36&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5d33cc92-b715-40b4-a01b-cf423f4efa06.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 04 : Rotational Emf & Questions</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=4384c1ef-f98e-4cf2-a081-386e9dcb5893&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d8a3815e-5447-4aa2-b246-53a4495c6bf5.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 03 : Motional Emf & Rotational Emf</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=8a60a4f2-b9cb-4409-a7c5-1dacff9bc699&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/347a6faa-4d87-450f-abbb-fbb1843a6c2f.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 02 : Cases Of Faradays & Lenz Law</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=0a1cdd60-924f-445f-9607-371b30ba12a5&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/35bef2e0-b69f-4bfe-8dc8-622daba5dc00.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 01 : Faradays Law & Lenz Law</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=52a1f104-37e2-475e-aa5f-7d40e570291b&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/58284bd3-53d8-4488-bbc4-03faefdbbbd1.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+ case 11:
+                    chapterTitle.textContent = 'Chapter 11: Electric Charges And Field';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+<tr><td>Electric Charges And Field 20 : Questions On Application Of Gauss Law || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=93e40292-9a3b-4cba-8beb-084cfdd3a3a3&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/90852928-146d-4628-88d7-29d760eaec6c.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 19 : Application Of Gauss Law</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=c6cbe2b2-415e-467c-9af6-9dc47a2b9f08&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ca3162e2-3e30-4cb8-a2c6-3ceaabdc02e9.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 18 : Questions on Gauss law</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=9f88dd78-7ea9-4d98-af8a-50e9cc06983c&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9064dea2-b77d-4e6a-828e-7f8161e00576.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 17 : Electric Flux Projection Rule || Gauss Law</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=479a55f0-5f63-46be-8cbe-879d906fcc25&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c62d69bf-5b4d-4a63-adf4-fb599a9f372d.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 16 : Electric Flux And Projection Rule</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=8ebd09ec-e878-45e8-b89b-c6ca999470b3&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7a17679b-42fa-434e-b997-fcfd376d38f1.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 15 : Oscillation Of Dipole In Field || Force Interaction Between Dipoles || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=1bb52c47-9a00-482f-ae3b-7985541f82b7&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6d4376bf-2440-4523-9e69-3523a53d9be7.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 14 : Electric Dipole In External Field</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=068c2fe0-896a-4594-9459-b1675334e1af&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2639d4cb-5b9b-40e7-ad47-513572b42533.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 13 : Electric Dipole || Electric Field Due To Dipole Moment</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=0e377742-a6ca-4484-99b0-4f8d95b80130&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d256ce86-6c2c-4ca2-8105-14e155788ed0.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 12 : Electric Field Due To Charged Thread || Electric Dipole</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=106607d3-7f30-4e53-ac01-e9c4b6dfbcc3&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e54427d0-02a2-47f6-af53-57e79c85435c.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 11 : Electric Field Due To Ring || Electric Dipole</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=821e335d-fd5e-41a7-b702-18717e8a6c11&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ddde506d-edd9-4a93-a536-c8276b3f7c63.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 10 : Electric Field Lines</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=4eec2554-8fdd-460d-80e5-9f8ffb4d0e84&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/16ebd6c4-9852-4f24-b34e-7acaae605ef6.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 09 : Electric Field Lines || It's Properties</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=02833026-e4a9-4d4c-9cff-8b1872f2243d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9ac08fd2-9456-49cb-8855-dceb54b2c721.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 08 : Charge Particle In Electric Field || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=7b9e040b-a86d-487e-8094-eae5089338a5&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a983a1a2-20c9-488f-991b-0af6d2da4394.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 07 : Electric Field || Force On Charge Particle In Electric Field</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=a682ac69-ad9c-4f9d-a5b7-84bac9706e6e&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/14dc681c-b464-44c3-b2a0-ee2708278906.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 06 : Questions On Coulomb's Law (Part - 02)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=04f7ef5c-4312-45ed-9840-640fd862d0a0&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4429dab0-4486-4bea-8239-d1c69143c152.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 05 : Questions On Coulomb's Law (Part - 01)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=a9256859-6ba5-4db7-839c-f9040c44cea9&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/77a7df7e-4f28-4b13-946e-2c13e07a3ee9.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 04 : Coulomb's Law || It's Vector Form</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d3nzo6itypaz07.cloudfront.net/04b455b9-2fc1-4de9-b77c-1b1d54349d34&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/efe669d3-f8c2-485f-8998-df98f21c9c75.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 03 : Charging By Conduction || Coloumb's Law</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=a3420114-8f8f-4eeb-8f76-9a61e7b529b3&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a7bc83e6-e107-4c00-bdc6-575aa681ce9f.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 02 : Method Of Charging A Body</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=5f582dc3-7089-4b5b-b698-8169196fedb9&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/99121a06-bddc-46e5-8d00-dc5f234b8164.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 01 : Charges || Properties OF Charges || Questions || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=bce6196c-7b93-463b-9318-3f983fe2228f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/94ef82c1-0a00-4a1f-99cb-a0e2b6755c33.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+
+
+ case 12:
+                    chapterTitle.textContent = 'Chapter 12:Dual Nature Of Matter & Radiation ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+
+<tr>  <td> Dual Nature Of Matter & Radiation 04 : Radiation Pressure & Force || Rescheduled @ 3:30 PM || DPP & DPP Quiz Wll Be Provided Soon </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=893147d3-a892-4cfc-9051-20ff7f8f831e&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d91adfd5-be5c-4dfe-91a9-e0f6e5940ec3.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Dual Nature Of Matter & Radiation 03 : Question On Photoelectric & Debroglie Wavelength || Rescheduled @ 3:30 PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=9d6b87fc-d62c-40aa-9258-4c1207dffc61&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/434c23b7-f31c-4fe5-a961-9e862856185d.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/91ae097b-f609-4427-86bb-b824300e970c.pdf&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Dual Nature Of Matter & Radiation 02 : Questions On Photoelectric Effect || NO DPP || Reschedule @ 03:30 PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=39746862-46f5-4346-a80f-dd2d0d3b9da0&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2cc68707-c051-4d61-a4bb-e24641aeffcb.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Dual Nature Of Matter & Radiation 01 : Photo Electric Effect || NO DPP || Rescheduled @ 3:30 PM </td>   <td style="padding: 10px;"> 
+  <b
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+ case 13:
+                    chapterTitle.textContent = 'Chapter 13: Current Electricity ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+ <tr>  <td> Current Electricity 16 : RC Circuits Charging || RC Circuit Discharging || Time Constant || Questions || NO DPP || (Recorded) || (Extra Lecture) </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=cbdb961c-aee4-4ecc-a576-2f613b32a3af&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ac4aaf98-a8db-4c10-86e1-bcbf5a33a873.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 15 : Power & Brightness Of Bulb </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=e2b6cd76-a5e9-4bfe-9508-98b7e64af4ef&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9a0e35a1-2e67-42b7-9bb0-be96658c597a.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f015a8d6-51aa-4d98-990b-7479b5e9792b.pdf&q=https://www.pw.live/study/q-bank-exercise/648c28c343d4211006485946?contentSlug=current-electricity---dpp-12-mcq-quiz-348719&title=Current%20Electricity%20:%20DPP%2012%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=648c29a212e3360018373c88&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 14 : Potentiometer </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=10f75003-a922-4a6f-802e-9154bc96216d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ae83f1d3-4cb5-4f5c-a0da-19b3fb450199.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/805dc312-a3ca-4de2-af49-fc63bcdfc731.pdf&q=https://www.pw.live/study/q-bank-exercise/648a59c66b728e7ad64cab6f?contentSlug=current-electricity---dpp-11-mcq-quiz-290790&title=Current%20Electricity%20:%20DPP%2011%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=648a747947d0af00183d4f0c&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 13 : Wheatstone Bridge & Meter Bridge </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://d3nzo6itypaz07.cloudfront.net/49680226-f387-42be-938b-4e695832e196&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0d9aa25a-d57e-49eb-930b-02e8ab310a9e.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fb5f14d6-e633-410e-ae11-2cdff79dee4b.pdf&q=https://www.pw.live/study/q-bank-exercise/6489025933a3f98470f5ffee?contentSlug=current-electricity---dpp-10-mcq-quiz-005676&title=Current%20Electricity%20:%20DPP%2010%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=648922ed3778da0018ae5173&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 12 : Question On KVL & KCL </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=19616ec1-7180-4de0-9c42-fdfd12f359d8&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1080fcb1-9c37-4564-8fd6-c4f84a9e26c8.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/47df7761-0d73-4772-8ac8-5f54936ba517.pdf&q=https://www.pw.live/study/q-bank-exercise/6487ca70a244c391cd6239df?contentSlug=current-electricity---dpp-09-mcq-quiz-346033&title=Current%20Electricity%20:%20DPP%2009%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=6487cc495a720c0018db89c4&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 11 : Question On KVL & KCL </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=e2c7ab2d-edac-4129-8c6b-6b61700bfc38&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/783147a9-1d5c-40b8-b361-7a2b7aa1d820.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6405b591-4846-4efd-8013-720c511dcc64.pdf&q=https://www.pw.live/study/q-bank-exercise/6486d697df86d69705e98a49?contentSlug=current-electricity---dpp-08-mcq-quiz-293862&title=Current%20Electricity%20:%20DPP%2008%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=6486d9268e68bd0018c25577&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 10 : Kirchoff Laws || NO DPP </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=20869ef6-ef7d-4747-8072-48555af95712&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c95883e4-4d65-42a0-ad87-9f8578aecb0d.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 09 : Combination Of Batteries And Questions </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=63208633-c1db-4209-8462-ee4d4337927b&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2b71c2fa-12ea-4b9d-aa33-a1a29a701e75.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/467a0cb0-c3aa-484c-9458-bcd10ba75366.pdf&q=https://www.pw.live/study/q-bank-exercise/64819a34c8c14f58df18492a?contentSlug=current-electricity---dpp-07-mcq-quiz-020659&title=Current%20Electricity%20:%20DPP%2007%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=64819ba5a6ad1a0018425aa9&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 08 : Question On Series & Parallel Of Resistance </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=a6655642-4276-47a4-a1cc-c211eb2d9e65&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2bc830f2-2493-4bb2-8372-8cfb38a7a835.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/172d3200-7e2e-4242-89e2-cceb841b9af2.pdf&q=https://www.pw.live/study/q-bank-exercise/64800175314aca7ce0f0a8c1?contentSlug=current-electricity---dpp-06-mcq-quiz-057085&title=Current%20Electricity%20:%20DPP%2006%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=6480023e55769b001820997d&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 07 : Series & Parallel Of Batteries </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=1dedce7a-6597-4967-a812-8668cb776d4f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/70223a2b-ca5b-4ebc-bd0d-328a5fe79d22.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/cf3d9ffd-bd3c-4453-923a-45ea4ddfcbcc.pdf&q=https://www.pw.live/study/q-bank-exercise/647e99d588235990b792664b?contentSlug=current-electricity---dpp-05-mcq-quiz-230093&title=Current%20Electricity%20:%20DPP%2005%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=647e9b02a86f990019869309&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 06 : Combination Of Resistances || NO DPP </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=908d2584-f0ea-4140-9ac6-528e90a9cfc3&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b1cb1499-0a01-46a0-a057-e167c800cda5.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 05 : Temperature Dependence Of Resistance </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=63c299aa-1c7a-409c-a15b-8013c9029b48&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/82e352f0-563a-4924-b325-be498a8b32a1.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/50ee7d0d-e13a-4aa7-8e99-9e5e69df9495.pdf&q=https://www.pw.live/study/q-bank-exercise/6479c6a8314aca7ce0901049?contentSlug=current-electricity---dpp-04-mcq-quiz-280278&title=Current%20Electricity%20:%20DPP%2004%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=6479d5e9c7f85e00184261b4&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 04 : Questions On Resistance Calculation </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=e8d69e32-9ce5-440c-b9ec-7d97b4ea93f8&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/93eae15b-5134-46a7-a882-4780b00aef90.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1ce215c2-f7c3-49bd-b5c6-1917a23fe707.pdf&q=https://www.pw.live/study/q-bank-exercise/6478790c17e91cd5c1d16bb0?contentSlug=6478790c17e91cd5c1d16bb0&title=Current%20Electricity%20:%20DPP%2003%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 03 : Relation Between Current & Drift Velocity || Ohms Law </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=8f58bae4-599b-4b7a-b423-df50b308da57&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3b9896e7-0f4e-4459-b187-7a8202bbdde1.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e19c7b8f-dc86-4b24-b975-b65a06f8d7a6.pdf&q=https://www.pw.live/study/q-bank-exercise/6477010f0ed136559ff3c9d0?contentSlug=current-electricity---dpp-02-mcq-quiz-439854&title=Current%20Electricity%20:%20DPP%2002%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=64770310dfe3ce001844b07b&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 02 : Current Density || Drift velocity || Mobility </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=c071d04d-3195-4e34-9c32-96714f70cfd0&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/04267fc3-0e0f-4c61-af25-ba482253bba7.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9542b3df-243a-48c0-b53d-4742d27d6fb1.pdf&q=https://www.pw.live/study/q-bank-exercise/6475bb14d2f5d91444747fb6?contentSlug=current-electricity---dpp-01-mcq-quiz-952600&title=Current%20Electricity%20:%20DPP%2001%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchScheduleId=6475bce8eba39600186acbe3&batchName=Lakshya%20JEE%202024?batchld=undefined';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        <tr>  <td> Current Electricity 01 : Basics Of Current || NO DPP </td>   <td style="padding: 10px;"> 
+          <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=ff908fca-c22e-41ba-826b-3719f8573442&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7d6739ae-ea17-415f-a472-69d2da65beb5.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+        
+        
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+ case 14:
+                    chapterTitle.textContent = 'Chapter 14:Communications ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+
+     
+<tr> <td>Communications 03 : Questions on Communication || NO DPP || Extra || Recorded</td>    <td style="padding: 10px;">
+ <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=4aa89a9f-4a7c-4643-b231-5636f6be366f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a67db5f0-3b1e-4773-bbde-15c470591be1.pdf&d=&q= ';" type="button"> WATCH/NOTES </button></td></tr> 
+      
+
+<tr>  <td> Communications 02 : Modulation || Questions on Communications || (NO DPP) || Extra || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=593c6227-e6fe-4f4b-905f-bc80c4cbcf0d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7036a436-ff0b-4fe6-a18b-5dfc6880b343.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Communications 01 : Complete Communications Theory || (NO DPP) || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=fd83f558-c79c-41ef-88b0-5ae15df02dfc&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/98445668-661a-410e-b420-df781d9a7a89.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+
+
+
+                case 15:
+                    chapterTitle.textContent = 'Chapter --: ALL DPPS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPP</th></tr>
+  
+
+
+<tr>  <td> Semiconductors : DPP 02 (Of Lec 03) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ac459bc0-0734-453d-bf37-1de11c2cf0d9.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Semiconductors : DPP 01 (Of Lec 02) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d79741e8-388f-4f99-8b3e-5cdce08df0a4.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Dual Nature Of Matter & Radiation : DPP 01 (Of Lec 03) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/91ae097b-f609-4427-86bb-b824300e970c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Wave Optics : DPP 07 (Of Lec 08) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c333eeff-584c-4afe-9127-91c44cc56e0c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Wave Optics : DPP 06 || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c92b3d36-a7d5-408b-afcd-d6813ef6ad36.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Wave Optics : DPP 05 || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c5058639-c322-4aba-a90a-812f7dd67ad4.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Wave Optics : DPP 04 || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8b836c19-41ca-4f3b-b2b5-9d83669e9190.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Wave Optics : DPP 03 || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6bf3a19f-82b5-42e5-a9dd-7f6e628fc99b.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Wave Optics : DPP 02 || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3045029e-a946-4d74-aff4-6391b70e71d9.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Wave Optics : DPP 01 || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/48bb13fa-8ede-4870-8ffc-c3e442c50404.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 16 (Of Lec 18) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5743b5d7-e23b-44ad-bbbf-7caba33b177c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 15 (Of Lec 17) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/14d224cd-0222-46b8-82cd-79b9d63cf981.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 14 (Of Lec 16)  || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2a06e8d5-ca49-441d-8f57-e536f2fc5ad9.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 13 (Of Lec 15) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e8eb01b6-1904-4ba8-89ae-a9418887637e.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 12 (Of Lec 14) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/85de99c7-7d01-4d8b-89f2-7960d6c81fe2.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 11 (Of Lec 13) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/dc124530-0260-4a68-8868-844d88926706.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 10 (Of Lec 12) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/198818fd-6f94-4a5a-97f2-987827d39c7c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 09 (Of Lec 11) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4ea73274-9428-4d3b-b1cc-5d12c55ebf23.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 08 (Of Lec 10) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6f9c3771-e54b-4374-91c9-9163f6bada00.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 07 (Of Lec 09) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/456b9605-9080-4a7e-8031-b160a6214e7c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 06 (Of Lec 08) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bbe75434-0cc2-4e3e-9b8f-4c46909ad2e3.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Current Electricity : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/e4a70446-50fb-41df-b9a8-7d60c7b0d7da.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electromagnetic Induction : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a4af6703-4300-4105-a246-24c9dcb05231.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Alternating Current : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7a72adb9-292d-46fd-89e5-fb96d02b457b.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 05 (Of Lec 06) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/32327384-fcba-420c-b172-54436f4abe8d.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 04 (Of Lec 05) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/59c24df0-bab1-4843-8ff9-776bea8623ed.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 03 (Of Lec 04) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/dc14a71f-39ee-4aae-be0e-45fe2397dad6.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 02 (Of Lec 03) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c223881e-ec22-4f90-8fb1-ad46ae50d2f3.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Ray Optics and Optical Instruments : DPP 01 (Of Lec 02) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/70c12a0c-e91d-4c4a-a9e3-a0308e94fc7b.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Alternating Current : DPP 06 (Of Lec 09) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d34be7f2-3e51-4fe6-bc84-22d3cc9aa767.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Alternating Current : DPP 05 (Of Lec 08) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bfc8126a-6709-4fe6-9895-e367f76c326b.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Alternating Current : DPP 04 (Of Lec 07) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d94dfbda-30d3-4b05-a4c6-b1da4c0fa341.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Alternating Current : DPP 03 (Of Lec 05) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6173a347-6b56-4384-8718-ba6c6e869c93.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Alternating Current : DPP 02 (Of Lec 03) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6cd4b323-7cd2-4185-b56f-e5ce0ed79f2c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Alternating Current : DPP 01 (Of Lec 02) || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ddc6fb04-f043-4030-927d-10c4d6c18325.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electromagnetic Induction : DPP 08 || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b2a323b7-3c96-4dcb-94b0-d2e8c129a72c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electromagnetic Induction : DPP 07 || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8d8c2b88-bfe6-459e-92a7-39ed5240ea9b.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electromagnetic Induction : DPP 06 || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5d3f1ad6-f4a4-4642-80b1-bcf49e2134b1.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Electromagnetic Induction : DPP 05 || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0e9f3127-cce3-4780-8d45-878b4e4bd95c.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+<tr>  <td> Magnetism and Bar Magnet : Practice Sheet || Lakshya JEE 2024 </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href = 'https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4efc9e9f-0d7c-4b6d-a102-4cb9f7d80101.pdf';" type="button">  VIEW NOTES</button></td></tr>
+
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+ case 16:
+                    chapterTitle.textContent = 'Chapter 16:  Atoms ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+
+<tr>  <td> Atoms 02 : X - ray & Questions || NO DPP || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=f1e37319-39c5-41bd-a8ee-ca58da7fc6dc&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2f461831-92c9-43ae-a538-0216d0bf29ae.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Atoms 01 : Bohr's Model || Atomic Spectra || Questions || NO DPP || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=76e62ef1-e949-43f4-9a97-a846fd5d5581&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/51b15c7b-6e43-4af9-afc1-e4bc1f6f9096.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+ case 17:
+                    chapterTitle.textContent = 'Chapter 17:Alternating Current ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+
+<tr>  <td> Alternating Current 09 : Questions  On Resonance, Power & LC Oscillation  </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=974d6c87-f0c3-415d-b40a-42955efdeb38&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/57a9c3b6-3b5f-4253-a3b4-51f920f0670f.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/57a9c3b6-3b5f-4253-a3b4-51f920f0670f.pdf&q=https://www.pw.live/study/q-bank-exercise/64fc9e1c4f2f64f6eb9b122d?contentSlug=64fc9e1c4f2f64f6eb9b122d&title=Alternating%20Current%20:%20DPP%2006%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Alternating Current 08 : LC oscillation & Transformers || Reschedule  @3:45 PM </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=a7c44f6c-eae4-4113-8095-2615b2613e7a&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/fd7c4086-7c20-4d33-9aa2-46f56d45e132.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bfc8126a-6709-4fe6-9895-e367f76c326b.pdf&q=https://www.pw.live/study/q-bank-exercise/64f9dd101f8359adf1da5354?contentSlug=64f9dd101f8359adf1da5354&title=Alternating%20Current%20:%20DPP%2005%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Alternating Current 07: Transformers || Resonance In RLC Circuit || Power Factor || Wattless Current </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=d80c4150-04d0-4dbd-91dc-456521c6eca6&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/51a2b71a-b75f-4991-8e99-1aae67cba483.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/341e2286-3072-431c-86f9-973553ce3b8a.pdf&q=https://www.pw.live/study/q-bank-exercise/64f84cf8cc8568c6dd01ed59?contentSlug=64f84cf8cc8568c6dd01ed59&title=Alternating%20Current%20:%20DPP%2004%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Alternating Current 06 : Questions || Resonance In RLC Circuit || Power Factor || Wattless Current || NO DPP || Extra Lecture </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=59f20beb-2c8d-4839-937b-13ab520f7cf9&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4ebccacd-a23f-42fe-9617-29b6c5ec35f9.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Alternating Current 05 : RLC circuit & Questions </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=c3bbb3e2-f919-4bbf-a8cd-6f58f58e13f6&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7cc850a8-6516-494e-b5f0-635e429d1d5e.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6173a347-6b56-4384-8718-ba6c6e869c93.pdf&q=https://www.pw.live/study/q-bank-exercise/64f35a7485e85dac14cb02ba?contentSlug=64f35a7485e85dac14cb02ba&title=Alternating%20Current%20:%20DPP%2003%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Alternating Current 04 : Analysis Of AC Circuits || NO DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=24cb6470-72ac-42a7-bbf8-af485fdd4b78&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/9c89ab28-ed38-4c6f-8ee2-be50619d826a.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Alternating Current 03 : R-Ckt,L-Ckt,C-Ckt, RL, RC,LC Circuit </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=b7cf0fd0-0c1e-4017-b364-9620935b1c81&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/59c80552-42fc-4255-995f-1ca2d2bc5363.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6cd4b323-7cd2-4185-b56f-e5ce0ed79f2c.pdf&q=https://www.pw.live/study/q-bank-exercise/64e5db02fb980f92c11129c0?contentSlug=64e5db02fb980f92c11129c0&title=Alternating%20Current%20:%20DPP%2002%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Alternating Current 02 : Mean & RMS Value Of Current </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=10504492-0b31-4663-a7f5-b6385d3f6e40&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8048cda9-fa53-48c4-8d01-0ea607e0efe9.pdf&d=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ddc6fb04-f043-4030-927d-10c4d6c18325.pdf&q=https://www.pw.live/study/q-bank-exercise/64df489e5d5909af5a11d60e?contentSlug=64df489e5d5909af5a11d60e&title=Alternating%20Current%20:%20DPP%2001%20MCQ%20Quiz&cameFrom=dpp&subjectName=Physics&batchId=63fc49ff5376bb01699a69d5&batchName=Lakshya%20JEE%202024';" type="button">  WATCH/NOTES </button></td></tr>
+
+<tr>  <td> Alternating Current 01 : AC Generator || AC Current || NO DPP </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=640aa9f7-4860-4859-9e11-ad966c07c4f7&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d25a742a-cc5c-4c58-b14a-430ac0b98c00.pdf&d=&q=';" type="button">  WATCH/NOTES </button></td></tr>
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+ case 18:
+                    chapterTitle.textContent = 'Chapter 18:ADVANCE CLASSES ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+<tr>  <td> Magnetic Effect of Current 01 : Thinking Ability Building Question || No DPP || Recorded || Extra Lecture </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=b67a054f-6320-40fa-9ea0-c60c43bd5c05&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1bd072ee-51f0-4f7e-beaf-893efe16eae5.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Current Electricity 02 : Advanced PYQ Of Current || Thinking Ability Building Questions || NO DPP || Extra Lecture || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=8195d2c4-4c6f-4e02-b711-3474b5f4e60b&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c7a2e0d5-e706-4e2e-bded-c9c0ee9397bc.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Current Electricity 01 : Advanced Lecture On Current Electricity || NO DPP || Extra Lecture || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=4bd04557-f5db-4578-8ac1-69e8686882e7&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b798978c-db58-4c90-8830-22a32101b35d.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Electric Potential and Capacitance 03 : Application Of Gauss Law || PYQ || NO DPP || Extra Lecture || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=d3f6dcb7-926d-4e69-9ac3-9edb8bdca685&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0c5db5f7-2bf3-44b0-9b58-f5870e19f7f1.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Electric Potential and Capacitance 02 : Advanced Question On Capacitors || NO DPP || Extra Lecture || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=fbff4e26-aec5-4c08-8f56-7807d6866c7d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ef3534c1-bc7b-45e4-a06f-61d3ceb07f97.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Electric Potential and Capacitance 01 : Advanced Question On Capacitors || NO DPP || Extra Lecture || Recorded </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=044ef274-fbdf-4417-af82-d7dc8afe8afa&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d5dcb2a2-9133-482f-a7a1-aa2fcc7ca36a.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Electric Charges And Field 02 : Advance Questions Electric Charges And Field || NO DPP || (Extra) || (Recorded) </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=3a5ff6c2-175c-4665-b68a-7dee85220f5a&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/986d09a0-dfe1-4ef0-9b79-1eb29aef7805.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+<tr>  <td> Electric Charges And Field 01 : Advance Concepts & Questions || PYQ || NO DPP || (Extra) || (Recorded) </td>   <td style="padding: 10px;"> 
+  <button class="btn" onclick="window.location.href ='https://xyz1234xd.blogspot.com/p/player.html?vid=b998ec4c-8587-413c-a95a-a0d23ce13ef4&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8a6e8c10-1f7f-434c-a664-b30acb4f630a.pdf&d=&q=';" type="button">  WATCH</button></td></tr>
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+ case 19:
+                    chapterTitle.textContent = 'Chapter 19: NCERT Discussion ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+
+<tr><td>Nuclei 02 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=c34aab14-f650-4793-aebf-75e641446d97 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Nuclei 01 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=73cbb14d-655b-477d-b938-5cea5ebb7e11 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Atoms 02 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=ca9ae91f-6c1f-4561-90a1-0bf1d7c16841 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Atoms 01 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=75aa53b2-48ab-4499-8434-31057cdc580d &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Dual Nature Of Matter & Radiation 02 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=198e8a50-4cf0-4c5f-a832-fe1a297f45b5 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Dual Nature Of Matter & Radiation 01 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=e0ec1c93-387a-47da-afb5-b794c1c24ab0 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Wave Optics 02 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=412ca257-ff78-40b2-8a9e-3164f340203d &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Wave Optics 01 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=00bb17a3-ea7a-4f99-8d5f-f2fad8b6c893 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Alternating Current 02 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=2eeb0e27-e356-4fdd-93db-f0ca44521adc &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Alternating Current 01 : NCERT Discussion || Recorded || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=cf007c69-4db0-4fa3-a306-136d4e2e49e2 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 02 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=e6b17cb2-d79b-4789-a6f6-4e9e718cdfc8 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electromagnetic Induction 01 : NCERT Discussion || Recorded</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=ec96b313-d297-499a-9449-5f1913b8c028 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Magnetism & Matter 02 : NCERT Discussion || (Recorded)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=06fd48d3-f2ab-442a-b447-dc7bff27736d &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Magnetism & Matter 01 : NCERT Discussion || (Recorded)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=3c709eae-441b-41f9-b9ad-698a22170586 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 02 : NCERT Discussion || (Recorded)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=9543be96-75dd-43da-8d78-9502434a8f53 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Moving Charges & Magnetism 01 : NCERT Discussion || (Recorded)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=76e8b979-6f4e-48f2-bfbc-75b70c5706b5 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Current Electricity 02 : NCERT Discussion || Only Video || (Recorded)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=02136c50-6907-48cf-aa35-89282067f8a6 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Current Electricity 01 : NCERT Discussion || (Recorded)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=b8ab7505-cbd9-4fbc-871c-36a661f23b00 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrostatic Potential & Capacitance 02 : NCERT Discussion || (Recorded)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=70d92111-d475-46cf-a934-1ecc2c7d7261 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrostatic Potential & Capacitance 01 : NCERT Discussion || (Recorded)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=050ee7ab-bf12-4796-ad00-ba2781e00d31 &n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+
+            
+
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+      // Function to replace old links with new links and preserve query parameters
+      function replaceLinks() {
+        const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+        const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+    
+        // Select all elements with a class of 'btn'
+        const buttons = document.querySelectorAll('.btn');
+    
+        // Loop through the selected elements
+        buttons.forEach(button => {
+          // Get the current onclick attribute
+          const currentOnClick = button.getAttribute('onclick');
+    
+          // Check if the onclick attribute contains the oldLink
+          if (currentOnClick.includes(oldLink)) {
+            // Extract the query parameters from the old link
+            const queryParameters = currentOnClick.split(oldLink)[1];
+    
+            // Build the new URL with the query parameters
+            const newURL = newLink + queryParameters;
+    
+            // Remove the existing onclick attribute
+            button.removeAttribute('onclick');
+    
+            // Add a click event listener to handle the navigation
+            button.addEventListener('click', () => {
+              window.location.href = newURL;
+            });
+          }
+        });
+      }
+    
+      // Call the replaceLinks function to replace the links in the onclick attributes
+      replaceLinks();
+    </script>
+
+
+    <style> 
+        /* Desktop styles */
+        table {
+         border-collapse: collapse;
+         width: auto;
+        }
+        th, td {
+         text-align: left;
+         padding: 8px;
+         border: 1px solid black;
+        }
+        th {
+         background-color: #f2f2f2;
+        }
+        img {
+         max-width: 100%;
+         height: auto;
+        }
+        
+        /* Mobile styles */
+        @media only screen and (max-width: 600px) {
+          table {
+            font-size: 12px;
+          }
+          th, td {
+            padding: 4px;
+          }
+          img {
+            height: 200px;
+          }
+          body {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        </style>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+
+    </body>
+    </html>
+    
