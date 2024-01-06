@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #pageContainer {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #ddd; /* Add borders */border-radius: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <h2>Chapter List - Click On Name</h2>
+
+        <!-- Chapter buttons -->
+        <button onclick="showChapterContent(1)">LECTURE & NOTES</button>
+        <button onclick="showChapterContent(2)">DPP'S</button>
+
+        <!-- Chapter content -->
+        <div id="chapterContent">
+            <h3 id="chapterTitle"></h3>
+            <p id="chapterText"></p>
+        </div>
+
+        <!-- Beautified table -->
+        
+    </div>
+ <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'LECTURE & NOTES ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+
+
+<tr><td>Electrochemistry 08 : Board Question Practice</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=a5e0d56c-2f33-4cec-93da-5b0726392eab&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1c209b82-2af7-4af9-8244-4b5ed52ec4c1.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrochemistry 07 : Batteries || Corrosion || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=8b0406d8-3829-467e-87aa-d9320ecc8371&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ac0ab950-db80-49d0-9267-d4e227bbf78e.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrochemistry 06 : Effect Of Dilution || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=a0e457a9-f467-4e29-af31-30ab1e0be90f&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c3a66ec2-72e9-48de-bf6a-b76d74551a8d.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrochemistry 05 : Conductance || NO DPP || Rescheduled @7:45 PM</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=49aeee97-32eb-4654-9721-aa0f5c3bc63d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/48285b87-37eb-4c75-a0d9-94e5d4e35fbc.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrochemistry 04: Faraday Law and Question Practice || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=69cc65f8-e35d-481b-ad39-dfd23c508522&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/60bab6f9-d792-4be8-92f1-691e9ece62ec.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrochemistry 03 : Nernst Equation || Equilibrium Constant || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=f1bd6bd3-d30d-4911-8b50-4817883ce89d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/207e1e53-21fe-4f63-aed4-48b84e0cf7df.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrochemistry 02 : Electrochemical Series || Nernst Equation || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=47668c08-46e7-4f3e-aeca-1c53960fbf82&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/80e1df39-1b5f-4e55-9a85-be06438172d9.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrochemistry 01 : Galvanaic Cell || NO DPP || Rescheduled @7:30 PM</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=2df884c9-46e6-4258-a908-b8f9f28bb00b&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1f3f2f6d-97cd-47fd-84f9-2e8aa08faca7.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+              case 2:
+                    chapterTitle.textContent = 'CHAPTER DPPS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPPS</th></tr>
+
+
+
+
+</tr><td>Electrochemistry : DPP 01 (Of Lecture 08)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3b50d92b-cf20-4107-895e-34f57120608a.pdf'" type="button">VIEW</button>
+</td></tr>
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+                
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+      
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+   
+   
+</body>
+
+</html>
