@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <script disable-devtool-auto="true" src="https://cdn.jsdelivr.net/npm/disable-devtool" clear-log="true" disable-select="true" disable-copy="true" disable-cut="true" disable-paste="true"></script>
+    <title>Chapter LIST</title>
+    
+    <style>
+        body {
+           
+            background-color: #f8f8f8;
+        }
+
+        .all-cont {
+            padding: 10px;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-wrap: wrap;
+        }
+
+        .rectangular-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 250px;
+            height: 60px;
+            color: #fff;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out,
+                background-color 0.3s ease-in-out;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rectangular-card::before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 100%;
+            background-color: #3498db;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .rectangular-card:hover {
+            background-color: rgb(224, 224, 224);
+            transform: scale(1.05);
+            width: 270px;
+            height: 70px;
+        }
+
+        .chapter-names a {
+            text-decoration: none;
+        }
+
+        .chapter-names {
+            font-size: 16px;
+            font-weight: bold;
+            color: #3498db;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+        .chapter-names-ON::before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .arrow {
+            width: 20px;
+            height: 20px;
+            color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        @media (min-width: 500px) {
+            .rectangular-card, .all-cont {
+                margin: 20px;
+                display: flex;
+            }
+        }
+
+        .card-img {
+            width: 45px;
+            margin-left: 9px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="all-cont">
+
+      
+        <div onclick="window.location.href ='https://devanshop12.github.io/lak/BOARD%20BOOSTER/ENG/1%20%20%20Flamingo.html';">
+            <div class="rectangular-card">
+                <div class="chapter-names"> Flamingo </div>
+                <div class="arrow">&rarr;</div>
+            </div>
+        </div>
+
+
+        
+           <div onclick="window.location.href ='https://devanshop12.github.io/lak/BOARD%20BOOSTER/ENG/2%20%20%20Vistas.html';">
+            <div class="rectangular-card">
+                <div class="chapter-names"> Vistas </div>
+                <div class="arrow">&rarr;</div>
+            </div>
+        </div>
+
+
+        
+        
+           <div onclick="window.location.href ='https://devanshop12.github.io/lak/BOARD%20BOOSTER/ENG/3%20%20Writing%20Skills.html';">
+            <div class="rectangular-card">
+                <div class="chapter-names"> Writing Skills </div>
+                <div class="arrow">&rarr;</div>
+            </div>
+        </div>
+        
+
+
+        
+        
+        
+    </div>
+</body>
+</html>
