@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #pageContainer {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #ddd; /* Add borders */border-radius: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <h2>Chapter List - Click On Name</h2>
+
+        <!-- Chapter buttons -->
+        <button onclick="showChapterContent(1)">LECTURE & NOTES</button>
+        <button onclick="showChapterContent(2)">DPP'S</button>
+
+        <!-- Chapter content -->
+        <div id="chapterContent">
+            <h3 id="chapterTitle"></h3>
+            <p id="chapterText"></p>
+        </div>
+
+        <!-- Beautified table -->
+        
+    </div>
+ <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'LECTURE & NOTES ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+<tr><td>Sexual Reproduction In Flowering Plants 05 : Seed || Apomixis || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=563ab486-ffd1-47dd-91c5-e8c32f610d82&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/82b1d321-3b8b-4ee5-b076-6ce19f7c902e.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Sexual Reproduction In Flowering Plants 04 : Pollen Pistil Interaction || Fertilisation Event || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=1550ed6f-0a68-4d8e-85b9-e096e8a95f1a&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/df63a9da-fd1e-4207-8f27-2627c20503c2.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Sexual Reproduction In Flowering Plants 03 : Female Gametophyte || Types Of Pollination || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=89b41071-521b-4189-8672-bd17b361ce4c&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4ef36e5f-3a59-425d-9db1-3907ec4b1725.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Sexual Reproduction In Flowering Plants 02 : Male Gametophyte || Female Reproductive Part || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=a4527819-a22d-4390-b258-e823342a40bf&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/918d0341-390d-4e64-8465-4e969c07af68.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Sexual Reproduction In Flowering Plants 01 : Introduction || L.S. Of A Flower || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=e1b3f740-860c-410b-ba46-d56692da085b&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3e798fbf-bbe8-465d-9b50-887a3c98d78e.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+              case 2:
+                    chapterTitle.textContent = 'CHAPTER DPPS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPPS</th></tr>
+  
+
+</tr><td>Sexual Reproduction In Flowering Plants : DPP 05 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a933101b-6a2f-4acf-8bee-a4a024e3106c.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Sexual Reproduction In Flowering Plants : DPP 04 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8d0a80c3-31e8-43ac-9565-4649c87df545.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Sexual Reproduction In Flowering Plants : DPP 03 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7d96474e-1f4a-4200-8c11-830f18e14366.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Sexual Reproduction In Flowering Plants : DPP 02 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/d199bc58-29f2-47f6-b81f-10dcb646abc3.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Sexual Reproduction In Flowering Plants : DPP 01 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7dd962ef-2755-4ca3-a5d2-9de6c3e864bc.pdf'" type="button">VIEW</button>
+</td></tr>
+
+
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+                
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+      
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+   
+   
+</body>
+
+</html>
