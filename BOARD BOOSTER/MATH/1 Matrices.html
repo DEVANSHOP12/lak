@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+
+            max-height: 100vh;
+        }
+
+        #pageContainer {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #ddd; /* Add borders */border-radius: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <h2>Chapter List - Click On Name</h2>
+
+        <!-- Chapter buttons -->
+        <button onclick="showChapterContent(1)">LECTURE & NOTES</button>
+        <button onclick="showChapterContent(2)">DPP'S</button>
+
+        <!-- Chapter content -->
+        <div id="chapterContent">
+            <h3 id="chapterTitle"></h3>
+            <p id="chapterText"></p>
+        </div>
+
+        <!-- Beautified table -->
+        
+    </div>
+ <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'LECTURE & NOTES ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+
+
+
+<tr><td>Matrices 03 : Properties Of Symmetric And Skew Symmetric Matrices || Elementary Operations Of Matrices || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=beda2dfc-c0f7-4fc7-8c94-f5d606575d9c&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bb0fbdae-20cb-4b14-a3f6-2c5d7cbf2634.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Matrices 02 : Multiplication Of Matrices || Properties Of Multiplication Of Matrices || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=e0c80cac-dcb4-4ad1-970e-279f9441dea0&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/82ec2c7d-94d4-45a0-b58b-e817129ec39e.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Matrices 01 : Matrix || Order Of Matrix || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=b7cba2a1-b442-4bb3-ae4d-24e6f0b496f4&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/04ddcd81-b478-4d13-9f49-5bb5bdf41f78.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+              case 2:
+                    chapterTitle.textContent = 'CHAPTER DPPS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPPS</th></tr>
+
+</tr><td>Matrices : DPP 04 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c4ddef13-6ea6-4142-b824-9d6418b65c53.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Matrices : DPP 03 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6fe1ec1e-88c5-4b5f-aab9-0641c2b307f7.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Matrices : DPP 02 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/807223af-2c6a-4d91-b5f9-c88e4cd48310.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Matrices : DPP 01 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7f54d3b2-56aa-47ab-8e22-e5e7612298d7.pdf'" type="button">VIEW</button>
+</td></tr>
+
+
+
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+                
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+      
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+   
+   
+</body>
+
+</html>
