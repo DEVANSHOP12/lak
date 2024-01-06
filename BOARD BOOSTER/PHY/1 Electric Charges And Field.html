@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+
+            max-height: 100vh;
+        }
+
+        #pageContainer {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #ddd; /* Add borders */border-radius: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <h2>Chapter List - Click On Name</h2>
+
+        <!-- Chapter buttons -->
+        <button onclick="showChapterContent(1)">LECTURE & NOTES</button>
+        <button onclick="showChapterContent(2)">DPP'S</button>
+
+        <!-- Chapter content -->
+        <div id="chapterContent">
+            <h3 id="chapterTitle"></h3>
+            <p id="chapterText"></p>
+        </div>
+
+        <!-- Beautified table -->
+        
+    </div>
+ <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'LECTURE & NOTES ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+
+
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=97e5c227-6e50-4dea-acd4-499727c446e2&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/aa478933-73a9-4044-91d9-39dad249084f.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 06 : Continuous Charge Distribution || Gauss's Law || Live || Rescheduled @4:15 PM</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=2d9d5a51-ec0c-4fdd-97a4-27d14671b5e7&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3f8d1db7-0518-4f3e-96bf-828e2025659e.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 05 : Electric Dipole || Dipole In A Uniform External Field (Part 2) || Live</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=1eb4a39c-da41-4735-b905-2650ac973241&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a5ac0835-2525-4f6d-b225-0856ea5002e2.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 04 : Electric Dipole || Dipole In A Uniform External Field || Live</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=8f8cf66d-56c0-4474-9134-1eb4944a6bcf&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/72c75dc0-6d61-4d7e-82d6-9ac16e64904b.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 03 : Electric Field Lines || Electric Flux || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=60612014-de21-4324-80de-29b80ef73cfd&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bc2bb22e-75ec-4783-8fda-aa4e2869907f.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 02 : Electric Field || Electric Field Due To A Point Charge || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=97d5b496-ec7b-44e6-af5e-1ba9c88f69c4&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8ce8c738-3060-462a-b880-0e62d36cc519.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electric Charges And Field 01 : Conductors And Insulators || Charging By Induction || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=b595f7dd-7460-4036-a982-9bc7915de88b&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1201c889-9bb1-40b3-b68c-3aef06cd6798.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+   </table>`
+   replaceLinks();
+                    break;
+
+              case 2:
+                    chapterTitle.textContent = 'CHAPTER DPPS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPPS</th></tr>
+
+</tr><td>Electric Charges And Field : DPP 04 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/12572794-6a51-471d-8aad-0514d462e402.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Electric Charges And Field : DPP 03 (Of Lecture 06)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c5052c92-065b-4d71-b580-d19247922719.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Electric Charges And Field : DPP 02 (Of Lecture 05)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a4cda018-d736-4fd7-a13e-39258beb939b.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Electric Charges And Field : DPP 01 (Of Lecture 04)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/400ad708-4fdc-4524-b3d9-f731ad8629d2.pdf'" type="button">VIEW</button>
+</td></tr>
+
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+                
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+      
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+   
+   
+</body>
+
+</html>
