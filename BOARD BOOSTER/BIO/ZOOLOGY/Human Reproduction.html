@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+
+</head>
+<body>
+    <h2>Chapter List Click On Name </h2>
+
+    <!-- Chapter buttons -->
+ 
+  <button onclick="showChapterContent(1)"> LECTURE & NOTES </button>
+  <button onclick="showChapterContent(2)"> DPP'S  </button>
+
+    <!-- Add buttons for other chapters as needed -->
+
+    <!-- Chapter content -->
+    <div id="chapterContent">
+        <h3 id="chapterTitle"></h3>
+        <p id="chapterText"></p>
+    </div>
+
+    <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'LECTURE & NOTES ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+<tr><td>Human Reproduction 06 : Gastrulation, Placentation || Parturition, Lactation</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=08008f82-e84f-4e41-a5d4-10005c380831&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c97e6d6b-7011-4d0b-b054-ed84de64f8c5.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Human Reproduction 05 : Fertilisation || Cleavage || Implantation</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=f6683ecc-b2dc-4909-b60f-da3d20d121de&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/02684e91-ea6e-44ab-80b6-7365a6c20f7d.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Human Reproduction 04 : Oogenesis And Menstrual Cycle || Structure Of Egg</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=2145e8e1-09f9-4289-bb1e-ecea17d32406&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7423325b-e23a-4233-a957-983ec238d582.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Human Reproduction 03 : Spermatogenesis || Hormonal Control Of Male Reproductive System</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=b486a7f2-4aba-419a-b154-841c72f8f36a&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/73029e75-9576-4a01-a1ad-08b3b2a31378.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Human Reproduction 02 : Female Reproductive System || Mammary Glands || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=d3d533df-f6e7-439f-9f57-8a550a165a92&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/7af54b5f-5e28-4b24-9eb0-ed532db52a96.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Human Reproduction 01 : Events In Human Reproduction || Male Reproductive System || NO DPP || Rescheduled @7:40 PM</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=543f7651-3b1d-4ae2-af39-58ba1cc01e97&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/efbc716b-2013-4e3f-8d1f-2f15b5fdb65f.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+              case 2:
+                    chapterTitle.textContent = 'CHAPTER DPPS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+  
+
+</tr><td>Human Reproduction : DPP 06 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/09a16167-1fd9-41e1-b309-ed8e2d10c6c8.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Human Reproduction : DPP 05 (Extra)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c3052ffb-e3bd-4af9-ae10-bcb37eb2180a.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Human Reproduction : DPP 04 (Of Lecture 06)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/757c9415-b83b-4525-b60d-7dced6cb58a3.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Human Reproduction : DPP 03 (Of Lecture 05)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4d69b564-42ff-4cd2-871b-2d9670422a12.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Human Reproduction : DPP 02 (Of Lecture 04)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2be19e63-4d65-42f5-a702-d646506411f6.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Human Reproduction : DPP 01 (Of Lecture 03)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ea44e85e-1056-49b6-90d0-050898730209.pdf'" type="button">VIEW</button>
+</td></tr>
+
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+                
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+      
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+      </body>
+
+  
+    <style> 
+        /* Desktop styles */
+        table {
+         border-collapse: collapse;
+         width: auto;
+        }
+        th, td {
+         text-align: left;
+         padding: 8px;
+         border: 1px solid black;
+        }
+        th {
+         background-color: #f2f2f2;
+        }
+        img {
+         max-width: 100%;
+         height: auto;
+        }
+        
+        /* Mobile styles */
+        @media only screen and (max-width: 600px) {
+          table {
+            font-size: 12px;
+          }
+          th, td {
+            padding: 4px;
+          }
+          img {
+            height: 200px;
+          }
+          body {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        </style>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+      </html>
