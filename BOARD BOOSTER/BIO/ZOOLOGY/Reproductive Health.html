@@ -1,26 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
 
+            max-height: 100vh;
+        }
+
+        #pageContainer {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #ddd; /* Add borders */border-radius: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
+
 <body>
-    <h2>Chapter List Click On Name </h2>
+    <div id="pageContainer">
+        <h2>Chapter List - Click On Name</h2>
 
-    <!-- Chapter buttons -->
- 
-  <button onclick="showChapterContent(1)"> LECTURE & NOTES </button>
-  <button onclick="showChapterContent(2)"> DPP'S  </button>
+        <!-- Chapter buttons -->
+        <button onclick="showChapterContent(1)">LECTURE & NOTES</button>
+        <button onclick="showChapterContent(2)">DPP'S</button>
 
-    <!-- Add buttons for other chapters as needed -->
+        <!-- Chapter content -->
+        <div id="chapterContent">
+            <h3 id="chapterTitle"></h3>
+            <p id="chapterText"></p>
+        </div>
 
-    <!-- Chapter content -->
-    <div id="chapterContent">
-        <h3 id="chapterTitle"></h3>
-        <p id="chapterText"></p>
+        <!-- Beautified table -->
+        
     </div>
 
     <script>
@@ -121,72 +188,8 @@
         // Call the replaceLinks function to replace the links in the onclick attributes
         replaceLinks();
       </script>
-      </body>
+   
+   
+</body>
 
-  
-    <style> 
-        /* Desktop styles */
-        table {
-         border-collapse: collapse;
-         width: auto;
-        }
-        th, td {
-         text-align: left;
-         padding: 8px;
-         border: 1px solid black;
-        }
-        th {
-         background-color: #f2f2f2;
-        }
-        img {
-         max-width: 100%;
-         height: auto;
-        }
-        
-        /* Mobile styles */
-        @media only screen and (max-width: 600px) {
-          table {
-            font-size: 12px;
-          }
-          th, td {
-            padding: 4px;
-          }
-          img {
-            height: 200px;
-          }
-          body {
-            margin: 0;
-            padding: 0;
-          }
-        }
-        </style>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 20px;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        button {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        #chapterContent {
-            display: none;
-            margin-top: 20px;
-        }
-    </style>
-      </html>
+</html>
