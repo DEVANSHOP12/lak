@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+
+            max-height: 100vh;
+        }
+
+        #pageContainer {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #ddd; /* Add borders */border-radius: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <h2>Chapter List - Click On Name</h2>
+
+        <!-- Chapter buttons -->
+        <button onclick="showChapterContent(1)">LECTURE & NOTES</button>
+        <button onclick="showChapterContent(2)">DPP'S</button>
+
+        <!-- Chapter content -->
+        <div id="chapterContent">
+            <h3 id="chapterTitle"></h3>
+            <p id="chapterText"></p>
+        </div>
+
+        <!-- Beautified table -->
+        
+    </div>
+ <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'LECTURE & NOTES ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+
+
+<tr><td>Electrostatic Potential And Capacitance 05 : Capacitor</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=8e17bd8e-41bc-4c55-8ffe-bf1b954af61c&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0e8880f1-a4a7-46e0-84d4-74102d36a416.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrostatic Potential And Capacitance 04 : Revision And Doubts || Electrostatic Of Conductors</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=2b12f1a6-3b06-4af3-92b3-2f5233bdfe2a&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/eb42e010-ff86-4f45-aa99-fd652c0b5bad.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrostatic Potential And Capacitance 03 : Revision And Doubts || Potential In External Electric Field || Rescheduled @7:30 PM</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=4540ba66-1a5f-452c-86a7-2ce6e13edf4d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0a3bfdb5-d1d3-419f-a324-c6427d3bfdbf.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrostatic Potential And Capacitance 02 : Potential Concept || Electric Potential Due To A Point Charge (Part 2) || NO DPP || Live</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=f4dec3f4-313c-4abe-9136-26ea8d2f8ec2&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/26d6092d-abe2-4076-8182-f853c925efec.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Electrostatic Potential And Capacitance 01 : Potential Concept || Electric Potential Due To A Point Charge || NO DPP || Live</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=3427e33c-3534-4804-9ca4-56ad6ce6d664&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/938d18b7-cdab-4668-bd87-4b3bff5641bb.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+   </table>`
+   replaceLinks();
+                    break;
+
+              case 2:
+                    chapterTitle.textContent = 'CHAPTER DPPS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPPS</th></tr>
+
+
+</tr><td>Electrostatic Potential And Capacitance : DPP 03 (Of Lecture 05)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/15c082a7-8932-4735-b2a3-1dce9e09f1ed.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Electrostatic Potential And Capacitance : DPP 02 (Of Lecture 04)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/af44d74e-8978-4be2-98ff-11a5e8b9877e.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Electrostatic Potential And Capacitance : DPP 01 (Of Lecture 03)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1117927a-9e4f-4fcd-a732-05eda4d51c82.pdf'" type="button">VIEW</button>
+</td></tr>
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+                
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+      
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+   
+   
+</body>
+
+</html>
