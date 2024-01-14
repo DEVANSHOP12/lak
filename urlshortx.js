@@ -1,7 +1,7 @@
       
    // Function to shorten a URL
 async function shortenURL(url) {
-  const apiEndpoint = "https://urlshortx.com/api?api=4b17f6a264b2bbe471bf6b71ae3cd28dfc36ae90&url="; // Replace YOUR_API_KEY with your actual API key
+  const apiEndpoint = "https://urlshortx.com/api?api=310d4ade2a90efdb53bcd1d92c3a541b536d6793&url="; // Replace YOUR_API_KEY with your actual API key
 
   try {
     const response = await fetch(apiEndpoint + encodeURIComponent(url));
