@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <script disable-devtool-auto="true" src="https://cdn.jsdelivr.net/npm/disable-devtool" clear-log="true" disable-select="true" disable-copy="true" disable-cut="true" disable-paste="true"></script>
     <title>Chapter LIST</title>
-
+    
     <style>
         body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
+           
             background-color: #f8f8f8;
+        }
+
+        .all-cont {
+            padding: 10px;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-wrap: wrap;
         }
 
         .rectangular-card {
@@ -48,50 +53,76 @@
         }
 
         .rectangular-card:hover {
+            background-color: rgb(224, 224, 224);
             transform: scale(1.05);
             width: 270px;
             height: 70px;
         }
 
-        .rectangular-card:active {
-            background-color: rgb(224, 224, 224); /* Darken the color on click */
+        .chapter-names a {
+            text-decoration: none;
         }
 
         .chapter-names {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
-          color: #3498db;
+            color: #3498db;
             border-top-right-radius: 8px;
             border-bottom-right-radius: 8px;
             padding: 5px;
             margin-right: 5px;
         }
 
+        .chapter-names-ON::before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
         .arrow {
             width: 20px;
             height: 20px;
-          /*  background-color: #2c3e50;  Darken the circle on click */
             color: #3498db;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            font-weight: bold; /* Make the arrow bold */
+            font-weight: bold;
+        }
+
+        @media (min-width: 500px) {
+            .rectangular-card, .all-cont {
+                margin: 20px;
+                display: flex;
+            }
+        }
+
+        .card-img {
+            width: 45px;
+            margin-left: 9px;
         }
     </style>
 </head>
-
 <body>
+    <div class="all-cont">
 
-    <div class="rectangular-card">
-        <div class="chapter-names">
-            Chapter 1 - Introduction
+
+    <div onclick="window.location.href =' https://devanshop12.github.io/lak/';">
+            <div class="rectangular-card">
+                <div class="chapter-names">  soon </div>
+                <div class="arrow">&rarr;</div>
+            </div>
         </div>
-        <div class="arrow">
-            &rarr;
-        </div>
+
+
+        
     </div>
-
 </body>
-
 </html>
