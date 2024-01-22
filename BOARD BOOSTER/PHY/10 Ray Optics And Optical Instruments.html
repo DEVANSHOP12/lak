@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+
+            max-height: 100vh;
+        }
+
+        #pageContainer {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #ddd; /* Add borders */border-radius: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <h2>Content List - Click On Button </h2>
+
+        <!-- Chapter buttons -->
+        <button onclick="showChapterContent(1)">LECTURE & NOTES</button>
+        <button onclick="showChapterContent(2)">DPP'S</button>
+
+        <!-- Chapter content -->
+        <div id="chapterContent">
+            <h3 id="chapterTitle"></h3>
+            <p id="chapterText"></p>
+        </div>
+
+        <!-- Beautified table -->
+        
+    </div>
+ <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'LECTURE & NOTES ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+
+
+
+<tr><td>Ray Optics And Optical Instruments 05 : Revision || Microscope || NO DPP || LIVE</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=fbb458a9-f8de-4ec4-be4e-5511404978a2&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/91e14f38-fd42-4aac-b8ad-fc576f8a6d3f.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Ray Optics And Optical Instruments 04 : Thin Lens || Prism</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=3db85d36-2a6b-4bd9-9844-ed1b3fed2bf7&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/2f6612af-ecb6-4bb0-ab75-ff7f753c9661.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Ray Optics And Optical Instruments 03 : Glass Slab || Lens Maker Formula</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=de4497a6-aaea-438f-a13a-e111a1287692&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/f45b83db-1ca7-49e1-a736-ef5dfc16d1f2.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Ray Optics And Optical Instruments 02 : Mirror Formula || Refraction</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=9579074f-8894-4946-bea5-61ea7d32f8a5&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8a534222-9461-49ac-99e6-f825cb1af718.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Ray Optics And Optical Instruments 01 : Introduction || Plane Mirror</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=46c97348-90c0-4c4d-baed-4caedbdcdab6&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/41a3500f-49de-4fb8-9efa-6104a2c41d3e.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+              case 2:
+                    chapterTitle.textContent = 'CHAPTER DPPS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPPS</th></tr>
+
+</tr><td>Ray Optics And Optical Instruments : DPP 04</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/352d56a2-0fd8-4f09-a568-2dc35582f0af.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Ray Optics And Optical Instruments : DPP 03</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/41c508d4-8cf5-4fa0-a2ee-d650de2ae944.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Ray Optics And Optical Instruments : DPP 02</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/277ab58d-df1e-45c7-a3ca-c59b8d1e42b1.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Ray Optics And Optical Instruments : DPP 01</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6f7e489c-ded1-4225-81ce-60dab63cc0af.pdf'" type="button">VIEW</button>
+</td></tr>
+
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+                
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+      
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+   
+   
+</body>
+
+</html>
