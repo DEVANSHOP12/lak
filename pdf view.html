@@ -1,0 +1,40 @@
+
+<pdf-viewer src="https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0d9f14bd-a9d9-440c-9896-16724745a13f.pdf"></pdf-viewer>
+
+
+<script>
+const template = document.createElement('template');
+template.innerHTML = `
+  <iframe frameborder="0" 
+    width="1280" 
+    height="900">
+  </iframe>
+`
+
+class PdfViewer extends HTMLElement {
+  constructor() {
+    super()
+    const shadowRoot = this.attachShadow({mode: 'open'})
+    shadowRoot.appendChild(template.content.cloneNode(true))
+  }
+  get observedAttributes() {
+    return ['src']
+  }
+  connectedCallback() {
+    this.updateIframeSrc()
+  }
+  attributeChangedCallback(name) {
+    if (['src', 'viewerPath'].includes(name)) {
+      this.updateIframeSrc()
+    }
+  }
+  updateIframeSrc() {
+    this.shadowRoot.querySelector('iframe').setAttribute(
+      'src', 
+      `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
+    )
+  }
+}
+window.customElements.define('pdf-viewer', PdfViewer)
+
+  </script>
