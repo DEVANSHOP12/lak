@@ -3,7 +3,7 @@
 <script>
 const template = document.createElement('template');
 template.innerHTML = `
-  <iframe frameborder="0" width="100%" height="100%"></iframe>
+  <iframe frameborder="0" width="1280" height="900"></iframe>
 `;
 
 class PdfViewer extends HTMLElement {
@@ -31,12 +31,19 @@ class PdfViewer extends HTMLElement {
     const pdfUrlParam = new URLSearchParams(window.location.search).get('v');
     const pdfSrc = pdfUrlParam ? pdfUrlParam : this.getAttribute('src') || '';
 
+    // PDF.js options for optimization
+    const pdfjsOptions = {
+      cacheOnly: true, // Enable caching
+      range: '1-5',   // Load pages 1 to 10 initially
+    };
+
     this.shadowRoot.querySelector('iframe').setAttribute(
       'src', 
-      `https://mozilla.github.io/pdf.js/web/viewer.html?file=${pdfSrc}`
+      `https://mozilla.github.io/pdf.js/web/viewer.html?file=${pdfSrc}&${new URLSearchParams(pdfjsOptions)}`
     );
   }
 }
 
 window.customElements.define('pdf-viewer', PdfViewer);
 </script>
+
