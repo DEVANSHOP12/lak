@@ -1,40 +1,42 @@
-
-<pdf-viewer src="https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/0d9f14bd-a9d9-440c-9896-16724745a13f.pdf"></pdf-viewer>
-
+<pdf-viewer></pdf-viewer>
 
 <script>
 const template = document.createElement('template');
 template.innerHTML = `
-  <iframe frameborder="0" 
-    width="1280" 
-    height="900">
-  </iframe>
-`
+  <iframe frameborder="0" width="100%" height="100%"></iframe>
+`;
 
 class PdfViewer extends HTMLElement {
   constructor() {
-    super()
-    const shadowRoot = this.attachShadow({mode: 'open'})
-    shadowRoot.appendChild(template.content.cloneNode(true))
+    super();
+    const shadowRoot = this.attachShadow({mode: 'open'});
+    shadowRoot.appendChild(template.content.cloneNode(true));
   }
-  get observedAttributes() {
-    return ['src']
-  }
+
   connectedCallback() {
-    this.updateIframeSrc()
+    this.updateIframeSrc();
   }
+
   attributeChangedCallback(name) {
     if (['src', 'viewerPath'].includes(name)) {
-      this.updateIframeSrc()
+      this.updateIframeSrc();
     }
   }
+
+  static get observedAttributes() {
+    return ['src'];
+  }
+
   updateIframeSrc() {
+    const pdfUrlParam = new URLSearchParams(window.location.search).get('v');
+    const pdfSrc = pdfUrlParam ? pdfUrlParam : this.getAttribute('src') || '';
+
     this.shadowRoot.querySelector('iframe').setAttribute(
       'src', 
-      `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
-    )
+      `https://mozilla.github.io/pdf.js/web/viewer.html?file=${pdfSrc}`
+    );
   }
 }
-window.customElements.define('pdf-viewer', PdfViewer)
 
-  </script>
+window.customElements.define('pdf-viewer', PdfViewer);
+</script>
