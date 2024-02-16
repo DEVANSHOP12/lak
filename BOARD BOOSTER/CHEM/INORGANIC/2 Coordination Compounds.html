@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+
+            max-height: 100vh;
+        }
+
+        #pageContainer {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #ddd; /* Add borders */border-radius: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <h2>Chapter List - Click On Name</h2>
+
+        <!-- Chapter buttons -->
+        <button onclick="showChapterContent(1)">LECTURE & NOTES</button>
+        <button onclick="showChapterContent(2)">DPP'S</button>
+
+        <!-- Chapter content -->
+        <div id="chapterContent">
+            <h3 id="chapterTitle"></h3>
+            <p id="chapterText"></p>
+        </div>
+
+        <!-- Beautified table -->
+        
+    </div>
+ <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'LECTURE & NOTES ';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+
+
+
+<tr><td>Coordination Compounds 06 : Isomerism In Coordination Compounds</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=4c4c0f9a-35be-400c-b2dd-d4f2640f6c84&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b462ed21-c486-4ca3-b1b9-5f744cedc233.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Coordination Compounds 05 : Crystal Field Theory (Part 2)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=af612ff4-2d5c-4968-9163-0f861fd4112d&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a0280639-f2c9-402d-9fa4-3f4fff5ed766.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Coordination Compounds 04 : Crystal Field Theory || Extra</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=1f298745-937b-473a-b455-6c82815af8cd&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/bcec34a3-5c1b-4388-b218-4df99dc2f8f4.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Coordination Compounds 03 : Valence Bond Theory</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=c09c1868-317b-4ef4-92be-4503b81bbe80&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/58ab8550-fcba-4a44-97b4-b9a28191b8ee.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Coordination Compounds 02 : Classification Of Ligands || IUPAC Nomenclature</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=4f6a41c0-95e3-45df-82ff-70e2d410ba32&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/4ccfff6b-8265-40ff-90e6-6dfeda5a3d77.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Coordination Compounds 01 : Double Salts & Coordination Compounds || Werner's Theory || NO DPP</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=7aa57658-54a6-4c2e-bb88-e9a68a1bdcfa&n=https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/92f85a81-b8bf-4b27-b6ce-1b66683753f6.pdf&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+
+
+
+   </table>`
+   replaceLinks();
+                    break;
+
+              case 2:
+                    chapterTitle.textContent = 'CHAPTER DPPS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">DPPS</th></tr>
+
+          
+</tr><td>Coordination Compounds : DPP 05 (Of Lecture 06)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6a084348-75e9-4c05-ae5a-0c5d82f94822.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Coordination Compounds : DPP 04 (Of Lecture 05)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/99f434c8-d58b-44f4-b76f-b858a7015b1f.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Coordination Compounds : DPP 03 (Of Lecture 04)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/cf017bcf-1c0c-42e1-97b4-995d43b6b1c7.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Coordination Compounds : DPP 02 (Of Lecture 03)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/1bdb4cad-c2c3-41bb-bcac-417d0f2cec06.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Coordination Compounds : DPP 01 (Of Lecture 02)</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/8d62a3c9-cff6-4027-84d9-f8cc6b0e4318.pdf'" type="button">VIEW</button>
+</td></tr>
+ 
+
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+                
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+      
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+   
+   
+</body>
+
+</html>
