@@ -282,6 +282,10 @@ if (!videoId) {
     console.error('Video ID not found in URL');
 }
 
+clearkeysData = protData['org.w3.clearkey'].clearkeys;
+ // Log clearkeys data
+  console.log('Clearkeys Data:', clearkeysData);
+
 // Construct the URL of the video player page based on the video ID
 var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/'+videoId+'/master.mpd';
 
