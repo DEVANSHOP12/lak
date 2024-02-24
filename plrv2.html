@@ -73,13 +73,62 @@
         <div class="circle"></div>
     </div>
     <video controls crossorigin playsinline id="videoContainer" style="background-color: #0A0909;">
-        <source src="https://d1d34p8vz63oiq.cloudfront.net/1169c60a-ceb9-4b1e-9899-816644ce3f9b/master.mpd">
+        <source id="videoSource" src="https://d1d34p8vz63oiq.cloudfront.net/0896bf63-4917-4d71-8bf1-43462f30f6b9/master.mpd">
     </video>
     <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script> <!-- Include Dash.js library -->
     <script>
+        // Declare clearkeysData as a global variable
+        var clearkeysData;
+
         document.addEventListener("DOMContentLoaded", function() {
+            // URL of the website from which you want to extract HTML data
+            var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/1169c60a-ceb9-4b1e-9899-816644ce3f9b/master.mpd'; // Replace with your URL
+
+            // Fetch HTML content from the URL
+            fetch(url)
+                .then(response => response.text())
+                .then(htmlContent => {
+                    // Create a temporary div element to parse HTML content
+                    var tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = htmlContent;
+
+                    // Find the script tag containing protData
+                    var scriptElement = tempDiv.querySelector('script:not([src])');
+
+                    if (scriptElement && scriptElement.textContent.includes('const protData')) {
+                        // Extract protData object
+                        var startIndex = scriptElement.textContent.indexOf('const protData = ') + 'const protData = '.length;
+                        var endIndex = scriptElement.textContent.indexOf(';', startIndex);
+                        var protDataStr = scriptElement.textContent.substring(startIndex, endIndex);
+
+                        // Parse protData object
+                        var protData = JSON.parse(protDataStr);
+
+                        // Extract clearkeys data
+                        clearkeysData = protData['org.w3.clearkey'].clearkeys; // Assign to the global variable
+
+                        // Log clearkeys data
+                        console.log('Clearkeys Data:', clearkeysData);
+                    } else {
+                        console.error('Script tag containing protData not found');
+                    }
+                })
+                .catch(error => console.error('Error fetching HTML:', error))
+                .finally(() => {
+                    // Once clearkeysData is fetched, initialize the player
+                    initializePlayer();
+                });
+        });
+
+        function initializePlayer() {
             const video = document.getElementById("videoContainer");
-            const source = "https://d1d34p8vz63oiq.cloudfront.net/1169c60a-ceb9-4b1e-9899-816644ce3f9b/master.mpd";
+            const videoSource = document.getElementById("videoSource");
+            const videoKey = "0896bf63-4917-4d71-8bf1-43462f30f6b9"; // Replace with your actual video key
+            const source = `https://d1d34p8vz63oiq.cloudfront.net/${videoKey}/master.mpd`;
+            
+            videoSource.src = source;
+            
             const dash = dashjs.MediaPlayer().create();
             var defaultOptions = {
                 "autoplay": false,
@@ -111,10 +160,7 @@
             });
             const protData = {
                 "org.w3.clearkey": {
-                    "clearkeys": {
-                        // "DfSlNwvgGlQylBfCBLgbXw": "oT30lg0hMmM88rT0pQeLww"
-                        clearkeysData,
-                    }
+                    "clearkeys": clearkeysData // Using clearkeysData here
                 }
             };
             dash.setProtectionData(protData);
@@ -137,53 +183,16 @@
                     },
                 };
                 defaultOptions.previewThumbnails = {
-                                enabled: true,
-                                src: 'https://d1d34p8vz63oiq.cloudfront.net/1169c60a-ceb9-4b1e-9899-816644ce3f9b/master.mpd'
-                            };
+                    enabled: true,
+                    src: `https://d1d34p8vz63oiq.cloudfront.net/${videoKey}/master.mpd`
+                };
                 defaultOptions.tooltips = {controls: true, seek:true};
                 const player = new Plyr(video, defaultOptions);
                 window.player = player;
                 window.dash = dash;
             });
             dash.attachView(video);
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // URL of the website from which you want to extract HTML data
-            var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/7ac9bcad-f153-4ac9-81f9-fb99dfd4cdc8/master.mpd'; // Replace with your URL
-
-            // Fetch HTML content from the URL
-            fetch(url)
-                .then(response => response.text())
-                .then(htmlContent => {
-                    // Create a temporary div element to parse HTML content
-                    var tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = htmlContent;
-
-                    // Find the script tag containing protData
-                    var scriptElement = tempDiv.querySelector('script:not([src])');
-
-                    if (scriptElement && scriptElement.textContent.includes('const protData')) {
-                        // Extract protData object
-                        var startIndex = scriptElement.textContent.indexOf('const protData = ') + 'const protData = '.length;
-                        var endIndex = scriptElement.textContent.indexOf(';', startIndex);
-                        var protDataStr = scriptElement.textContent.substring(startIndex, endIndex);
-
-                        // Parse protData object
-                        var protData = JSON.parse(protDataStr);
-
-                        // Extract clearkeys data
-                        var clearkeysData = protData['org.w3.clearkey'].clearkeys;
-
-                        // Log clearkeys data
-                        console.log('Clearkeys Data:', clearkeysData);
-                    } else {
-                        console.error('Script tag containing protData not found');
-                    }
-                })
-                .catch(error => console.error('Error fetching HTML:', error));
-        });
+        }
     </script>
 </body>
 </html>
