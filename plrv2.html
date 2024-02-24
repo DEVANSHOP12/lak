@@ -47,10 +47,10 @@
                         var protDataStr = scriptElement.textContent.substring(startIndex, endIndex);
 
                         // Parse protData object
-                        var protData = JSON.parse(protDataStr);
+                        var extractedProtData = JSON.parse(protDataStr);
 
                         // Extract clearkeys data and assign it to the global variable
-                        clearkeysData = protData['org.w3.clearkey'].clearkeys;
+                        clearkeysData = extractedProtData['org.w3.clearkey'].clearkeys;
 
                         // Log clearkeys data
                         console.log('Clearkeys Data:', clearkeysData);
