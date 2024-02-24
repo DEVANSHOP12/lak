@@ -83,6 +83,7 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             // URL of the website from which you want to extract HTML data
+
               // Get the video ID from the URL
         var videoId = new URLSearchParams(window.location.search).get('vid');
 
@@ -94,8 +95,6 @@ if (!videoId) {
 
 // Construct the URL of the video player page based on the video ID
 var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/'+videoId+'/master.mpd';
-
-            // var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/0896bf63-4917-4d71-8bf1-43462f30f6b9/master.mpd'; // Replace with your URL
 
             // Fetch HTML content from the URL
             fetch(url)
@@ -135,7 +134,7 @@ var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfro
         function initializePlayer() {
             const video = document.getElementById("videoContainer");
             const videoSource = document.querySelector("#videoContainer source");
-            const videoKey = "0896bf63-4917-4d71-8bf1-43462f30f6b9"; // Replace with your actual video key
+            const videoKey = videoId; // Replace with your actual video key
             const source = `https://d1d34p8vz63oiq.cloudfront.net/${videoKey}/master.mpd`;
 
             videoSource.src = source;
