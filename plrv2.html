@@ -4,14 +4,29 @@
     
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DEVASH VIDEO PLAYER</title>
+    <title>DVIDEO PLAYER</title>
     <!-- codes copy krne wala mc , bc -->
 
     <link rel="icon" type="image/jpeg" href="https://telegra.ph/file/53696585b88da5376d48c.jpg">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script>
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey) {
+            event.preventDefault();
+            return false;
+        }
+    });
 
+    // Disable F12 key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'F12') {
+            event.preventDefault();
+            return false;
+        }
+    });
+  </script>
     <style type="text/css" media="screen">
         
         html {
@@ -22,8 +37,9 @@
             --plyr-color-main: #1ac266;
         }
         .plyr {
-            height: 100%;
-            width: 100%;
+          /* height: 50%;
+            max-height: 60%; */
+            /* width: 100%; */
         }
         .loading {
             position: fixed;
