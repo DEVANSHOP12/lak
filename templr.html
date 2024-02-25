@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DRM VIDEO PLAYER</title>
+    <title>DEV'S VIDEO PLAYER</title>
     <link rel="icon" type="image/jpeg" href="https://telegra.ph/file/53696585b88da5376d48c.jpg">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet"/>
@@ -13,129 +13,125 @@
     <style type="text/css" media="screen">
         html {
             font-family: Poppins;
-/*             background: #0A0909; */
-		background: rgb(34,164,195);
-background: linear-gradient(166deg, rgba(34,164,195,1) 9%, rgba(253,187,45,1) 88%);
+            background: rgb(34,164,195);
+            background: linear-gradient(166deg, rgba(34,164,195,1) 9%, rgba(253,187,45,1) 88%);
             margin: 0;
             padding: 0;
-		background-repeat: no-repeat;
-		height:100%;
-		width:100%;
+            background-repeat: no-repeat;
+            height:100%;
+            width:100%;
             --plyr-color-main: #2986cc;
         }
-       .logo-container {
-                position: absolute;
-                top: 10px;
-                left: 10px;
-                width: 60px;
-                height: 60px;
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 60px;
+            height: 60px;
+        }
+        .plyr {
+            height: 100%;
+            width: 100%;
+        }
+        #logo {
+            position: fixed;
+            background-image: url("https://i.imgur.com/Z52wJgg.jpg");
+            background-size: contain;
+            background-position: center;
+        }
+
+        .float {
+            height: 60px;
+            width: 60px;
+            z-index: 10;
+            border-radius: 50px;
+            box-shadow: 2px 2px 3px #999;
+        }
+
+        .label-container{
+            position: relative;
+            top: 5px;
+            left:70px;
+            display:table;
+            visibility: hidden;
+        }
+
+        .label-text{
+            color:#FFF;
+            background:rgba(51,51,51,0.5);
+            display:table-cell;
+            vertical-align:middle;
+            padding:10px;
+            border-radius:3px;
+        }
+
+        .label-arrow{
+            display:table-cell;
+            vertical-align:middle;
+            color:#333;
+            opacity:0.5;
+            transform: scaleX(-1);
+        }
+
+        a.float + div.label-container {
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s ease;
+        }
+
+        a.float:hover + div.label-container{
+            opacity: 1;
+        }
+
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 9999;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+            border-radius: 50%;
+            animation: loader-animation 0.75s ease infinite;
+        }
+
+        .circle:nth-child(1) {
+            background-color: #D90429;
+            animation-delay: 0s;
+        }
+
+        .circle:nth-child(2) {
+            background-color: #FFA300;
+            animation-delay: 0.15s;
+        }
+
+        .circle:nth-child(3) {
+            background-color: #048BA8;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes loader-animation {
+            0% {
+                transform: scale(0);
+                opacity: 0.7;
             }
-	  .plyr {
-                height: 100%;
-                width: 100%;
+            100% {
+                transform: scale(1);
+                opacity: 0;
             }
-            #logo {
-                position: fixed;
-                background-image: url("https://i.imgur.com/Z52wJgg.jpg");
-                background-size: contain;
-                background-position: center;
-            }
-
-            .float {
-                height: 60px;
-                width: 60px;
-                z-index: 10;
-                border-radius: 50px;
-                box-shadow: 2px 2px 3px #999;
-            }
-
-            .label-container{
-	            position: relative;
-                top: 5px;
-                left:70px;
-                display:table;
-                visibility: hidden;
-            }
-
-            .label-text{
-                color:#FFF;
-                background:rgba(51,51,51,0.5);
-                display:table-cell;
-                vertical-align:middle;
-                padding:10px;
-                border-radius:3px;
-            }
-
-            .label-arrow{
-                display:table-cell;
-                vertical-align:middle;
-                color:#333;
-                opacity:0.5;
-                transform: scaleX(-1);
-            }
-
-            a.float + div.label-container {
-/*               visibility: hidden; */
-              opacity: 0;
-              transition: visibility 0s, opacity 0.5s ease;
-            }
-
-            a.float:hover + div.label-container{
-/*               visibility: visible; */
-              opacity: 1;
-            }
-
-
-    .loading {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        z-index: 9999;
-    }
-
-    .loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  }
-
-.circle {
-  width: 20px;
-  height: 20px;
-  margin: 10px;
-  border-radius: 50%;
-  animation: loader-animation 0.75s ease infinite;
-}
-
-.circle:nth-child(1) {
-  background-color: #D90429;
-  animation-delay: 0s;
-}
-
-.circle:nth-child(2) {
-  background-color: #FFA300;
-  animation-delay: 0.15s;
-}
-
-.circle:nth-child(3) {
-  background-color: #048BA8;
-  animation-delay: 0.3s;
-}
-
-@keyframes loader-animation {
-  0% {
-    transform: scale(0);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
+        }
 
     </style>
 </head>
@@ -145,31 +141,35 @@ background: linear-gradient(166deg, rgba(34,164,195,1) 9%, rgba(253,187,45,1) 88
         <div class="circle"></div>
         <div class="circle"></div>
     </div>
-	<div class="plyr__video-wrapper">
-    <video crossorigin="" playsinline="" id="videoContainer" style="background-color: #0A0909;" preload="auto" >
-        <source src="">
-    </video>
-	
-	</div>
-	
+    <div class="plyr__video-wrapper">
+        <video crossorigin="" playsinline="" id="videoContainer" style="background-color: #0A0909;" preload="auto" >
+            <source src="">
+        </video>
+
+    </div>
+
     <script>
         // Declare clearkeysData as a global variable
         var clearkeysData;
 
         document.addEventListener("DOMContentLoaded", function() {
-            // URL of the website from which you want to extract HTML data
+            // Get the video ID from the URL ending with master.mpd
+            var videoId = getVideoIdFromUrl();
 
-              // Get the video ID from the URL
-        var videoId = new URLSearchParams(window.location.search).get('vid');
+            if (!videoId) {
+                console.error('Video ID not found in URL');
+                alert("HEY YOU NEED TO GIVE VIDEO KEY TOO OR YOU MIGHT HAVE GIVEN INCORRECT VIDEO ID");
+                return;
+            }
 
-// If videoId is null, it means the 'vid' parameter is not present in the URL
-if (!videoId) {
-    console.error('Video ID not found in URL');
-    return;
-}
-
-// Construct the URL of the video player page based on the video ID
-var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/'+videoId+'/master.mpd';
+            // Construct the URL of the video player page based on the video ID
+            var url;
+            if (videoId.endsWith("master.mpd")) {
+                videoId = videoId.substring(0, videoId.length - 10);
+                url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/' + videoId + '/master.mpd';
+            } else {
+                url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/' + videoId + '/master.mpd';
+            }
 
             // Fetch HTML content from the URL
             fetch(url)
@@ -206,31 +206,47 @@ var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfro
                 .catch(error => console.error('Error fetching HTML:', error));
         });
 
-        function initializePlayer() {
-            var videoId = new URLSearchParams(window.location.search).get('vid');
+        function getVideoIdFromUrl() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var url = urlParams.get('key');
+            if (!url) return null;
 
-// If videoId is null, it means the 'vid' parameter is not present in the URL
-if (!videoId) {
-    console.error('Video ID not found in URL');
-    return;
-}
+            var startIndex = url.lastIndexOf('/');
+            var endIndex = url.lastIndexOf('master.mpd');
+            if (startIndex >= 0 && endIndex >= 0) {
+                return url.substring(startIndex + 1, endIndex);
+            }
+            return null;
+        }
+
+        function initializePlayer() {
+            var videoId = getVideoIdFromUrl();
+
+            if (!videoId) {
+                console.error('Video ID not found in URL');
+                alert("HEY YOU NEED TO GIVE VIDEO KEY TOO OR YOU MIGHT HAVE GIVEN INCORRECT VIDEO ID");
+                return;
+            }
+
             const video = document.getElementById("videoContainer");
             const videoSource = document.querySelector("#videoContainer source");
-            const videoKey = videoId; // Replace with your actual video key
+            const videoKey = videoId;
             const source = `https://d1d34p8vz63oiq.cloudfront.net/${videoKey}/master.mpd`;
 
             videoSource.src = source;
 
             const dash = dashjs.MediaPlayer().create();
             var defaultOptions = {
-                "autoplay": true,
+                controls: [ 'rewind','play','fast-forward','current-time','progress','duration','settings','mute','volume','fullscreen','keyboard'  ],
+
+                "autoplay": false,
                 "muted": false,
                 "loop": {
                     "active": false
                 },
                 speed: {
                       selected: 1,
-                      options: [0.25,0.5,1,1.25,1.5, 2,2.5, 3,]
+                      options: [0.25,0.5,1,1.25,1.5, 2,2.5,3,]
                     },
                 "captions": {
                     "active": false,
@@ -252,7 +268,7 @@ if (!videoId) {
             });
             const protData = {
                 "org.w3.clearkey": {
-                    "clearkeys": clearkeysData // Using clearkeysData here
+                    "clearkeys": clearkeysData
                 }
             };
             dash.setProtectionData(protData);
@@ -276,7 +292,7 @@ if (!videoId) {
                 };
                 defaultOptions.previewThumbnails = {
                     enabled: true,
-                    src: `https://d1d34p8vz63oiq.cloudfront.net/${videoKey}/master.mpd`
+                    src: `https://graph.org/file/dd2400055cdf7b4c21586.jpg`
                 };
                 defaultOptions.tooltips = {controls: true, seek:true};
                 const player = new Plyr(video, defaultOptions);
@@ -286,8 +302,7 @@ if (!videoId) {
             dash.attachView(video);
         }
     </script>
-	<script>
-		
+    <script>
         document.addEventListener("contextmenu", function (e) {e.preventDefault()});
         document.addEventListener('keydown', function (e) {
             if (
@@ -304,7 +319,7 @@ if (!videoId) {
                 e.preventDefault();
             }
         });
-	</script>
-	
+    </script>
+
 </body>
 </html>
