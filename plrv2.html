@@ -1,30 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DVIDEO PLAYER</title>
-    <!-- codes copy krne wala mc , bc -->
-
+    <title>DRM VIDEO PLAYER</title>
     <link rel="icon" type="image/jpeg" href="https://telegra.ph/file/53696585b88da5376d48c.jpg">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  
+    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script> 
     <style type="text/css" media="screen">
-        
         html {
             font-family: Poppins;
-            background: #0A0909;
+            background: rgb(34,164,195);
+            background: linear-gradient(166deg, rgba(34,164,195,1) 9%, rgba(253,187,45,1) 88%);
             margin: 0;
             padding: 0;
-            --plyr-color-main: #1ac266;
+            height:100%;
+            width:100%;
+            --plyr-color-main: #2986cc;
+        }
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 60px;
+            height: 60px;
         }
         .plyr {
-          /* height: 50%;
-            max-height: 60%; */
-            /* width: 100%; */
+            height: 100%;
+            width: 100%;
+        }
+        #logo {
+            position: fixed;
+            background-image: url("https://i.imgur.com/Z52wJgg.jpg");
+            background-size: contain;
+            background-position: center;
+        }
+        .float {
+            height: 60px;
+            width: 60px;
+            z-index: 10;
+            border-radius: 50px;
+            box-shadow: 2px 2px 3px #999;
+        }
+        .label-container {
+            position: relative;
+            top: 5px;
+            left:70px;
+            display:table;
+            visibility: hidden;
+        }
+        .label-text {
+            color:#FFF;
+            background:rgba(51,51,51,0.5);
+            display:table-cell;
+            vertical-align:middle;
+            padding:10px;
+            border-radius:3px;
+        }
+        .label-arrow {
+            display:table-cell;
+            vertical-align:middle;
+            color:#333;
+            opacity:0.5;
+            transform: scaleX(-1);
+        }
+        a.float + div.label-container {
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s ease;
+        }
+        a.float:hover + div.label-container {
+            opacity: 1;
         }
         .loading {
             position: fixed;
@@ -78,11 +126,12 @@
         <div class="circle"></div>
         <div class="circle"></div>
     </div>
-    <video crossorigin="" playsinline="" id="videoContainer" style="background-color: #0A0909;" preload="auto" >
-        <source src="">
-    </video>
-    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
-    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script> <!-- Include Dash.js library -->
+    <div class="plyr__video-wrapper">
+        <video crossorigin="" playsinline="" id="videoContainer" style="background-color: #0A0909;" preload="auto" >
+            <source src="">
+        </video>
+    </div>
+
     <script>
         // Declare clearkeysData as a global variable
         var clearkeysData;
@@ -138,16 +187,13 @@ var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfro
         });
 
         function initializePlayer() {
-              // Get the video ID from the URL
-        var videoId = new URLSearchParams(window.location.search).get('vid');
+            var videoId = new URLSearchParams(window.location.search).get('vid');
 
-        // If videoId is null, it means the 'vid' parameter is not present in the URL
-        if (!videoId) {
-            console.error('Video ID not found in URL');
-            return;
-        }
-
-
+// If videoId is null, it means the 'vid' parameter is not present in the URL
+if (!videoId) {
+    console.error('Video ID not found in URL');
+    return;
+}
             const video = document.getElementById("videoContainer");
             const videoSource = document.querySelector("#videoContainer source");
             const videoKey = videoId; // Replace with your actual video key
@@ -157,19 +203,20 @@ var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfro
 
             const dash = dashjs.MediaPlayer().create();
             var defaultOptions = {
-                "autoplay": false,
+                "autoplay": true,
                 "muted": false,
                 "loop": {
                     "active": false
                 },
                 speed: {
                       selected: 1,
-                      options: [1,1.25,1.5, 2,2.5, 3, 3.25,3.5, 4]
+                      options: [0.25,0.5,1,1.25,1.5, 2,2.5, 3,]
                     },
                 "captions": {
-                    "active": true,
-                    "update": true
-                }
+                    "active": false,
+                    "update": false
+                },
+                controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'airplay', 'fullscreen', 'seek-forward', 'seek-backward']
             };
             dash.initialize(video, source, false);
             dash.updateSettings({
@@ -219,6 +266,24 @@ var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfro
             });
             dash.attachView(video);
         }
+    </script>
+    <script>
+        document.addEventListener("contextmenu", function (e) {e.preventDefault()});
+        document.addEventListener('keydown', function (e) {
+            if (
+                e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.key === 'u') ||
+                (e.ctrlKey && e.key === 'U') ||
+                (e.ctrlKey && e.key === 's') ||
+                (e.ctrlKey && e.key === 'S') ||
+                e.ctrlKey ||
+                e.shiftKey ||
+                e.altKey
+            ) {
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
