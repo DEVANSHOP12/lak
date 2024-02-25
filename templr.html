@@ -18,6 +18,7 @@
 background: linear-gradient(166deg, rgba(34,164,195,1) 9%, rgba(253,187,45,1) 88%);
             margin: 0;
             padding: 0;
+		background-repeat: no-repeat;
             --plyr-color-main: #2986cc;
         }
        .logo-container {
@@ -227,7 +228,7 @@ if (!videoId) {
                 },
                 speed: {
                       selected: 1,
-                      options: [0.5,1,1.25,1.5, 2,2.5, 3,]
+                      options: [0.25,0.5,1,1.25,1.5, 2,2.5, 3,]
                     },
                 "captions": {
                     "active": false,
@@ -283,5 +284,24 @@ if (!videoId) {
             dash.attachView(video);
         }
     </script>
+	<script>
+		
+        document.addEventListener("contextmenu", function (e) {e.preventDefault()});
+        document.addEventListener('keydown', function (e) {
+            if (
+                e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.key === 'u') ||
+                (e.ctrlKey && e.key === 'U') ||
+                (e.ctrlKey && e.key === 's') ||
+                (e.ctrlKey && e.key === 'S') ||
+                e.ctrlKey ||
+                e.shiftKey ||
+                e.altKey
+            ) {
+                e.preventDefault();
+            }
+        });
+	</script>
 </body>
 </html>
