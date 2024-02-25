@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DRM VIDEO PLAYER</title>
+    <link rel="icon" type="image/jpeg" href="https://i.imgur.com/Z52wJgg.jpg">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style type="text/css" media="screen">
+        html {
+            font-family: Poppins;
+            background: #0A0909;
+            margin: 0;
+            padding: 0;
+            --plyr-color-main: #1ac266;
+        }
+        .plyr {
+            height: 100%;
+            width: 100%;
+        }
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 9999;
+        }
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .circle {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+            border-radius: 50%;
+            animation: loader-animation 0.75s ease infinite;
+        }
+        .circle:nth-child(1) {
+            background-color: #D90429;
+            animation-delay: 0s;
+        }
+        .circle:nth-child(2) {
+            background-color: #FFA300;
+            animation-delay: 0.15s;
+        }
+        .circle:nth-child(3) {
+            background-color: #048BA8;
+            animation-delay: 0.3s;
+        }
+        @keyframes loader-animation {
+            0% {
+                transform: scale(0);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading" class="loading">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <video crossorigin="" playsinline="" id="videoContainer" style="background-color: #0A0909;" preload="auto" >
+        <source src="">
+    </video>
+    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script> <!-- Include Dash.js library -->
+    <script>
+        // Declare clearkeysData as a global variable
+        var clearkeysData;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // URL of the website from which you want to extract HTML data
+
+              // Get the video ID from the URL
+        var videoId = new URLSearchParams(window.location.search).get('vid');
+
+// If videoId is null, it means the 'vid' parameter is not present in the URL
+if (!videoId) {
+    console.error('Video ID not found in URL');
+    return;
+}
+
+// Construct the URL of the video player page based on the video ID
+var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/'+videoId+'/master.mpd';
+
+            // Fetch HTML content from the URL
+            fetch(url)
+                .then(response => response.text())
+                .then(htmlContent => {
+                    // Create a temporary div element to parse HTML content
+                    var tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = htmlContent;
+
+                    // Find the script tag containing protData
+                    var scriptElement = tempDiv.querySelector('script:not([src])');
+
+                    if (scriptElement && scriptElement.textContent.includes('const protData')) {
+                        // Extract protData object
+                        var startIndex = scriptElement.textContent.indexOf('const protData = ') + 'const protData = '.length;
+                        var endIndex = scriptElement.textContent.indexOf(';', startIndex);
+                        var protDataStr = scriptElement.textContent.substring(startIndex, endIndex);
+
+                        // Parse protData object
+                        var protData = JSON.parse(protDataStr);
+
+                        // Extract clearkeys data
+                        clearkeysData = protData['org.w3.clearkey'].clearkeys; // Assign to the global variable
+
+                        // Log clearkeys data
+                        console.log('Clearkeys Data:', clearkeysData);
+
+                        // Initialize the player with the retrieved source
+                        initializePlayer();
+                    } else {
+                        console.error('Script tag containing protData not found');
+                    }
+                })
+                .catch(error => console.error('Error fetching HTML:', error));
+        });
+
+        function initializePlayer() {
+            var videoId = new URLSearchParams(window.location.search).get('vid');
+
+// If videoId is null, it means the 'vid' parameter is not present in the URL
+if (!videoId) {
+    console.error('Video ID not found in URL');
+    return;
+}
+            const video = document.getElementById("videoContainer");
+            const videoSource = document.querySelector("#videoContainer source");
+            const videoKey = videoId; // Replace with your actual video key
+            const source = `https://d1d34p8vz63oiq.cloudfront.net/${videoKey}/master.mpd`;
+
+            videoSource.src = source;
+
+            const dash = dashjs.MediaPlayer().create();
+            var defaultOptions = {
+                "autoplay": false,
+                "muted": false,
+                "loop": {
+                    "active": false
+                },
+                speed: {
+                      selected: 1,
+                      options: [1,1.25,1.5, 2,2.5, 3, 3.25,3.5, 4]
+                    },
+                "captions": {
+                    "active": true,
+                    "update": true
+                }
+            };
+            dash.initialize(video, source, false);
+            dash.updateSettings({
+                streaming: {
+                    abr: {
+                        autoSwitchBitrate: {
+                            audio: false,
+                            video: false
+                        }
+                    },
+                    fastSwitchEnabled: true,
+                    lowLatencyEnabled: true
+                }
+            });
+            const protData = {
+                "org.w3.clearkey": {
+                    "clearkeys": clearkeysData // Using clearkeysData here
+                }
+            };
+            dash.setProtectionData(protData);
+            dash.on("streamInitialized", function() {
+                const bodyElement = document.querySelector("body");
+                const loadingElement = document.getElementById("loading");
+                loadingElement.style.display = "none";
+                bodyElement.style.visibility = "visible";
+                const availableQualities = dash.getBitrateInfoListFor("video").map((l) => l.height);
+                defaultOptions.quality = {
+                    default: availableQualities[0].height,
+                    options: availableQualities,
+                    forced: true,
+                    onChange: function(newQuality) {
+                        dash.getBitrateInfoListFor("video").forEach((level, levelIndex) => {
+                            if (level.height === newQuality) {
+                                dash.setQualityFor("video", level.qualityIndex);
+                            }
+                        });
+                    },
+                };
+                defaultOptions.previewThumbnails = {
+                    enabled: true,
+                    src: `https://d1d34p8vz63oiq.cloudfront.net/${videoKey}/master.mpd`
+                };
+                defaultOptions.tooltips = {controls: true, seek:true};
+                const player = new Plyr(video, defaultOptions);
+                window.player = player;
+                window.dash = dash;
+            });
+            dash.attachView(video);
+        }
+    </script>
+</body>
+</html>
