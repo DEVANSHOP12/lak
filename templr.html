@@ -13,7 +13,9 @@
     <style type="text/css" media="screen">
         html {
             font-family: Poppins;
-            background: #0A0909;
+/*             background: #0A0909; */
+		background: rgb(34,164,195);
+background: linear-gradient(166deg, rgba(34,164,195,1) 9%, rgba(253,187,45,1) 88%);
             margin: 0;
             padding: 0;
             --plyr-color-main: #2986cc;
@@ -70,13 +72,13 @@
             }
 
             a.float + div.label-container {
-              visibility: hidden;
+/*               visibility: hidden; */
               opacity: 0;
               transition: visibility 0s, opacity 0.5s ease;
             }
 
             a.float:hover + div.label-container{
-              visibility: visible;
+/*               visibility: visible; */
               opacity: 1;
             }
 
@@ -146,7 +148,7 @@
     </video>
 	<div class="plyr__poster"></div>
 	</div>
-	<div class="plyr__captions"></div>
+	
     <script>
         // Declare clearkeysData as a global variable
         var clearkeysData;
