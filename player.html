@@ -1,9 +1,10 @@
 
 <!-- codes copy krne wala mc , bc -->
- <script disable-devtool-auto="true" src="https://cdn.jsdelivr.net/npm/disable-devtool" clear-log="true" disable-select="false" disable-copy="false" disable-cut="true" disable-paste="true"></script> 
 
 <!DOCTYPE html>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ahmetaksungur/aksvideoplayer/aksVideoPlayer.css">
+<!-- <script disable-devtool-auto="true" src="https://cdn.jsdelivr.net/npm/disable-devtool" clear-log="true" disable-select="false" disable-copy="false" disable-cut="true" disable-paste="true"></script>  -->
+
 <html>
 <style> 
     /* Desktop styles */
@@ -48,6 +49,7 @@
  
    <center><i><br>
     <div id="download-btn-main">
+        <button class="glow-on-hover" onclick="NEWPLR()" type="button">Watch on New Player</button>
       <button class="glow-on-hover" onclick=" displybtn()" type="button">CLICK DOWNLOADING LEC</button>
       </div>
     <div id="downlod-buttons-opt" style="display: none;">
@@ -161,15 +163,16 @@ var fvideo = "intent:https://psitoffers.store/1dm.php?vid="+videourl[0]+"#Intent
   }
 
 
-  function OLDPLR()
+  function NEWPLR()
     {
       
     var video_id = window.location.search.split('=');
       var videourl = video_id[1].split('&m');
       var spl =videourl[0].split(',');
-    var fst ="https://lakshyawallah.blogspot.com/p/old-player_27.html?vid="
+    var fst ="https://devanshop12.github.io/lak/plrv2.html?key="
     var snd = fst+spl ;
    //window.location.href();
+   alert("JOIN US ON TELEGRAM TOO : @LAKSHYA_JEE_24 || TANKS FOR CHOOSING US !")
       window.open(snd, '_blank');
    
     }
