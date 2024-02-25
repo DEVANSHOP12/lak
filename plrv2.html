@@ -223,7 +223,7 @@ if (!videoId) {
 
             const dash = dashjs.MediaPlayer().create();
             var defaultOptions = {
-                 controls: ['play', 'rewind', 'fast-forward', 'progress', 'current-time', 'settings','mute', 'volume', 'fullscreen', 'keyboard'  ],
+                 controls: [ 'rewind', 'play','fast-forward', 'progress', 'current-time', 'settings','mute', 'volume', 'fullscreen', 'keyboard'  ],
                 "autoplay": false,
                 "muted": false,
                 "loop": {
@@ -231,7 +231,7 @@ if (!videoId) {
                 },
                 speed: {
                       selected: 1,
-                      options: [0.25,0.5,1,1.25,1.5, 2,2.5, 3,]
+                      options: [0.25,0.5,1,1.25,1.5, 2,2.5,3,]
                     },
                 "captions": {
                     "active": false,
@@ -277,7 +277,7 @@ if (!videoId) {
                 };
                 defaultOptions.previewThumbnails = {
                     enabled: true,
-                    src: `https://d1d34p8vz63oiq.cloudfront.net/${videoKey}/master.mpd`
+                    src: `https://graph.org/file/dd2400055cdf7b4c21586.jpg`
                 };
                 defaultOptions.tooltips = {controls: true, seek:true};
                 const player = new Plyr(video, defaultOptions);
