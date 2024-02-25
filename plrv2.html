@@ -267,23 +267,6 @@ if (!videoId) {
             dash.attachView(video);
         }
     </script>
-    <script>
-        document.addEventListener("contextmenu", function (e) {e.preventDefault()});
-        document.addEventListener('keydown', function (e) {
-            if (
-                e.key === 'F12' ||
-                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-                (e.ctrlKey && e.key === 'u') ||
-                (e.ctrlKey && e.key === 'U') ||
-                (e.ctrlKey && e.key === 's') ||
-                (e.ctrlKey && e.key === 'S') ||
-                e.ctrlKey ||
-                e.shiftKey ||
-                e.altKey
-            ) {
-                e.preventDefault();
-            }
-        });
-    </script>
+   
 </body>
 </html>
