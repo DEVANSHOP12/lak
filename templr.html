@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script> 
     <style type="text/css" media="screen">
         html {
             font-family: Poppins;
@@ -138,11 +140,13 @@
         <div class="circle"></div>
         <div class="circle"></div>
     </div>
+	<div class="plyr__video-wrapper">
     <video crossorigin="" playsinline="" id="videoContainer" style="background-color: #0A0909;" preload="auto" >
         <source src="">
     </video>
-    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
-    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script> <!-- Include Dash.js library -->
+	<div class="plyr__poster"></div>
+	</div>
+	<div class="plyr__captions"></div>
     <script>
         // Declare clearkeysData as a global variable
         var clearkeysData;
