@@ -13,131 +13,130 @@
     <style type="text/css" media="screen">
         html {
             font-family: Poppins;
-            background: rgb(34,164,195);
-            background: linear-gradient(166deg, rgba(34,164,195,1) 9%, rgba(253,187,45,1) 88%);
+/*             background: #0A0909; */
+		background: rgb(34,164,195);
+background: linear-gradient(166deg, rgba(34,164,195,1) 9%, rgba(253,187,45,1) 88%);
             margin: 0;
             padding: 0;
-            height:100%;
-            width:100%;
+		background-repeat: no-repeat;
+		height:100%;
+		width:100%;
             --plyr-color-main: #2986cc;
         }
-        .logo-container {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 60px;
-            height: 60px;
-        }
-        .plyr {
-            height: 100%;
-            width: 100%;
-        }
-        #logo {
-            position: fixed;
-            background-image: url("https://i.imgur.com/Z52wJgg.jpg");
-            background-size: contain;
-            background-position: center;
-        }
-        .float {
-            height: 60px;
-            width: 60px;
-            z-index: 10;
-            border-radius: 50px;
-            box-shadow: 2px 2px 3px #999;
-        }
-        .label-container {
-            position: relative;
-            top: 5px;
-            left:70px;
-            display:table;
-            visibility: hidden;
-        }
-        .label-text {
-            color:#FFF;
-            background:rgba(51,51,51,0.5);
-            display:table-cell;
-            vertical-align:middle;
-            padding:10px;
-            border-radius:3px;
-        }
-        .label-arrow {
-            display:table-cell;
-            vertical-align:middle;
-            color:#333;
-            opacity:0.5;
-            transform: scaleX(-1);
-        }
-        a.float + div.label-container {
-            opacity: 0;
-            transition: visibility 0s, opacity 0.5s ease;
-        }
-        a.float:hover + div.label-container {
-            opacity: 1;
-        }
-        .loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            z-index: 9999;
-        }
-        .loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .circle {
-            width: 20px;
-            height: 20px;
-            margin: 10px;
-            border-radius: 50%;
-            animation: loader-animation 0.75s ease infinite;
-        }
-        .circle:nth-child(1) {
-            background-color: #D90429;
-            animation-delay: 0s;
-        }
-        .circle:nth-child(2) {
-            background-color: #FFA300;
-            animation-delay: 0.15s;
-        }
-        .circle:nth-child(3) {
-            background-color: #048BA8;
-            animation-delay: 0.3s;
-        }
-        @keyframes loader-animation {
-            0% {
-                transform: scale(0);
-                opacity: 0.7;
+       .logo-container {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 60px;
+                height: 60px;
             }
-            100% {
-                transform: scale(1);
-                opacity: 0;
+	  .plyr {
+                height: 100%;
+                width: 100%;
             }
-        }
+            #logo {
+                position: fixed;
+                background-image: url("https://i.imgur.com/Z52wJgg.jpg");
+                background-size: contain;
+                background-position: center;
+            }
 
-        /* Added CSS for Plyr controls */
-        .plyr__controls {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .plyr__controls button.plyr__control[aria-label="Seek forward"]::before,
-        .plyr__controls button.plyr__control[aria-label="Seek backward"]::before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .plyr__controls button.plyr__control[aria-label="Seek forward"]::before {
-            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.12/controls.svg#plyr-seek-next');
-        }
-        .plyr__controls button.plyr__control[aria-label="Seek backward"]::before {
-            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.12/controls.svg#plyr-seek-previous');
-        }
+            .float {
+                height: 60px;
+                width: 60px;
+                z-index: 10;
+                border-radius: 50px;
+                box-shadow: 2px 2px 3px #999;
+            }
+
+            .label-container{
+	            position: relative;
+                top: 5px;
+                left:70px;
+                display:table;
+                visibility: hidden;
+            }
+
+            .label-text{
+                color:#FFF;
+                background:rgba(51,51,51,0.5);
+                display:table-cell;
+                vertical-align:middle;
+                padding:10px;
+                border-radius:3px;
+            }
+
+            .label-arrow{
+                display:table-cell;
+                vertical-align:middle;
+                color:#333;
+                opacity:0.5;
+                transform: scaleX(-1);
+            }
+
+            a.float + div.label-container {
+/*               visibility: hidden; */
+              opacity: 0;
+              transition: visibility 0s, opacity 0.5s ease;
+            }
+
+            a.float:hover + div.label-container{
+/*               visibility: visible; */
+              opacity: 1;
+            }
+
+
+    .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+    }
+
+    .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  }
+
+.circle {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  border-radius: 50%;
+  animation: loader-animation 0.75s ease infinite;
+}
+
+.circle:nth-child(1) {
+  background-color: #D90429;
+  animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+  background-color: #FFA300;
+  animation-delay: 0.15s;
+}
+
+.circle:nth-child(3) {
+  background-color: #048BA8;
+  animation-delay: 0.3s;
+}
+
+@keyframes loader-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -146,12 +145,13 @@
         <div class="circle"></div>
         <div class="circle"></div>
     </div>
-    <div class="plyr__video-wrapper">
-        <video crossorigin="" playsinline="" id="videoContainer" style="background-color: #0A0909;" preload="auto" >
-            <source src="">
-        </video>
-    </div>
-
+	<div class="plyr__video-wrapper">
+    <video crossorigin="" playsinline="" id="videoContainer" style="background-color: #0A0909;" preload="auto" >
+        <source src="">
+    </video>
+	
+	</div>
+	
     <script>
         // Declare clearkeysData as a global variable
         var clearkeysData;
@@ -223,7 +223,10 @@ if (!videoId) {
 
             const dash = dashjs.MediaPlayer().create();
             var defaultOptions = {
-                "autoplay": true,
+                 controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'rewind', 'fast-forward',
+                'settings', 'fullscreen', 'keyboard'
+            ],
+                "autoplay": false,
                 "muted": false,
                 "loop": {
                     "active": false
@@ -235,8 +238,7 @@ if (!videoId) {
                 "captions": {
                     "active": false,
                     "update": false
-                },
-                controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'airplay', 'fullscreen', 'seek-forward', 'seek-backward']
+                }
             };
             dash.initialize(video, source, false);
             dash.updateSettings({
@@ -287,7 +289,8 @@ if (!videoId) {
             dash.attachView(video);
         }
     </script>
-    <script>
+	<script>
+		
         document.addEventListener("contextmenu", function (e) {e.preventDefault()});
         document.addEventListener('keydown', function (e) {
             if (
@@ -304,6 +307,7 @@ if (!videoId) {
                 e.preventDefault();
             }
         });
-    </script>
+	</script>
+	
 </body>
 </html>
