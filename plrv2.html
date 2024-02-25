@@ -118,6 +118,26 @@
                 opacity: 0;
             }
         }
+
+        /* Added CSS for Plyr controls */
+        .plyr__controls {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .plyr__controls button.plyr__control[aria-label="Seek forward"]::before,
+        .plyr__controls button.plyr__control[aria-label="Seek backward"]::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .plyr__controls button.plyr__control[aria-label="Seek forward"]::before {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.12/controls.svg#plyr-seek-next');
+        }
+        .plyr__controls button.plyr__control[aria-label="Seek backward"]::before {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.12/controls.svg#plyr-seek-previous');
+        }
     </style>
 </head>
 <body>
@@ -267,6 +287,23 @@ if (!videoId) {
             dash.attachView(video);
         }
     </script>
-   
+    <script>
+        document.addEventListener("contextmenu", function (e) {e.preventDefault()});
+        document.addEventListener('keydown', function (e) {
+            if (
+                e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.key === 'u') ||
+                (e.ctrlKey && e.key === 'U') ||
+                (e.ctrlKey && e.key === 's') ||
+                (e.ctrlKey && e.key === 'S') ||
+                e.ctrlKey ||
+                e.shiftKey ||
+                e.altKey
+            ) {
+                e.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
