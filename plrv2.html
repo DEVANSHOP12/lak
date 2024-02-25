@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DRM VIDEO PLAYER</title>
+    <title>DEV'S VIDEO PLAYER</title>
     <link rel="icon" type="image/jpeg" href="https://telegra.ph/file/53696585b88da5376d48c.jpg">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet"/>
@@ -223,7 +223,8 @@ if (!videoId) {
 
             const dash = dashjs.MediaPlayer().create();
             var defaultOptions = {
-                 controls: [ 'rewind', 'play','fast-forward', 'progress', 'current-time', 'settings','mute', 'volume', 'fullscreen', 'keyboard'  ],
+                 controls: [ 'rewind', 'play','fast-forward', 'duration', 'progress', 'current-time', 'settings','mute', 'volume', 'fullscreen', 'pip', 'airplay','keyboard'  ],
+		    
                 "autoplay": false,
                 "muted": false,
                 "loop": {
