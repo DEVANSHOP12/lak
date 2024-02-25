@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #pageContainer {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chapterContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #ddd; /* Add borders */border-radius: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <h2>Chapter List - Click On Name</h2>
+
+        <!-- Chapter buttons -->
+        <button onclick="showChapterContent(1)">PAPERS </button>
+        <button onclick="showChapterContent(2)">SOLUTIONS</button>
+
+        <!-- Chapter content -->
+        <div id="chapterContent">
+            <h3 id="chapterTitle"></h3>
+            <p id="chapterText"></p>
+        </div>
+
+        <!-- Beautified table -->
+        
+    </div>
+ <script>
+        function showChapterContent(chapterNumber) {
+            const chapterTitle = document.getElementById('chapterTitle');
+            const chapterText = document.getElementById('chapterText');
+            const chapterContent = document.getElementById('chapterContent');
+
+            // Use a switch statement to handle each chapter
+            switch (chapterNumber) {
+               
+
+                case 1:
+                    chapterTitle.textContent = 'PAPERS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">LEC & NOTES</th></tr>
+
+ 
+ </tr><td>Practice Test 06 : English Test Paper || PDF Only || 12th Board Booster 2024</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6daa94e8-e7a7-45d6-aeb0-46598d38e041.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Practice Test 05 : English Test Paper || PDF Only || 12th Board Booster 2024</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/725e7ff1-dfc2-44b5-9a7d-24e9aa3ede47.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Practice Test 04 : English Test Paper || PDF Only || 12th Board Booster 2024</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/00399761-7a52-485f-8587-9fc9e9818bc3.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Practice Test 03 : English Test Paper || PDF Only || 12th Board Booster 2024</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/c1b1b3b4-8aad-4b6b-bd8d-0325e18f87d6.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Practice Test 02 : English Test Paper || PDF Only || 12th Board Booster 2024</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/ce1358c0-6ee9-48d5-b2c4-bb26caa5773b.pdf'" type="button">VIEW</button>
+</td></tr>
+
+</tr><td>Practice Test 01 : English Test Paper || PDF Only || 12th Board Booster 2024</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/3f491dfe-2217-4806-9599-7f8fc6e6fb93.pdf'" type="button">VIEW</button>
+</td></tr>
+
+   </table>`
+   replaceLinks();
+                    break;
+
+              case 2:
+                    chapterTitle.textContent = 'SOLUTIONS';
+                    chapterText.innerHTML = ` <table>
+        <tr><h5><th style="color: #0b50be; font-size: 25px;"> DETAILS </th></h5>
+          <th style="color: rgba(192, 212, 14, 0.866); font-size: 20PX;">VIDEO</th></tr>
+
+
+
+<tr><td>Practice Test 06 - English : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=304a94da-9300-4cdd-a9a1-6a16a810c06d&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 06 - Biology : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=85f6bb09-345e-4600-a61c-34d86bfc3298&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 06 - Physics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=70bc8630-fd7a-4195-bb51-57fcd89b2d7f&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 06 - Mathematics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=41703038-c874-45dd-8b33-f8d873f0c0bf&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 06 - Chemistry : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=58c34faa-7517-4c6a-bfdc-68d7787513f0&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 05 - Mathematics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=e4bf3950-3258-4131-aa83-13681023f461&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 05 - Physics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=6b21ddaf-418b-4026-b0b3-ab6fa4ebeeca&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 05 - Biology : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=ec02ced5-c723-45d3-8e08-c9b2cc73e417&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 05 - Chemistry : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=ffa0e4f0-433e-4a08-bacd-bb01179b55c6&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 04 - English : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=310092e0-45bd-4a86-bb15-edf3b16b00d0&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 04 - Mathematics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=cacf3645-25a5-4f77-ad97-e77e76e1a664&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 04 - Biology : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=4bd85342-761b-47dd-a2ee-be45373e6cd2&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 04 - Physics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=4b0accb2-fc38-492a-9498-5ac85db4e98a&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 04 - Chemistry : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=fd872993-714c-4a74-8ff4-37cdfa7f1c86&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 03 - Chemistry : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=4fdbf2f2-effa-46e0-a8f7-3f4753dbda4a&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 03 - English : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=98b42c3b-ebb7-49ab-8727-003e23765c61&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 03 - Physics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=e6c350f9-89fc-494c-811e-3ee65912da47&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 03 - Biology : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=6f985fb3-c909-4405-b672-f1072123e104&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 03 - Mathematics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=d4162946-11cf-4b73-9fbf-7f2b839e0ca3&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 02 - Mathematics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=909a5dc5-f853-4e28-a41f-6f0c07f29f77&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 02 - English : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=147bcd11-e122-435f-bc22-dc8d1f16befd&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 02 - Physical Chemistry : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=a867e2c1-4067-4340-8f35-989f7c795cf7&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 02 - Biology : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=004bf967-cfc2-44d8-b08d-2a1ca40bf02a&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 02 - Physics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=d5ec4e9d-a7a8-4731-8933-173677a5bcbd&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 01 - Physical Chemistry : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=ab760cd6-bdc4-4db5-821a-90e39e737104&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 01 - Mathematics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=5f6f1ceb-537c-4029-8b0c-a095dffdaccb&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 01 - Physics : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=ebeb12e1-c63f-4238-b96a-540473754dbc&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 01 - Botany : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=e238a2c6-4603-4283-a8ce-0f62a8623486&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+<tr><td>Practice Test 01 - English : Test Paper Discussion || Only Video</td><td style="padding: 10px;">
+<button class="btn" onclick="window.location.href='https://xyz1234xd.blogspot.com/p/player.html?vid=3825695e-4142-48c9-a0e5-7006e770ea57&n=&d=&q=';" type="button">WATCH</button>
+</td></tr>
+
+
+  
+   </table>`
+   replaceLinks();
+                    break;
+
+
+
+                
+                default:
+                    // Handle the case where an invalid chapter number is provided
+                    chapterTitle.textContent = 'Invalid Chapter';
+                    chapterText.textContent = 'Please select a valid chapter.';
+                    break;
+            }
+
+            // Show the chapter content
+            chapterContent.style.display = 'block';
+        }
+    </script>
+    <script>
+        // Function to replace old links with new links and preserve query parameters
+        function replaceLinks() {
+          const oldLink = "https://xyz1234xd.blogspot.com/p/player.html";
+          const newLink = "https://lakpaid.blogspot.com/p/securing.html";
+      
+          // Select all elements with a class of 'btn'
+          const buttons = document.querySelectorAll('.btn');
+      
+          // Loop through the selected elements
+          buttons.forEach(button => {
+            // Get the current onclick attribute
+            const currentOnClick = button.getAttribute('onclick');
+      
+            // Check if the onclick attribute contains the oldLink
+            if (currentOnClick.includes(oldLink)) {
+              // Extract the query parameters from the old link
+              const queryParameters = currentOnClick.split(oldLink)[1];
+      
+              // Build the new URL with the query parameters
+              const newURL = newLink + queryParameters;
+      
+              // Remove the existing onclick attribute
+              button.removeAttribute('onclick');
+      
+              // Add a click event listener to handle the navigation
+              button.addEventListener('click', () => {
+                window.location.href = newURL;
+              });
+            }
+          });
+        }
+      
+        // Call the replaceLinks function to replace the links in the onclick attributes
+        replaceLinks();
+      </script>
+   
+   
+</body>
+
+</html>
