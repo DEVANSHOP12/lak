@@ -170,7 +170,7 @@ if (!videoId) {
 }
 
 // Construct the URL of the video player page based on the video ID
-var url = 'https://extractapi.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/'+videoId+'/master.mpd';
+var url = 'https://extractapi.xyz/alpha?v=https://d1d34p8vz63oiq.cloudfront.net/'+videoId+'/master.mpd';
 
             // Fetch HTML content from the URL
             fetch(url)
@@ -218,7 +218,7 @@ if (!videoId) {
 }
             const video = document.getElementById("videoContainer");
             const videoSource = document.querySelector("#videoContainer source");
-            const videoKey = videoId; // Replace with your actual video key
+            const videoKey = videoId; 
             const source = `https://d1d34p8vz63oiq.cloudfront.net/${videoKey}/master.mpd`;
 
             videoSource.src = source;
@@ -256,7 +256,7 @@ if (!videoId) {
             });
             const protData = {
                 "org.w3.clearkey": {
-                    "clearkeys": clearkeysData // Using clearkeysData here
+                    "clearkeys": clearkeysData 
                 }
             };
             dash.setProtectionData(protData);
